@@ -1,0 +1,9 @@
+- name: Example 2
+  url: https://github.com
+  description: Leverage agile frameworks to provide a robust synopsis for high level overviews.
+  status: live
+  tags:
+    - JavaScript
+    - HTML
+  icon: website
+  image: images/project.jpg
