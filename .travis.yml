@@ -3,18 +3,15 @@ cache:
   yarn: true
   directories:
     - node_modules
-notifications:
-  email:
-    recipients:
-      - codesandtags@gmail.com
-    on_success: always
-    on_failure: always
 node_js:
   - '12.13.1'
 git:
   depth: 3
+before_script:
+  - "npm i -g gatsby-cli"
+  - "yarn"
 script:
-  - npm run build
+  - gatsby build --prefix-paths && gh-pages -d public
 deploy:
   provider: pages
   skip_cleanup: true
