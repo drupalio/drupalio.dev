@@ -1,8 +1,5 @@
 module.exports = {
-  siteMetadata: {
-    title:"Drupalio's life"
-  },
-  plugins: [
+ plugins: [
     {
       resolve: "@wkocjan/gatsby-theme-intro",
       options: {
@@ -10,4 +7,10 @@ module.exports = {
       },
     },
   ],
+  // Customize your site metadata:
+  siteMetadata: {
+    title: "Drupalio's life",
+    author: "Ricardo Morales - Drupalio",
+    siteUrl: "https://drupalio.dev",
+  },
 }
