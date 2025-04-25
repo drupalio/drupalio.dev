@@ -1,0 +1,603 @@
+{
+  "personalInfo": {
+    "name": "Ricardo Morales",
+    "title": "Ingeniero de Software",
+    "picture":"https://avatars.githubusercontent.com/u/5186093",
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/drupalio",
+        "icon": ["fab", "linkedin"]
+      },
+      {
+        "name": "Sitio Web",
+        "url": "https://www.drupalio.dev",
+        "icon": ["fas", "globe"]
+      }
+    ]
+  },
+  "summary": {
+    "title": "Sobre mí",
+    "summaryText": "Desarrollador de sistemas con experiencia y una sólida capacidad para navegar por diversos stacks tecnológicos, priorizando un código limpio y eficiente, y abrazando la innovación. Comprometido, creativo y motivado por el aprendizaje continuo. Destaco en fomentar la colaboración y entregar resultados de alta calidad. Apasionado tanto por la tecnología como por la gastronomía, busco aprovechar mis habilidades para crear impactos significativos en diversas industrias y comunidades."
+  },
+  "workExperienceSection": {
+    "title": "Experiencias Laborales"
+  },
+  "workExperience": [
+    {
+      "title": "Desarrollador Senior Java",
+      "company": "Multiplica Talent",
+      "period": "Abr 2024 - Presente",
+      "icon": ["fas", "briefcase"],
+      "projects": [
+        {
+          "name": "Hive & Colony",
+          "description": "Integración e implementación de Zoho One y Shopify para operaciones empresariales optimizadas",
+          "technologies": ["Java", "Zoho One", "Shopify"]
+        },
+        {
+          "name": "Banorte",
+          "description": "Desarrollo de plantillas y módulos para el nuevo portal público de Banorte usando MagnoliaCMS",
+          "technologies": ["Java", "MagnoliaCMS", "HTML", "CSS", "JavaScript"]
+        },
+        {
+          "name": "Qualitas",
+          "description": "Desarrollo e integración del núcleo CRM utilizando procedimientos almacenados, funciones SQL/PLus y backend en Java",
+          "technologies": ["Java", "SQL/PLus", "Oracle", "CRM"]
+        }
+      ]
+    },
+    {
+      "title": "Desarrollador de Microservicios Java",
+      "company": "Globant",
+      "period": "May 2019 - Feb 2024",
+      "icon": ["fas", "microchip"],
+      "projects": [
+        {
+          "name": "QuizzerA",
+          "description": "Personalización de GPT para proyectos clave y desarrollo de sistema de seguimiento de entrevistas para mejorar la retroalimentación y eficiencia",
+          "technologies": ["Java", "Spring Boot", "GPT", "AI"]
+        },
+        {
+          "name": "Banco Nacional del Perú",
+          "description": "Modernización de banca en línea con microservicios usando el framework YAPE",
+          "technologies": ["Java", "Microservicios", "YAPE Framework"]
+        },
+        {
+          "name": "Round Feather",
+          "description": "Construcción y mantenimiento de microservicios financieros con Quarkus y Kubernetes en Google Cloud, automatizando despliegues con GitHub Actions",
+          "technologies": ["Java", "Quarkus", "Kubernetes", "Google Cloud", "GitHub Actions"]
+        },
+        {
+          "name": "Santander",
+          "description": "Liderazgo en la transición de la plataforma bancaria a arquitectura de microservicios con Spring Boot",
+          "technologies": ["Java", "Spring Boot", "Microservicios"]
+        },
+        {
+          "name": "Expedia (Despegar & Hotels.com)",
+          "description": "Integración fluida y optimización del rendimiento de microservicios",
+          "technologies": ["Java", "Microservicios", "Optimización de Rendimiento"]
+        },
+        {
+          "name": "AEPE Energy",
+          "description": "Optimización de procesos CI/CD, mantenimiento y arquitectura escalable",
+          "technologies": ["Java", "CI/CD", "DevOps"]
+        },
+        {
+          "name": "Commodity Finance",
+          "description": "Mantenimiento de microservicios y plataformas web",
+          "technologies": ["Java", "Microservicios", "Desarrollo Web"]
+        },
+        {
+          "name": "MyGrowth",
+          "description": "Implementación de microservicios estratégicos para mejorar evaluaciones y experiencia de usuario",
+          "technologies": ["Java", "Microservicios", "UX"]
+        },
+        {
+          "name": "Disney",
+          "description": "Co-desarrollo de infraestructura de procesamiento por lotes para facturación y pagos de cine",
+          "technologies": ["Java", "Procesamiento por lotes", "Sistemas de Pago"]
+        },
+        {
+          "name": "HSBC",
+          "description": "Expansión de microservicios y modernización de plataforma bancaria digital",
+          "technologies": ["Java", "Microservicios", "Banca Digital"]
+        }
+      ]
+    },
+    {
+      "title": "Java Ssr Developer",
+      "company": "GFT Technologies",
+      "period": "Mar 2017 - Abr 2019",
+      "icon": ["fas", "briefcase"],
+      "projects": [
+        {
+          "name": "Glomo",
+          "description": "Migración de la plataforma bancaria de BBVA Bancomer de una arquitectura monolítica a microservicios utilizando CXF Spring Framework y SDLO de BBVA, aplicando principios SOLID e integración continua",
+          "technologies": ["Java", "CXF Spring Framework", "BBVA SDLO", "Microservicios", "CI/CD"]
+        },
+        {
+          "name": "Claims",
+          "description": "Soporte de primer nivel para sistema de reclamaciones de BBVA y desarrollo de APIs centrales para el motor y sistema de reclamaciones",
+          "technologies": ["Java", "Desarrollo de API", "Soporte"]
+        }
+      ]
+    },
+    {
+      "title": "Especialista Java",
+      "company": "Telcel Radio Dipsa",
+      "period": "Jun 2015 - Mar 2017",
+      "icon": ["fas", "mobile-alt"],
+      "projects": [
+        {
+          "name": "Telcel Blue Circle",
+          "description": "Reconstrucción del motor de campañas reactivas y sistema de recompensas Telcel Blue Circle",
+          "technologies": ["Java", "Programación Reactiva", "Sistema de Recompensas"]
+        }
+      ]
+    },
+    {
+      "title": "Desarrollador Java",
+      "company": "Grupo Salinas Dinero Expres",
+      "period": "Abr 2015 - Jul 2015",
+      "icon": ["fas", "money-bill-wave"],
+      "projects": [
+        {
+          "name": "Sistema de Transferencia de Dinero",
+          "description": "Migración de servicios web de transferencias de dinero (SOA) de Oracle Application Server a JBoss EAP",
+          "technologies": ["Java", "SOA", "Oracle Application Server", "JBoss EAP"]
+        }
+      ]
+    },
+    {
+      "title": "Desarrollador Java Jr",
+      "company": "MXD Solutions",
+      "period": "Jun 2014 - Abr 2015",
+      "icon": ["fas", "code"],
+      "projects": [
+        {
+          "name": "Sistema de Transferencia de Dinero",
+          "description": "Migración de servicios web de transferencias de dinero (SOA) de Oracle Application Server a JBoss EAP",
+          "technologies": ["Java", "SOA", "Oracle Application Server", "JBoss EAP"]
+        }
+      ]
+    },
+    {
+      "title": "Desarrollador Web",
+      "company": "Remodelaciones Industriales",
+      "period": "Ene 2013 - Ago 2013",
+      "icon": ["fas", "laptop-code"],
+      "projects": [
+        {
+          "name": "Sistema de Gestión de Clientes",
+          "description": "Desarrollo, mantenimiento y soporte del CMS para la gestión de clientes",
+          "technologies": ["PHP", "MySQL", "HTML", "CSS", "JavaScript"]
+        }
+      ]
+    }
+  ],
+  "education": {
+    "formalEducation": [
+      {
+        "degree": "Ingeniería en Sistemas Computacionales",
+        "institution": "Tecnológico de estudios superiores de Ecatepec",
+        "period": "Ago 2015 - Ago 2018"
+      },
+      {
+        "degree": "Técnico en computación",
+        "institution": "Centro de Estudios tecnológicos y de servicios número 55",
+        "period": "Jun 2005 - Ago 2008"
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Oracle Certified Associate Java",
+        "platform": "Oracle",
+        "issue_date": "Feb 2015",
+        "credential_id": "237614080OCAJSE7",
+        "icon": ["fab", "java"]
+      },
+      {
+        "title": "Scrum Fundamentals Certified",
+        "platform": "VMEdu Inc.",
+        "issue_date": "Abr 2018",
+        "credential_id": "623619",
+        "icon": ["fas", "users-cog"]
+      },
+      {
+        "title": "Introducción a Contenedores y Kubernetes",
+        "platform": "Cloudevel®",
+        "issue_date": "Sep 2020",
+        "credential_id": "RMP-atikak8a",
+        "icon": ["fab", "docker"]
+      }
+    ],
+    "courses": [
+      {
+        "title": "Expresiones Lambda y Streams en Java",
+        "platform": "Udemy",
+        "completion_date": "Dic 2023",
+        "course_id": "UC-88a6eec7-1069-43ad-896c-cdc6965d9e16",
+        "link": "https://ude.my/UC-88a6eec7-1069-43ad-896c-cdc6965d9e16",
+        "icon": ["fas", "book"]
+      },
+      {
+        "title": "Habilidades de Comunicación: Mejora Tu Comunicación",
+        "platform": "Udemy",
+        "completion_date": "Nov 2022",
+        "course_id": "UC-7f69003d-0d60-4001-92fd-96a31cc19794",
+        "link": "https://www.udemy.com/certificate/UC-7f69003d-0d60-4001-92fd-96a31cc19794",
+        "icon": ["fas", "book"]
+      },
+      {
+        "title": "Liderazgo: Habilidades Prácticas de Liderazgo",
+        "platform": "Udemy",
+        "completion_date": "Oct 2022",
+        "course_id": "UC-ac5f7a9d-a0b9-4946-a3f5-9b716187068a",
+        "link": "https://www.udemy.com/certificate/UC-ac5f7a9d-a0b9-4946-a3f5-9b716187068a",
+        "icon": ["fas", "book"]
+      },
+      {
+        "title": "Aprende a Programar con GO",
+        "platform": "Udemy",
+        "completion_date": "Jun 2022",
+        "course_id": "UC-18c498c4-d7b4-4db7-82ed-f429de7118e3",
+        "link": "https://www.udemy.com/certificate/UC-18c498c4-d7b4-4db7-82ed-f429de7118e3/",
+        "icon": ["fas", "book"]
+      },
+      {
+        "title": "Rust Avanzado: Gestión de Proyectos",
+        "platform": "LinkedIn",
+        "completion_date": "May 2022",
+        "link": "https://www.linkedin.com/learning/certificates/9cecaceaf16eedc5424645a18906233c6804aafe27e1ec79ff57bb32c094a38a",
+        "icon": ["fab", "linkedin"]
+      },
+      {
+        "title": "Guía Completa de Jakarta EE 9: Java EE 9 de Principiante a Experto 2022",
+        "platform": "Udemy",
+        "completion_date": "May 2022",
+        "course_id": "UC-766c49c2-cc32-4a65-b0c4-21c93e53fb92",
+        "link": "https://www.udemy.com/certificate/UC-766c49c2-cc32-4a65-b0c4-21c93e53fb92",
+        "icon": ["fas", "book"]
+      },
+      {
+        "title": "Microservicios con Spring Boot, Cloud y Docker",
+        "platform": "Udemy",
+        "completion_date": "May 2022",
+        "course_id": "UC-fef1b7d2-b227-417d-b6d8-604fe0251bae",
+        "link": "https://www.udemy.com/certificate/UC-fef1b7d2-b227-417d-b6d8-604fe0251bae",
+        "icon": ["fas", "book"]
+      },
+      {
+        "title": "Fundamentos de Quarkus",
+        "platform": "LinkedIn",
+        "completion_date": "May 2022",
+        "icon": ["fab", "linkedin"]
+      },
+      {
+        "title": "Consejos y Trucos de Rust",
+        "platform": "LinkedIn",
+        "completion_date": "May 2022",
+        "icon": ["fab", "linkedin"]
+      },
+      {
+        "title": "Todo Sobre Dotfiles",
+        "platform": "CodelyTV",
+        "completion_date": "Sep 2021",
+        "icon": ["fas", "tv"]
+      },
+      {
+        "title": "Guía Completa de Bases de Datos NoSQL con MongoDB y NodeJS",
+        "platform": "Mastermind",
+        "completion_date": "Jul 2021",
+        "icon": ["fas", "brain"]
+      },
+      {
+        "title": "Masterclass de Arquitectura Android",
+        "platform": "Udemy",
+        "completion_date": "May 2021",
+        "course_id": "UC-0bc51045-bf1c-45e9-95b5-ad7eeeddaa53",
+        "link": "https://www.udemy.com/certificate/UC-0bc51045-bf1c-45e9-95b5-ad7eeeddaa53",
+        "icon": ["fas", "book"]
+      },
+      {
+        "title": "Pruebas Unitarias en Android y Desarrollo Dirigido por Pruebas",
+        "platform": "Udemy",
+        "completion_date": "May 2021",
+        "course_id": "UC-8d2c8311-9295-41be-9fd0-d91c3eb381ab",
+        "link": "https://www.udemy.com/certificate/UC-8d2c8311-9295-41be-9fd0-d91c3eb381ab",
+        "icon": ["fas", "book"]
+      },
+      {
+        "title": "Primeros Pasos con Rust",
+        "platform": "Microsoft",
+        "completion_date": "May 2021",
+        "icon": ["fab", "microsoft"]
+      },
+      {
+        "title": "Masterclass Completa de Android 11 Jetpack 2021",
+        "platform": "Udemy",
+        "completion_date": "May 2021",
+        "course_id": "UC-8ddbda67-c27a-4681-ba64-9e815c4a8030",
+        "link": "https://www.udemy.com/certificate/UC-8ddbda67-c27a-4681-ba64-9e815c4a8030",
+        "icon": ["fas", "book"]
+      },
+      {
+        "title": "Fundamentos de Rust",
+        "platform": "Pluralsight",
+        "completion_date": "Abr 2021",
+        "course_id": "4127",
+        "icon": ["fas", "play-circle"]
+      },
+      {
+        "title": "Creación de Servicios RESTful con PHP/MySQL (CodeIgniter 3)",
+        "platform": "Udemy",
+        "completion_date": "Mar 2021",
+        "course_id": "UC-898bec2c-1ef3-4015-a8e5-8102e5b93984",
+        "link": "https://www.udemy.com/certificate/UC-898bec2c-1ef3-4015-a8e5-8102e5b93984",
+        "icon": ["fas", "book"]
+      },
+      {
+        "title": "Creación de Aplicaciones Móviles Offline-first con HTML5",
+        "platform": "Pluralsight",
+        "completion_date": "Mar 2021",
+        "course_id": "4127",
+        "icon": ["fas", "play-circle"]
+      },
+      {
+        "title": "Desarrollo Full Stack con Laravel y VueJS",
+        "platform": "Mastermind",
+        "completion_date": "Mar 2021",
+        "course_id": "237614080OCAJSE7",
+        "icon": ["fas", "brain"]
+      },
+      {
+        "title": "Introducción a WebAssembly y Emscripten",
+        "platform": "Udemy",
+        "completion_date": "Mar 2021",
+        "course_id": "UC-b19c663c-900a-404f-9bfe-b4d8441aa5c2",
+        "link": "https://www.udemy.com/certificate/UC-b19c663c-900a-404f-9bfe-b4d8441aa5c2",
+        "icon": ["fas", "book"]
+      }
+    ]
+  },
+  "certifications": [
+    {
+      "title": "Oracle Certified Associate Java",
+      "platform": "Oracle",
+      "issue_date": "Feb 2015",
+      "credential_id": "237614080OCAJSE7",
+      "icon": ["fab", "java"]
+    },
+    {
+      "title": "Scrum Fundamentals Certified",
+      "platform": "VMEdu Inc.",
+      "issue_date": "Abr 2018",
+      "credential_id": "623619",
+      "icon": ["fas", "users-cog"]
+    },
+    {
+      "title": "Introducción a Contenedores y Kubernetes",
+      "platform": "Cloudevel®",
+      "issue_date": "Sep 2020",
+      "credential_id": "RMP-atikak8a",
+      "icon": ["fab", "docker"]
+    }
+  ],
+  "courses": [
+    {
+      "title": "Expresiones Lambda y Streams en Java",
+      "platform": "Udemy",
+      "completion_date": "Dic 2023",
+      "icon": ["fas", "book"]
+    },
+    {
+      "title": "Habilidades de Comunicación: Mejora Tu Comunicación",
+      "platform": "Udemy",
+      "completion_date": "Nov 2022",
+      "icon": ["fas", "book"]
+    },
+    {
+      "title": "Liderazgo: Habilidades Prácticas de Liderazgo",
+      "platform": "Udemy",
+      "completion_date": "Oct 2022",
+      "icon": ["fas", "book"]
+    },
+    {
+      "title": "Aprende a Programar con GO",
+      "platform": "Udemy",
+      "completion_date": "Jun 2022",
+      "icon": ["fas", "book"]
+    },
+    {
+      "title": "Rust Avanzado: Gestión de Proyectos",
+      "platform": "LinkedIn",
+      "completion_date": "May 2022",
+      "icon": ["fab", "linkedin"]
+    }
+  ],
+
+  "skills": {
+    "categories": {
+      "programming": "Lenguajes de Programación",
+      "devFrameworks": "Frameworks de Desarrollo",
+      "testFrameworks": "Frameworks de Pruebas",
+      "databases": "Bases de Datos",
+      "cloud": "Proveedores de Nube",
+      "servers": "Servidores y Contenedores"
+    },
+    "programmingLanguages": [
+      { "name": "Java (17 y superior)", "level": "Experto", "icon": ["fab", "java"] },
+      { "name": "Kotlin", "level": "Experimentado", "icon": ["fab", "android"] },
+      { "name": "PHP", "level": "Experimentado", "icon": ["fab", "php"] },
+      { "name": "Python", "level": "Experimentado", "icon": ["fab", "python"] },
+      { "name": "JavaScript", "level": "Experimentado", "icon": ["fab", "js"] },
+      { "name": "TypeScript", "level": "Experimentado", "icon": ["fab", "js-square"] },
+      { "name": "Ruby", "level": "Hábil", "icon": ["fas", "gem"] },
+      { "name": "Rust", "level": "Hábil", "icon": ["fas", "cog"] },
+      { "name": "GoLang", "level": "Hábil", "icon": ["fas", "code"] },
+      { "name": "C#", "level": "Hábil", "icon": ["fab", "microsoft"] },
+      { "name": "C++", "level": "Hábil", "icon": ["fas", "code"] },
+      { "name": "Ziglang", "level": "Hábil", "icon": ["fas", "bolt"] },
+      { "name": "Swift", "level": "Hábil", "icon": ["fab", "apple"] }
+    ],
+    "cloudProviders": [
+      { "name": "AWS", "level": "Experimentado", "icon": ["fab", "aws"] },
+      { "name": "Google Cloud Platform", "level": "Hábil", "icon": ["fab", "google"] },
+      { "name": "Azure", "level": "Hábil", "icon": ["fab", "microsoft"] }
+    ],
+    "serversAndContainers": [
+      { "name": "Tomcat", "level": "Experimentado", "icon": ["fas", "server"] },
+      { "name": "Glassfish", "level": "Experimentado", "icon": ["fas", "fish"] },
+      { "name": "IBM WebSphere", "level": "Hábil", "icon": ["fas", "globe"] },
+      { "name": "OpenLiberty", "level": "Hábil", "icon": ["fas", "flag"] },
+      { "name": "Apache", "level": "Experimentado", "icon": ["fas", "feather"] },
+      { "name": "Payara", "level": "Hábil", "icon": ["fas", "fish"] },
+      { "name": "Jboss", "level": "Experimentado", "icon": ["fas", "fire"] },
+      { "name": "Openshift", "level": "Hábil", "icon": ["fas", "ship"] },
+      { "name": "DOCKER", "level": "Experimentado", "icon": ["fab", "docker"] },
+      { "name": "Kubernetes", "level": "Experimentado", "icon": ["fas", "dharmachakra"] }
+    ],
+    "developmentFrameworks": [
+      { "name": "Spring Framework", "level": "Muy experimentado", "icon": ["fas", "leaf"] },
+      { "name": "Quarkus", "level": "Experimentado", "icon": ["fas", "bolt"] },
+      { "name": "Helidon", "level": "Hábil", "icon": ["fas", "sun"] },
+      { "name": "Hibernate", "level": "Experimentado", "icon": ["fas", "database"] },
+      { "name": "EJB", "level": "Hábil", "icon": ["fas", "cubes"] },
+      { "name": "Apache Camel", "level": "Hábil", "icon": ["fas", "exchange-alt"] },
+      { "name": "Bootstrap", "level": "Hábil", "icon": ["fab", "bootstrap"] },
+      { "name": "Apache Kafka", "level": "Experimentado", "icon": ["fas", "stream"] },
+      { "name": "RabbitMQ", "level": "Hábil", "icon": ["fas", "envelope"] },
+      { "name": "CodeIgniter", "level": "Hábil", "icon": ["fas", "fire"] },
+      { "name": "Vue.js", "level": "Hábil", "icon": ["fab", "vuejs"] },
+      { "name": "Django", "level": "Hábil", "icon": ["fab", "python"] },
+      { "name": "Express.js", "level": "Hábil", "icon": ["fab", "node-js"] },
+      { "name": "Wordpress", "level": "Hábil", "icon": ["fab", "wordpress"] },
+      { "name": "Drupal", "level": "Hábil", "icon": ["fab", "drupal"] },
+      { "name": "Foundation", "level": "Hábil", "icon": ["fas", "layer-group"] },
+      { "name": "Angular", "level": "Hábil", "icon": ["fab", "angular"] },
+      { "name": "jQuery", "level": "Hábil", "icon": ["fab", "js"] },
+      { "name": "Knockout", "level": "Hábil", "icon": ["fas", "box-open"] },
+      { "name": "Cordova", "level": "Hábil", "icon": ["fab", "android"] },
+      { "name": "Primefaces", "level": "Hábil", "icon": ["fas", "window-maximize"] },
+      { "name": "Flask", "level": "Hábil", "icon": ["fas", "flask"] },
+      { "name": "Gatsby", "level": "Hábil", "icon": ["fab", "react"] },
+      { "name": "Laravel", "level": "Hábil", "icon": ["fab", "laravel"] },
+      { "name": "React", "level": "Hábil", "icon": ["fab", "react"] },
+      { "name": "Next.js", "level": "Hábil", "icon": ["fab", "react"] }
+    ],
+    "testingFrameworks": [
+      { "name": "JUnit", "level": "Experimentado", "icon": ["fas", "vial"] },
+      { "name": "Mockito", "level": "Experimentado", "icon": ["fas", "vials"] },
+      { "name": "Selenium", "level": "Hábil", "icon": ["fas", "atom"] },
+      { "name": "Jest", "level": "Hábil", "icon": ["fab", "js"] },
+      { "name": "Cypress", "level": "Hábil", "icon": ["fas", "check-circle"] },
+      { "name": "Mocha", "level": "Hábil", "icon": ["fas", "coffee"] },
+      { "name": "Chai", "level": "Hábil", "icon": ["fas", "mug-hot"] },
+      { "name": "TestNG", "level": "Hábil", "icon": ["fas", "check-double"] },
+      { "name": "Cucumber", "level": "Hábil", "icon": ["fas", "leaf"] },
+      { "name": "Postman", "level": "Experimentado", "icon": ["fas", "paper-plane"] },
+      { "name": "Swagger", "level": "Experimentado", "icon": ["fas", "file-code"] }
+    ],
+    "monitoringTools": [
+      { "name": "ELK Stack", "level": "Experimentado", "icon": ["fas", "search"] },
+      { "name": "Grafana", "level": "Hábil", "icon": ["fas", "chart-line"] },
+      { "name": "Prometheus", "level": "Hábil", "icon": ["fas", "fire"] },
+      { "name": "New Relic", "level": "Hábil", "icon": ["fas", "tachometer-alt"] },
+      { "name": "Datadog", "level": "Hábil", "icon": ["fas", "dog"] },
+      { "name": "Splunk", "level": "Hábil", "icon": ["fas", "search"] }
+    ],
+    "architectureAndMethodologies": [
+      { "name": "Arquitectura orientada a eventos", "level": "Experimentado" },
+      { "name": "ESB", "level": "Hábil" },
+      { "name": "Nativo en la nube", "level": "Experimentado" },
+      { "name": "Arquitectura limpia", "level": "Experimentado" },
+      { "name": "Arquitectura de microservicios", "level": "Muy experimentado" },
+      { "name": "Arquitectura en cebolla", "level": "Experimentado" },
+      { "name": "MV*", "level": "Experimentado" },
+      { "name": "Arquitectura C4D", "level": "Hábil" }
+    ],
+    "projectManagement": [
+      { "name": "Scrum", "level": "Experimentado" },
+      { "name": "Kanban", "level": "Experimentado" },
+      { "name": "SAFe", "level": "Hábil" },
+      { "name": "RUP", "level": "Hábil" }
+    ],
+    "aiAndLLMs": [
+      { "name": "MagnifAI", "level": "Hábil", "icon": ["fas", "search-plus"] },
+      { "name": "Mistral", "level": "Hábil", "icon": ["fas", "wind"] },
+      { "name": "Hugging Face", "level": "Hábil", "icon": ["fas", "smile-beam"] },
+      { "name": "Vikuna", "level": "Hábil", "icon": ["fas", "paw"] },
+      { "name": "Bloom", "level": "Hábil", "icon": ["fas", "seedling"] },
+      { "name": "Stable Diffusion", "level": "Hábil", "icon": ["fas", "paint-brush"] },
+      { "name": "Midjourney", "level": "Hábil", "icon": ["fas", "mountain"] },
+      { "name": "LLama2", "level": "Hábil", "icon": ["fas", "comment-dots"] },
+      { "name": "RAG", "level": "Hábil", "icon": ["fas", "book"] },
+      { "name": "OpenAI (ChatGPT)", "level": "Hábil", "icon": ["fas", "robot"] },
+      { "name": "Copilot", "level": "Hábil", "icon": ["fas", "user-astronaut"] },
+      { "name": "Qwen", "level": "Hábil", "icon": ["fas", "brain"] },
+      { "name": "DeepSeek", "level": "Hábil", "icon": ["fas", "search"] },
+      { "name": "Ollama", "level": "Hábil", "icon": ["fas", "server"] },
+      { "name": "OllamaFactory", "level": "Hábil", "icon": ["fas", "industry"] },
+      { "name": "Docker Model Runner", "level": "Hábil", "icon": ["fab", "docker"] },
+      { "name": "SmallVM", "level": "Hábil", "icon": ["fas", "microchip"] },
+      { "name": "OpenManus", "level": "Hábil", "icon": ["fas", "hand-paper"] },
+      { "name": "Agent Development Kit", "level": "Hábil", "icon": ["fas", "toolbox"] },
+      { "name": "Gemini", "level": "Hábil", "icon": ["fas", "gem"] }
+    ],
+    "databases": [
+      { "name": "MySQL", "level": "Experimentado", "icon": ["fas", "database"] },
+      { "name": "PostgreSQL", "level": "Experimentado", "icon": ["fas", "database"] },
+      { "name": "MongoDB", "level": "Hábil", "icon": ["fas", "leaf"] },
+      { "name": "Oracle", "level": "Experimentado", "icon": ["fas", "database"] },
+      { "name": "SQL Server", "level": "Hábil", "icon": ["fab", "microsoft"] },
+      { "name": "Redis", "level": "Hábil", "icon": ["fas", "server"] },
+      { "name": "Cassandra", "level": "Hábil", "icon": ["fas", "database"] },
+      { "name": "DynamoDB", "level": "Hábil", "icon": ["fab", "aws"] },
+      { "name": "Firebase", "level": "Hábil", "icon": ["fas", "fire"] },
+      { "name": "Elasticsearch", "level": "Hábil", "icon": ["fas", "search"] }
+    ],
+    "versionControl": [
+      { "name": "Git", "level": "Experimentado", "icon": ["fab", "git-alt"] },
+      { "name": "SVN", "level": "Experimentado", "icon": ["fas", "code-branch"] },
+      { "name": "Mercurial", "level": "Experimentado", "icon": ["fas", "code-branch"] },
+      { "name": "GitHub", "level": "Experimentado", "icon": ["fab", "github"] },
+      { "name": "GitLab", "level": "Experimentado", "icon": ["fab", "gitlab"] },
+      { "name": "Bitbucket", "level": "Experimentado", "icon": ["fab", "bitbucket"] }
+    ],
+    "buildTools": [
+      { "name": "Maven", "level": "Experimentado", "icon": ["fas", "box"] },
+      { "name": "Gradle", "level": "Experimentado", "icon": ["fas", "cogs"] },
+      { "name": "npm", "level": "Experimentado", "icon": ["fab", "npm"] },
+      { "name": "Yarn", "level": "Experimentado", "icon": ["fab", "yarn"] },
+      { "name": "NuGet", "level": "Experimentado", "icon": ["fas", "box"] },
+      { "name": "Ant", "level": "Hábil", "icon": ["fas", "bug"] }
+    ],
+    "developmentTools": [
+      { "name": "IntelliJ IDEA", "level": "Experimentado", "icon": ["fas", "laptop-code"] },
+      { "name": "Eclipse", "level": "Experimentado", "icon": ["fas", "moon"] },
+      { "name": "VS Code", "level": "Experimentado", "icon": ["fas", "code"] },
+      { "name": "Jenkins", "level": "Experimentado", "icon": ["fas", "cogs"] },
+      { "name": "GitLab CI/CD", "level": "Experimentado", "icon": ["fab", "gitlab"] },
+      { "name": "GitHub Actions", "level": "Experimentado", "icon": ["fab", "github"] },
+      { "name": "Jira", "level": "Experimentado", "icon": ["fab", "jira"] },
+      { "name": "Confluence", "level": "Experimentado", "icon": ["fas", "book"] },
+      { "name": "Postman", "level": "Experimentado", "icon": ["fas", "paper-plane"] },
+      { "name": "SonarQube", "level": "Experimentado", "icon": ["fas", "check-circle"] }
+    ]
+  },
+  "softSkillsSection": {
+    "title": "Habilidades Blandas",
+    "description": "Atributos personales clave que complementan mi experiencia técnica:"
+  },
+  "softSkills": [
+    { "name": "Pensador fuera de la caja", "icon": ["fas", "lightbulb"] },
+    { "name": "Trabajo en equipo", "icon": ["fas", "users"] },
+    { "name": "Liderazgo", "icon": ["fas", "user-tie"] },
+    { "name": "Aprendiz rápido", "icon": ["fas", "book-reader"] },
+    { "name": "Adaptabilidad", "icon": ["fas", "sync-alt"] },
+    { "name": "Pensamiento crítico", "icon": ["fas", "brain"] },
+    { "name": "Resolución de problemas", "icon": ["fas", "puzzle-piece"] },
+    { "name": "Colaboración", "icon": ["fas", "handshake"] }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "navigation": {
+    "fields": ["title", "description", "icon"]
+  },
+  "locales": ["en", "es"],
+  "defaultLocale": "en"
+}
