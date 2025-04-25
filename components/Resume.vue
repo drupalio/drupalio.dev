@@ -304,39 +304,60 @@ const currentLanguage = ref(locale.value)
 // Define t and tm functions
 const t = (key) => {
   try {
-    return $i18n.global.t(key)
+    // Intenta usar la función t de vue-i18n
+    const result = $i18n.global.t(key)
+    if (result === key) {
+      // Si devuelve la misma clave, es posible que no se haya encontrado la traducción
+      // Intentamos acceder directamente
+      return getNestedValue(key, false)
+    }
+    return result
   } catch (error) {
     console.error(`Error translating key: ${key}`, error)
     // Fallback to direct access
-    const parts = key.split('.')
-    let result = $i18n.global.messages.value[locale.value]
-    for (const part of parts) {
-      if (result && result[part]) {
-        result = result[part]
-      } else {
-        return key
-      }
-    }
-    return typeof result === 'string' ? result : key
+    return getNestedValue(key, false)
   }
 }
 
 const tm = (key) => {
   try {
-    return $i18n.global.tm(key)
+    // Intenta usar la función tm de vue-i18n
+    const result = $i18n.global.tm(key)
+    if (Object.keys(result).length === 0) {
+      // Si devuelve un objeto vacío, es posible que no se haya encontrado la traducción
+      // Intentamos acceder directamente
+      return getNestedValue(key, true)
+    }
+    return result
   } catch (error) {
     console.error(`Error translating key: ${key}`, error)
     // Fallback to direct access
-    const parts = key.split('.')
-    let result = $i18n.global.messages.value[locale.value]
-    for (const part of parts) {
-      if (result && result[part]) {
-        result = result[part]
-      } else {
-        return {}
-      }
+    return getNestedValue(key, true)
+  }
+}
+
+// Función auxiliar para acceder a valores anidados en el objeto de mensajes
+const getNestedValue = (key, isObject) => {
+  console.log(`Accessing nested value for key: ${key}, isObject: ${isObject}`)
+  const parts = key.split('.')
+  let result = $i18n.global.messages.value[locale.value]
+
+  // Imprimir el objeto de mensajes para depuración
+  console.log('Messages:', JSON.stringify(result).substring(0, 200) + '...')
+
+  for (const part of parts) {
+    if (result && result[part] !== undefined) {
+      result = result[part]
+    } else {
+      console.error(`Part ${part} not found in path ${key}`)
+      return isObject ? {} : key
     }
+  }
+
+  if (isObject) {
     return Array.isArray(result) || typeof result === 'object' ? result : {}
+  } else {
+    return typeof result === 'string' ? result : key
   }
 }
 const isDarkTheme = ref(true)
