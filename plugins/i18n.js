@@ -60,25 +60,134 @@ export default defineNuxtPlugin(async ({ vueApp }) => {
             "technologies": ["Angular", "TypeScript", "UI/UX", "CSS", "HTML"]
           }
         ]
-      },
-      {
-        "title": "Java Microservices Developer",
-        "company": "Globant",
-        "period": "May 2019 - Feb 2024",
-        "icon": ["fas", "microchip"],
-        "projects": [
-          {
-            "name": "QuizzerA",
-            "description": "Customized GPT for key projects and developed an interview follow-up system to enhance feedback and efficiency",
-            "technologies": ["Java", "Spring Boot", "GPT", "AI"]
-          },
-          {
-            "name": "Banco Nacional del Peru",
-            "description": "Modernized online banking with microservices using the YAPE framework",
-            "technologies": ["Java", "Microservices", "YAPE Framework"]
-          }
-        ]
-      }
+      },  {
+      "title": "Java Microservices Developer",
+      "company": "Globant",
+      "period": "May 2019 - Feb 2024",
+      "icon": ["fas", "microchip"],
+      "projects": [
+        {
+          "name": "QuizzerA",
+          "description": "Customized GPT for key projects and developed an interview follow-up system to enhance feedback and efficiency",
+          "technologies": ["Java", "Spring Boot", "GPT", "AI"]
+        },
+        {
+          "name": "Banco Nacional del Peru",
+          "description": "Modernized online banking with microservices using the YAPE framework",
+          "technologies": ["Java", "Microservices", "YAPE Framework"]
+        },
+        {
+          "name": "Round Feather",
+          "description": "Built and maintained financial microservices with Quarkus and Kubernetes on Google Cloud, automating deployments with GitHub Actions",
+          "technologies": ["Java", "Quarkus", "Kubernetes", "Google Cloud", "GitHub Actions"]
+        },
+        {
+          "name": "Santander",
+          "description": "Led the transition of its banking platform to microservices architecture with Spring Boot",
+          "technologies": ["Java", "Spring Boot", "Microservices"]
+        },
+        {
+          "name": "Expedia (Despegar & Hotels.com)",
+          "description": "Ensured seamless integration and optimized microservices performance",
+          "technologies": ["Java", "Microservices", "Performance Optimization"]
+        },
+        {
+          "name": "AEPE Energy",
+          "description": "Optimized CI/CD processes, maintenance and scalable architecture",
+          "technologies": ["Java", "CI/CD", "DevOps"]
+        },
+        {
+          "name": "Commodity Finance",
+          "description": "Maintained microservices and web platforms",
+          "technologies": ["Java", "Microservices", "Web Development"]
+        },
+        {
+          "name": "MyGrowth",
+          "description": "Implemented strategic microservices to improve assessments and user experience",
+          "technologies": ["Java", "Microservices", "UX"]
+        },
+        {
+          "name": "Disney",
+          "description": "Co-developed batch processing infrastructure for invoicing and cinema payments",
+          "technologies": ["Java", "Batch Processing", "Payment Systems"]
+        },
+        {
+          "name": "HSBC",
+          "description": "Expanded microservices and modernized its digital banking platform",
+          "technologies": ["Java", "Microservices", "Digital Banking"]
+        }
+      ]
+    },
+    {
+      "title": "Java Ssr Developer",
+      "company": "GFT Technologies",
+      "period": "Mar 2017 - Apr 2019",
+      "icon": ["fas", "briefcase"],
+      "projects": [
+        {
+          "name": "Glomo",
+          "description": "Migrated BBVA Bancomer's banking platform from a monolithic to a microservices architecture using CXF Spring Framework and BBVA's SDLO, applying SOLID principles and continuous integration",
+          "technologies": ["Java", "CXF Spring Framework", "BBVA SDLO", "Microservices", "CI/CD"]
+        },
+        {
+          "name": "Claims",
+          "description": "Provided first-level support for BBVA's claims system and developed core APIs for the claims engine/core system",
+          "technologies": ["Java", "API Development", "Support"]
+        }
+      ]
+    },
+    {
+      "title": "Java Specialist",
+      "company": "Telcel Radio Dipsa",
+      "period": "Jun 2015 - Mar 2017",
+      "icon": ["fas", "mobile-alt"],
+      "projects": [
+        {
+          "name": "Telcel Blue Circle",
+          "description": "Rebuilt the reactive campaigns engine and Telcel Blue Circle rewards system ",
+          "technologies": ["Java", "Reactive Programming", "Rewards System"]
+        }
+      ]
+    },
+    {
+      "title": "Java Developer",
+      "company": "Grupo Salinas Dinero Expres",
+      "period": "Apr 2015 - Jul 2015",
+      "icon": ["fas", "money-bill-wave"],
+      "projects": [
+        {
+          "name": "Money Transfer System",
+          "description": "Migrated Money Transfer WebServices (SOA) from Oracle Application Server to JBoss EAP",
+          "technologies": ["Java", "SOA", "Oracle Application Server", "JBoss EAP"]
+        }
+      ]
+    },
+    {
+      "title": "Java Developer Jr",
+      "company": "MXD Solutions",
+      "period": "Jun 2014 - Apr 2015",
+      "icon": ["fas", "code"],
+      "projects": [
+        {
+          "name": "Money Transfer System",
+          "description": "Migrated Money Transfer WebServices (SOA) from Oracle Application Server to JBoss EAP",
+          "technologies": ["Java", "SOA", "Oracle Application Server", "JBoss EAP"]
+        }
+      ]
+    },
+    {
+      "title": "Web Developer",
+      "company": "Remodelaciones Industriales",
+      "period": "Jan 2013 - Aug 2013",
+      "icon": ["fas", "laptop-code"],
+      "projects": [
+        {
+          "name": "Client Management System",
+          "description": "Developed, maintained and supported the CMS for client management",
+          "technologies": ["PHP", "MySQL", "HTML", "CSS", "JavaScript"]
+        }
+      ]
+    }
     ],
     "education": {
       "formalEducation": [
