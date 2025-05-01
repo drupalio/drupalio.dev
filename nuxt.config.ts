@@ -12,5 +12,15 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/test-utils',
     '@nuxt/ui'
-  ]
+  ],
+
+  alias: {
+    '@locales': '/locales'
+  },
+
+  vite: {
+    optimizeDeps: {
+      include: ['vue-i18n']
+    }
+  }
 })

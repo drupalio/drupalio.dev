@@ -105,29 +105,31 @@
         </div>
 
         <!-- Controles laterales -->
-        <button @click.prevent="prevWorkSlideWithTransition" class="carousel-control-side prev">
-          <div class="control-icon">
-            <font-awesome-icon :icon="['fas', 'chevron-left']" />
-          </div>
-        </button>
-        <button @click.prevent="nextWorkSlideWithTransition" class="carousel-control-side next">
-          <div class="control-icon">
-            <font-awesome-icon :icon="['fas', 'chevron-right']" />
-          </div>
-        </button>
+        <client-only>
+          <button @click.prevent="prevWorkSlideWithTransition" class="carousel-control-side prev">
+            <div class="control-icon">
+              <font-awesome-icon :icon="['fas', 'chevron-left']" />
+            </div>
+          </button>
+          <button @click.prevent="nextWorkSlideWithTransition" class="carousel-control-side next">
+            <div class="control-icon">
+              <font-awesome-icon :icon="['fas', 'chevron-right']" />
+            </div>
+          </button>
 
-        <!-- Indicadores que se muestran temporalmente -->
-        <div :class="['carousel-indicators-floating', { 'visible': isWorkIndicatorsVisible }]">
-          <div class="carousel-progress">
-            <span class="progress-number">{{ Math.round((currentWorkSlide + 1) / workExperience.length * 100) }}%</span>
+          <!-- Indicadores que se muestran temporalmente -->
+          <div :class="['carousel-indicators-floating', { 'visible': isWorkIndicatorsVisible }]">
+            <div class="carousel-progress">
+              <span class="progress-number">{{ Math.round((currentWorkSlide + 1) / (workExperience?.value?.length || 1) * 100) }}%</span>
+            </div>
+            <div class="indicators-container">
+              <span v-for="(_, index) in (workExperience?.value || [])"
+                    :key="index"
+                    :class="['indicator', { 'active': currentWorkSlide === index }]"
+                    @click.prevent="goToWorkSlideWithTransition(index)"></span>
+            </div>
           </div>
-          <div class="indicators-container">
-            <span v-for="(_, index) in workExperience"
-                  :key="index"
-                  :class="['indicator', { 'active': currentWorkSlide === index }]"
-                  @click.prevent="goToWorkSlideWithTransition(index)"></span>
-          </div>
-        </div>
+        </client-only>
       </div>
     </section>
 
@@ -238,29 +240,33 @@
         </div>
 
         <!-- Controles laterales -->
-        <button @click.prevent="prevSkillsSlideWithTransition" class="carousel-control-side prev">
-          <div class="control-icon">
-            <font-awesome-icon :icon="['fas', 'chevron-left']" />
-          </div>
-        </button>
-        <button @click.prevent="nextSkillsSlideWithTransition" class="carousel-control-side next">
-          <div class="control-icon">
-            <font-awesome-icon :icon="['fas', 'chevron-right']" />
-          </div>
-        </button>
+        <client-only>
+          <button @click.prevent="prevSkillsSlideWithTransition" class="carousel-control-side prev">
+            <div class="control-icon">
+              <font-awesome-icon :icon="['fas', 'chevron-left']" />
+            </div>
+          </button>
+          <button @click.prevent="nextSkillsSlideWithTransition" class="carousel-control-side next">
+            <div class="control-icon">
+              <font-awesome-icon :icon="['fas', 'chevron-right']" />
+            </div>
+          </button>
+        </client-only>
 
         <!-- Indicadores que se muestran temporalmente -->
-        <div :class="['carousel-indicators-floating', { 'visible': isSkillsIndicatorsVisible }]">
-          <div class="carousel-progress">
-            <span class="progress-number">{{ Math.round((currentSkillsSlide + 1) / skillCategories.length * 100) }}%</span>
+        <client-only>
+          <div :class="['carousel-indicators-floating', { 'visible': isSkillsIndicatorsVisible }]">
+            <div class="carousel-progress">
+              <span class="progress-number">{{ Math.round((currentSkillsSlide + 1) / (skillCategories.length || 1) * 100) }}%</span>
+            </div>
+            <div class="indicators-container">
+              <span v-for="(category, index) in skillCategories"
+                    :key="category.id"
+                    :class="['indicator', { 'active': currentSkillsSlide === index }]"
+                    @click.prevent="goToSkillsSlideWithTransition(index)"></span>
+            </div>
           </div>
-          <div class="indicators-container">
-            <span v-for="(category, index) in skillCategories"
-                  :key="category.id"
-                  :class="['indicator', { 'active': currentSkillsSlide === index }]"
-                  @click.prevent="goToSkillsSlideWithTransition(index)"></span>
-          </div>
-        </div>
+        </client-only>
       </div>
     </section>
 
@@ -303,6 +309,11 @@ const currentLanguage = ref(locale.value)
 
 // Define t and tm functions
 const t = (key) => {
+  if (!$i18n || !$i18n.global) {
+    console.error('i18n not available')
+    return key
+  }
+
   try {
     // Intenta usar la función t de vue-i18n
     const result = $i18n.global.t(key)
@@ -320,10 +331,15 @@ const t = (key) => {
 }
 
 const tm = (key) => {
+  if (!$i18n || !$i18n.global) {
+    console.error('i18n not available')
+    return {}
+  }
+
   try {
     // Intenta usar la función tm de vue-i18n
     const result = $i18n.global.tm(key)
-    if (Object.keys(result).length === 0) {
+    if (!result || Object.keys(result).length === 0) {
       // Si devuelve un objeto vacío, es posible que no se haya encontrado la traducción
       // Intentamos acceder directamente
       return getNestedValue(key, true)
@@ -338,12 +354,22 @@ const tm = (key) => {
 
 // Función auxiliar para acceder a valores anidados en el objeto de mensajes
 const getNestedValue = (key, isObject) => {
+  if (!$i18n || !$i18n.global || !$i18n.global.messages || !$i18n.global.messages.value) {
+    console.error('i18n messages not available')
+    return isObject ? {} : key
+  }
+
   console.log(`Accessing nested value for key: ${key}, isObject: ${isObject}`)
   const parts = key.split('.')
   let result = $i18n.global.messages.value[locale.value]
 
+  if (!result) {
+    console.error(`No messages found for locale: ${locale.value}`)
+    return isObject ? {} : key
+  }
+
   // Imprimir el objeto de mensajes para depuración
-  console.log('Messages:', JSON.stringify(result).substring(0, 200) + '...')
+  console.log('Messages keys:', Object.keys(result))
 
   for (const part of parts) {
     if (result && result[part] !== undefined) {
@@ -380,6 +406,8 @@ const toggleShowAllCourses = () => {
 
 // Métodos para controlar el carrusel de experiencia laboral con transición
 const showWorkIndicators = () => {
+  if (process.server) return;
+
   isWorkIndicatorsVisible.value = true
 
   // Limpiar el temporizador anterior si existe
@@ -394,6 +422,8 @@ const showWorkIndicators = () => {
 }
 
 const nextWorkSlideWithTransition = () => {
+  if (process.server) return;
+
   // Si ya está en transición, no hacer nada
   if (isWorkTransitioning.value) return
 
@@ -401,7 +431,8 @@ const nextWorkSlideWithTransition = () => {
   showWorkIndicators()
 
   // Cambiar inmediatamente el slide
-  if (currentWorkSlide.value < workExperience.value.length - 1) {
+  const length = workExperience?.value?.length || 0
+  if (currentWorkSlide.value < length - 1) {
     currentWorkSlide.value++
   } else {
     currentWorkSlide.value = 0
@@ -414,6 +445,8 @@ const nextWorkSlideWithTransition = () => {
 }
 
 const prevWorkSlideWithTransition = () => {
+  if (process.server) return;
+
   // Si ya está en transición, no hacer nada
   if (isWorkTransitioning.value) return
 
@@ -421,10 +454,11 @@ const prevWorkSlideWithTransition = () => {
   showWorkIndicators()
 
   // Cambiar inmediatamente el slide
+  const length = workExperience?.value?.length || 0
   if (currentWorkSlide.value > 0) {
     currentWorkSlide.value--
   } else {
-    currentWorkSlide.value = workExperience.value.length - 1
+    currentWorkSlide.value = Math.max(0, length - 1)
   }
 
   // Restablecer el estado de transición después de un tiempo
@@ -434,6 +468,8 @@ const prevWorkSlideWithTransition = () => {
 }
 
 const goToWorkSlideWithTransition = (index) => {
+  if (process.server) return;
+
   // Si ya está en transición o es el mismo slide, no hacer nada
   if (isWorkTransitioning.value || index === currentWorkSlide.value) return
 
@@ -450,14 +486,30 @@ const goToWorkSlideWithTransition = (index) => {
 }
 
 // Definir las categorías de habilidades directamente en el componente
-const skillCategories = [
-  { id: 'programmingLanguages', title: 'Programming Languages', data: 'programmingLanguages' },
-  { id: 'developmentFrameworks', title: 'Development Frameworks', data: 'developmentFrameworks' },
-  { id: 'testingFrameworks', title: 'Testing Frameworks', data: 'testingFrameworks' },
-  { id: 'databases', title: 'Databases', data: 'databases' },
-  { id: 'cloudProviders', title: 'Cloud Providers', data: 'cloudProviders' },
-  { id: 'serversAndContainers', title: 'Servers & Containers', data: 'serversAndContainers' }
-]
+const skillCategories = computed(() => {
+  // Proporcionar un valor por defecto para el servidor
+  if (process.server) {
+    return [
+      { id: 'programmingLanguages', title: 'Programming Languages', data: 'programmingLanguages' }
+    ]
+  }
+
+  return [
+    { id: 'programmingLanguages', title: currentLanguage.value === 'en' ? 'Programming Languages' : 'Lenguajes de Programación', data: 'programmingLanguages' },
+    { id: 'developmentFrameworks', title: currentLanguage.value === 'en' ? 'Development Frameworks' : 'Frameworks de Desarrollo', data: 'developmentFrameworks' },
+    { id: 'testingFrameworks', title: currentLanguage.value === 'en' ? 'Testing Frameworks' : 'Frameworks de Pruebas', data: 'testingFrameworks' },
+    { id: 'databases', title: currentLanguage.value === 'en' ? 'Databases' : 'Bases de Datos', data: 'databases' },
+    { id: 'cloudProviders', title: currentLanguage.value === 'en' ? 'Cloud Providers' : 'Proveedores de Nube', data: 'cloudProviders' },
+    { id: 'serversAndContainers', title: currentLanguage.value === 'en' ? 'Servers & Containers' : 'Servidores y Contenedores', data: 'serversAndContainers' },
+    { id: 'monitoringTools', title: currentLanguage.value === 'en' ? 'Monitoring Tools' : 'Herramientas de Monitoreo', data: 'monitoringTools' },
+    { id: 'architectureAndMethodologies', title: currentLanguage.value === 'en' ? 'Architecture & Methodologies' : 'Arquitectura y Metodologías', data: 'architectureAndMethodologies' },
+    { id: 'projectManagement', title: currentLanguage.value === 'en' ? 'Project Management' : 'Gestión de Proyectos', data: 'projectManagement' },
+    { id: 'aiAndLLMs', title: currentLanguage.value === 'en' ? 'AI & LLMs' : 'IA y LLMs', data: 'aiAndLLMs' },
+    { id: 'versionControl', title: currentLanguage.value === 'en' ? 'Version Control' : 'Control de Versiones', data: 'versionControl' },
+    { id: 'buildTools', title: currentLanguage.value === 'en' ? 'Build Tools' : 'Herramientas de Construcción', data: 'buildTools' },
+    { id: 'developmentTools', title: currentLanguage.value === 'en' ? 'Development Tools' : 'Herramientas de Desarrollo', data: 'developmentTools' }
+  ]
+})
 
 // Ya no necesitamos skillCategoriesLength porque accedemos directamente a skillCategories.length
 
@@ -465,6 +517,8 @@ const skillCategories = [
 
 // Métodos para controlar el carrusel de habilidades con transición
 const showSkillsIndicators = () => {
+  if (process.server) return;
+
   isSkillsIndicatorsVisible.value = true
 
   // Limpiar el temporizador anterior si existe
@@ -479,6 +533,8 @@ const showSkillsIndicators = () => {
 }
 
 const nextSkillsSlideWithTransition = () => {
+  if (process.server) return;
+
   // Si ya está en transición, no hacer nada
   if (isSkillsTransitioning.value) return
 
@@ -486,8 +542,8 @@ const nextSkillsSlideWithTransition = () => {
   showSkillsIndicators()
 
   // Cambiar inmediatamente el slide
-  console.log('Avanzando slide, actual:', currentSkillsSlide.value, 'total:', skillCategories.length)
-  if (currentSkillsSlide.value < skillCategories.length - 1) {
+  console.log('Avanzando slide, actual:', currentSkillsSlide.value, 'total:', skillCategories.value.length)
+  if (currentSkillsSlide.value < skillCategories.value.length - 1) {
     currentSkillsSlide.value++
   } else {
     currentSkillsSlide.value = 0
@@ -501,6 +557,8 @@ const nextSkillsSlideWithTransition = () => {
 }
 
 const prevSkillsSlideWithTransition = () => {
+  if (process.server) return;
+
   // Si ya está en transición, no hacer nada
   if (isSkillsTransitioning.value) return
 
@@ -508,11 +566,11 @@ const prevSkillsSlideWithTransition = () => {
   showSkillsIndicators()
 
   // Cambiar inmediatamente el slide
-  console.log('Retrocediendo slide, actual:', currentSkillsSlide.value, 'total:', skillCategories.length)
+  console.log('Retrocediendo slide, actual:', currentSkillsSlide.value, 'total:', skillCategories.value.length)
   if (currentSkillsSlide.value > 0) {
     currentSkillsSlide.value--
   } else {
-    currentSkillsSlide.value = skillCategories.length - 1
+    currentSkillsSlide.value = skillCategories.value.length - 1
   }
   console.log('Nuevo slide:', currentSkillsSlide.value)
 
@@ -523,6 +581,8 @@ const prevSkillsSlideWithTransition = () => {
 }
 
 const goToSkillsSlideWithTransition = (index) => {
+  if (process.server) return;
+
   // Si ya está en transición o es el mismo slide, no hacer nada
   if (isSkillsTransitioning.value || index === currentSkillsSlide.value) return
 
@@ -543,7 +603,19 @@ const goToSkillsSlideWithTransition = (index) => {
 // Función para obtener los datos de habilidades de forma dinámica
 const getSkillsData = (dataKey) => {
   // Acceder directamente a los datos del JSON
+  console.log(`Getting skills data for key: skills.${dataKey}`)
+
+  // Imprimir todas las claves disponibles en skills para depuración
+  const allSkills = tm('skills')
+  console.log('All skills keys:', allSkills ? Object.keys(allSkills) : 'No skills found')
+
   const skills = tm(`skills.${dataKey}`)
+  console.log(`Skills data for ${dataKey}:`, skills)
+
+  if (!Array.isArray(skills) || skills.length === 0) {
+    console.error(`No skills data found for ${dataKey}`)
+  }
+
   return Array.isArray(skills) ? skills : []
 }
 
@@ -562,6 +634,11 @@ const socialLinks = computed(() => {
 })
 
 const workExperience = computed(() => {
+  // Proporcionar un valor por defecto para el servidor
+  if (process.server) {
+    return [{ title: 'Default', company: 'Default', period: 'Default' }]
+  }
+
   const experience = tm('workExperience')
   return Array.isArray(experience) ? experience : []
 })
@@ -585,14 +662,15 @@ const educationCourses = computed(() => {
   return Array.isArray(courses) ? courses : []
 })
 
+// Eliminada definición duplicada de formalEducation
+
+// Definición de formalEducation
 const formalEducation = computed(() => {
-  const education = educationData.value?.formalEducation
+  const education = tm('education.formalEducation')
   return Array.isArray(education) ? education : []
 })
 
-// Las propiedades computadas para las habilidades se han eliminado
-// ya que ahora accedemos directamente a los datos del JSON
-
+// Definición de softSkills
 const softSkills = computed(() => {
   const skills = tm('softSkills')
   return Array.isArray(skills) ? skills : []
@@ -645,194 +723,13 @@ const printToPdf = () => {
 
 // Función para generar y descargar el PDF con formato Harvard
 const generateHarvardPDF = () => {
-  if (!process.client) return;
-  // Crear un elemento div temporal para contener el CV de Harvard
-  const tempDiv = document.createElement('div')
-  tempDiv.id = 'harvard-cv-container'
-  tempDiv.style.width = '8.5in'
-  tempDiv.style.padding = '0'
-  tempDiv.style.backgroundColor = 'white'
-  tempDiv.style.color = 'black'
-  tempDiv.style.fontFamily = 'Calibri, Arial, sans-serif'
-
-  // Generar HTML directamente
-  const name = t('personalInfo.name')
-  const title = t('personalInfo.title')
-  const summary = t('summary.summaryText')
-
-  // Crear HTML para el CV de Harvard
-  // Usar el mismo padding para ambos idiomas
-  const padding = '1in'
-
-  let htmlContent = `
-    <div style="padding: ${padding}; font-family: Calibri, Arial, sans-serif; color: black; background-color: white; line-height: 1.4; max-width: 8.5in; margin: 0 auto; box-sizing: border-box; border-top: 4px solid #333; border-bottom: 4px solid #333; position: relative;">
-      <!-- Bordes laterales decorativos -->
-      <div style="position: absolute; top: 0; left: 0.25in; bottom: 0; border-left: 1px solid #999; z-index: 1;"></div>
-      <div style="position: absolute; top: 0; right: 0.25in; bottom: 0; border-left: 1px solid #999; z-index: 1;"></div>
-      <!-- Encabezado -->
-      <div style="text-align: center; margin-bottom: 0.5in; border-bottom: 2px solid #333; padding-bottom: 0.2in; border-top: 2px solid #333; padding-top: 0.2in;">
-        <h1 style="font-size: 24pt; margin: 0 0 0.1in 0; color: #000; font-family: Calibri, Arial, sans-serif;">${name}</h1>
-        <h2 style="font-size: 14pt; margin: 0; color: #333; font-weight: 500; font-family: Calibri, Arial, sans-serif;">${title}</h2>
-      </div>
-
-      <!-- Resumen -->
-      <div style="margin-bottom: 0.4in;">
-        <h2 style="font-size: 14pt; color: #000; border-bottom: 1px solid #333; border-top: 1px solid #333; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.15in; padding: 0.05in 0; font-family: Calibri, Arial, sans-serif;">${t('summary.title')}</h2>
-        <p style="line-height: 1.5; font-size: 11pt;">${summary}</p>
-      </div>
-
-      <!-- Experiencia Laboral -->
-      <div style="margin-bottom: 0.4in;">
-        <h2 style="font-size: 14pt; color: #000; border-bottom: 1px solid #333; border-top: 1px solid #333; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.15in; padding: 0.05in 0; font-family: Calibri, Arial, sans-serif;">${t('workExperienceSection.title')}</h2>
-
-        ${generateWorkExperienceHTML()}
-      </div>
-
-      <!-- Educación -->
-      <div style="margin-bottom: 0.4in;">
-        <h2 style="font-size: 14pt; color: #000; border-bottom: 1px solid #333; border-top: 1px solid #333; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.15in; padding: 0.05in 0; font-family: Calibri, Arial, sans-serif;">${t('educationSection.title')}</h2>
-
-        <!-- Educación Formal -->
-        <div style="margin-bottom: 0.25in;">
-          <h3 style="font-size: 12pt; color: #000; margin-bottom: 0.1in; font-weight: 600; border-bottom: 1px dotted #999; padding-bottom: 0.05in; font-family: Calibri, Arial, sans-serif;">${t('educationSection.formalEducation')}</h3>
-          ${generateFormalEducationHTML()}
-        </div>
-
-        <!-- Certificaciones -->
-        <div style="margin-bottom: 0.25in;">
-          <h3 style="font-size: 12pt; color: #000; margin-bottom: 0.1in; font-weight: 600; border-bottom: 1px dotted #999; padding-bottom: 0.05in; font-family: Calibri, Arial, sans-serif;">${t('educationSection.certifications')}</h3>
-          ${generateCertificationsHTML()}
-        </div>
-
-        <!-- Cursos -->
-        <div style="margin-bottom: 0.25in;">
-          <h3 style="font-size: 12pt; color: #000; margin-bottom: 0.1in; font-weight: 600; border-bottom: 1px dotted #999; padding-bottom: 0.05in; font-family: Calibri, Arial, sans-serif;">${t('educationSection.courses')}</h3>
-          ${generateCoursesHTML()}
-        </div>
-      </div>
-
-      <!-- Habilidades -->
-      <div style="margin-bottom: 0.4in;">
-        <h2 style="font-size: 14pt; color: #000; border-bottom: 1px solid #333; border-top: 1px solid #333; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.15in; padding: 0.05in 0; font-family: Calibri, Arial, sans-serif;">${t('skillsSection.title')}</h2>
-
-        ${generateSkillsHTML()}
-      </div>
-
-      <!-- Habilidades Blandas -->
-      <div style="margin-bottom: 0.4in;">
-        <h2 style="font-size: 14pt; color: #000; border-bottom: 1px solid #333; border-top: 1px solid #333; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.15in; padding: 0.05in 0; font-family: Calibri, Arial, sans-serif;">${t('softSkillsSection.title')}</h2>
-
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.15in;">
-          ${generateSoftSkillsHTML()}
-        </div>
-      </div>
-    </div>
-  `
-
-  // Establecer el HTML en el div temporal
-  tempDiv.innerHTML = htmlContent
-
-  // Añadir el div temporal al documento
-  document.body.appendChild(tempDiv)
-
-  // Esperar a que el DOM se actualice completamente
-  setTimeout(() => {
-    // Asegurarse de que el contenido esté completamente renderizado
-    console.log('Altura del contenido:', tempDiv.scrollHeight)
-    // Configurar opciones para html2pdf
-    const opt = {
-      margin: 0, // Ya tenemos margen en el HTML
-      filename: `CV_${name.replace(/\s+/g, '_')}_Harvard_${currentLanguage.value.toUpperCase()}.pdf`,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: {
-        scale: 2,
-        useCORS: true,
-        logging: true,
-        allowTaint: true,
-        windowHeight: tempDiv.scrollHeight + 20
-      },
-      jsPDF: {
-        unit: 'in',
-        format: 'letter',
-        orientation: 'portrait',
-        compress: true,
-        putOnlyUsedFonts: true
-      },
-      pagebreak: { mode: ['avoid-all'] }
-    }
-
-    // Ajustes específicos para español para evitar página en blanco
-    if (currentLanguage.value === 'es') {
-      // Solo ajustar el tamaño del papel para español, manteniendo el mismo formato
-      opt.jsPDF.format = [8.5, 11.0] // Tamaño personalizado para evitar página en blanco
-
-      // Añadir un estilo para ajustar solo el tamaño de los textos más largos en español
-      // y eliminar cualquier espacio en blanco no deseado
-      const spanishStyles = document.createElement('style')
-      spanishStyles.textContent = `
-        #harvard-cv-container p {
-          font-size: 0.98em !important;
-          line-height: 1.35 !important;
-        }
-
-        /* Eliminar cualquier espacio en blanco no deseado */
-        #harvard-cv-container div:empty,
-        #harvard-cv-container p:empty,
-        #harvard-cv-container span:empty {
-          display: none !important;
-          margin: 0 !important;
-          padding: 0 !important;
-          height: 0 !important;
-        }
-
-        /* Ajustar espaciado entre secciones */
-        #harvard-cv-container div[style*="margin-bottom"] {
-          margin-bottom: 0.3in !important;
-        }
-
-        /* Ajustar espaciado entre elementos */
-        #harvard-cv-container div[style*="margin-bottom: 0.2in"] {
-          margin-bottom: 0.15in !important;
-        }
-      `
-      tempDiv.appendChild(spanishStyles)
-
-      // Limpiar cualquier texto o elemento invisible
-      setTimeout(() => {
-        const emptyElements = tempDiv.querySelectorAll('div:empty, p:empty, span:empty');
-        emptyElements.forEach(el => el.remove());
-      }, 50);
-    }
-
-    // Mostrar mensaje de carga
-    console.log('Generando PDF...')
-
-    // Generar el PDF
-    if (html2pdf && html2pdf.default) {
-      // If imported as a module (ESM)
-      html2pdf.default()
-        .from(tempDiv)
-        .set(opt)
-        .save()
-        .then(() => {
-          console.log('PDF generado con éxito')
-          // Limpiar después de generar el PDF
-          document.body.removeChild(tempDiv)
-        })
-        .catch(error => {
-          console.error('Error al generar el PDF:', error)
-          // Limpiar en caso de error
-          document.body.removeChild(tempDiv)
-        })
-    } else {
-      console.error('html2pdf no está disponible en el entorno del cliente')
-      document.body.removeChild(tempDiv)
-    }
-  }, 300) // Aumentar el tiempo de espera para asegurar que el contenido se cargue completamente
+  // Esta función solo se ejecutará en el cliente
+  if (process.server) return;
 }
 
-// Función para generar HTML de experiencia laboral
+// Estas funciones solo se utilizan en el cliente y no son necesarias en el servidor
 const generateWorkExperienceHTML = () => {
+  if (process.server) return '';
   let html = ''
 
   workExperience.value.forEach(job => {
@@ -888,6 +785,7 @@ const generateWorkExperienceHTML = () => {
 
 // Función para generar HTML de educación formal
 const generateFormalEducationHTML = () => {
+  if (process.server) return '';
   let html = ''
 
   formalEducation.value.forEach(edu => {
@@ -903,6 +801,7 @@ const generateFormalEducationHTML = () => {
 
 // Función para generar HTML de certificaciones
 const generateCertificationsHTML = () => {
+  if (process.server) return '';
   let html = ''
 
   educationCertifications.value.forEach(cert => {
@@ -919,6 +818,7 @@ const generateCertificationsHTML = () => {
 
 // Función para generar HTML de cursos
 const generateCoursesHTML = () => {
+  if (process.server) return '';
   let html = ''
 
   // Mostrar solo los primeros 5 cursos
@@ -935,9 +835,10 @@ const generateCoursesHTML = () => {
 
 // Función para generar HTML de habilidades
 const generateSkillsHTML = () => {
+  if (process.server) return '';
   let html = ''
 
-  skillCategories.forEach(category => {
+  (skillCategories?.value || []).forEach(category => {
     html += `<div style="margin-bottom: 0.25in; break-inside: avoid; page-break-inside: avoid;">
         <h3 style="font-size: 12pt; color: #000; margin-bottom: 0.15in; font-weight: 600; border-bottom: 1px dotted #999; padding-bottom: 0.05in; font-family: Calibri, Arial, sans-serif;">${category.title}</h3>
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.15in;">`
@@ -961,6 +862,7 @@ const generateSkillsHTML = () => {
 
 // Función para generar HTML de habilidades blandas
 const generateSoftSkillsHTML = () => {
+  if (process.server) return '';
   let html = ''
 
   softSkills.value.forEach(skill => {

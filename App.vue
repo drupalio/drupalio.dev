@@ -8,54 +8,24 @@
       <div class="gradient-sphere tertiary"></div>
     </div>
     <main class="main-content">
-      <div v-if="currentView === 'resume'">
-        <Resume />
-      </div>
-      <div v-else-if="currentView === 'harvard-cv'">
-        <HarvardCV />
-      </div>
+      <Resume />
     </main>
   </div>
 </template>
 
 <script setup>
 import Resume from './components/Resume.vue'
-import { onMounted, ref, watch } from 'vue'
+import { onMounted, ref } from 'vue'
 
 // Get i18n instance
 const { $i18n } = useNuxtApp()
-const locale = ref($i18n.global.locale.value || 'en')
+const locale = ref($i18n?.global?.locale?.value || 'en')
 
 // Estado del tema
 const isDarkTheme = ref(true)
 
 // Estado del idioma
 const currentLanguage = ref(locale.value || 'en')
-
-// Estado de la vista actual
-const currentView = ref('resume')
-
-// Función para cambiar a la vista de Harvard CV
-function goToHarvardCV() {
-  currentView.value = 'harvard-cv'
-}
-
-// Función para volver a la vista principal
-function goToResume() {
-  currentView.value = 'resume'
-}
-
-// Observar cambios en la URL para detectar la vista de Harvard CV
-// Solo ejecutar en el cliente
-if (process.client) {
-  watch(() => window.location.href, (newUrl) => {
-    if (newUrl.includes('harvard-cv')) {
-      currentView.value = 'harvard-cv'
-    } else {
-      currentView.value = 'resume'
-    }
-  }, { immediate: true })
-}
 
 // Función para cambiar el tema
 function toggleTheme() {
@@ -71,14 +41,13 @@ function toggleTheme() {
       document.body.classList.add('neo-theme-light')
       localStorage.setItem('theme', 'light')
     }
-
-    // Recargar la página para actualizar las estadísticas de GitHub
-    window.location.reload()
   }
 }
 
 // Función para cambiar el idioma
 function toggleLanguage() {
+  if (!$i18n || !$i18n.global) return;
+
   const newLanguage = locale.value === 'en' ? 'es' : 'en'
   locale.value = newLanguage
   currentLanguage.value = newLanguage
@@ -96,7 +65,7 @@ onMounted(() => {
 
     // Verificar si hay un idioma guardado en localStorage
     const savedLanguage = localStorage.getItem('language')
-    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'es')) {
+    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'es') && $i18n?.global) {
       locale.value = savedLanguage
       currentLanguage.value = savedLanguage
       $i18n.global.locale.value = savedLanguage

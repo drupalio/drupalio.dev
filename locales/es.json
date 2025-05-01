@@ -458,10 +458,15 @@
       { "name": "DOCKER", "level": "Experimentado", "icon": ["fab", "docker"] },
       { "name": "Kubernetes", "level": "Experimentado", "icon": ["fas", "dharmachakra"] }
     ],
-    "developmentFrameworks": [
-      { "name": "Spring Framework", "level": "Muy experimentado", "icon": ["fas", "leaf"] },
+    "frameworks": [
+      { "name": "Spring Framework", "level": "Experto", "icon": ["fas", "leaf"] },
+      { "name": "Swagger", "level": "Experimentado", "icon": ["fas", "file-code"] },
+      { "name": "Junit", "level": "Experimentado", "icon": ["fas", "vial"] },
+      { "name": "Mockito", "level": "Experimentado", "icon": ["fas", "vials"] },
+      { "name": "Selenium", "level": "Hábil", "icon": ["fas", "atom"] },
       { "name": "Quarkus", "level": "Experimentado", "icon": ["fas", "bolt"] },
       { "name": "Helidon", "level": "Hábil", "icon": ["fas", "sun"] },
+      { "name": "ELK", "level": "Experimentado", "icon": ["fas", "search"] },
       { "name": "Hibernate", "level": "Experimentado", "icon": ["fas", "database"] },
       { "name": "EJB", "level": "Hábil", "icon": ["fas", "cubes"] },
       { "name": "Apache Camel", "level": "Hábil", "icon": ["fas", "exchange-alt"] },
@@ -469,52 +474,29 @@
       { "name": "Apache Kafka", "level": "Experimentado", "icon": ["fas", "stream"] },
       { "name": "RabbitMQ", "level": "Hábil", "icon": ["fas", "envelope"] },
       { "name": "CodeIgniter", "level": "Hábil", "icon": ["fas", "fire"] },
-      { "name": "Vue.js", "level": "Hábil", "icon": ["fab", "vuejs"] },
+      { "name": "VUE", "level": "Hábil", "icon": ["fab", "vuejs"] },
       { "name": "Django", "level": "Hábil", "icon": ["fab", "python"] },
       { "name": "Express.js", "level": "Hábil", "icon": ["fab", "node-js"] },
       { "name": "Wordpress", "level": "Hábil", "icon": ["fab", "wordpress"] },
       { "name": "Drupal", "level": "Hábil", "icon": ["fab", "drupal"] },
       { "name": "Foundation", "level": "Hábil", "icon": ["fas", "layer-group"] },
       { "name": "Angular", "level": "Hábil", "icon": ["fab", "angular"] },
-      { "name": "jQuery", "level": "Hábil", "icon": ["fab", "js"] },
+      { "name": "Jquery", "level": "Hábil", "icon": ["fab", "js"] },
       { "name": "Knockout", "level": "Hábil", "icon": ["fas", "box-open"] },
       { "name": "Cordova", "level": "Hábil", "icon": ["fab", "android"] },
       { "name": "Primefaces", "level": "Hábil", "icon": ["fas", "window-maximize"] },
       { "name": "Flask", "level": "Hábil", "icon": ["fas", "flask"] },
       { "name": "Gatsby", "level": "Hábil", "icon": ["fab", "react"] },
-      { "name": "Laravel", "level": "Hábil", "icon": ["fab", "laravel"] },
-      { "name": "React", "level": "Hábil", "icon": ["fab", "react"] },
-      { "name": "Next.js", "level": "Hábil", "icon": ["fab", "react"] }
-    ],
-    "testingFrameworks": [
-      { "name": "JUnit", "level": "Experimentado", "icon": ["fas", "vial"] },
-      { "name": "Mockito", "level": "Experimentado", "icon": ["fas", "vials"] },
-      { "name": "Selenium", "level": "Hábil", "icon": ["fas", "atom"] },
-      { "name": "Jest", "level": "Hábil", "icon": ["fab", "js"] },
-      { "name": "Cypress", "level": "Hábil", "icon": ["fas", "check-circle"] },
-      { "name": "Mocha", "level": "Hábil", "icon": ["fas", "coffee"] },
-      { "name": "Chai", "level": "Hábil", "icon": ["fas", "mug-hot"] },
-      { "name": "TestNG", "level": "Hábil", "icon": ["fas", "check-double"] },
-      { "name": "Cucumber", "level": "Hábil", "icon": ["fas", "leaf"] },
-      { "name": "Postman", "level": "Experimentado", "icon": ["fas", "paper-plane"] },
-      { "name": "Swagger", "level": "Experimentado", "icon": ["fas", "file-code"] }
-    ],
-    "monitoringTools": [
-      { "name": "ELK Stack", "level": "Experimentado", "icon": ["fas", "search"] },
-      { "name": "Grafana", "level": "Hábil", "icon": ["fas", "chart-line"] },
-      { "name": "Prometheus", "level": "Hábil", "icon": ["fas", "fire"] },
-      { "name": "New Relic", "level": "Hábil", "icon": ["fas", "tachometer-alt"] },
-      { "name": "Datadog", "level": "Hábil", "icon": ["fas", "dog"] },
-      { "name": "Splunk", "level": "Hábil", "icon": ["fas", "search"] }
+      { "name": "Laravel", "level": "Hábil", "icon": ["fab", "laravel"] }
     ],
     "architectureAndMethodologies": [
       { "name": "Arquitectura orientada a eventos", "level": "Experimentado" },
       { "name": "ESB", "level": "Hábil" },
       { "name": "Nativo en la nube", "level": "Experimentado" },
       { "name": "Arquitectura limpia", "level": "Experimentado" },
-      { "name": "Arquitectura de microservicios", "level": "Muy experimentado" },
+      { "name": "Arquitectura de microservicios", "level": "Experto" },
       { "name": "Arquitectura en cebolla", "level": "Experimentado" },
-      { "name": "MV*", "level": "Experimentado" },
+      { "name": "MVC/MVP/MVVM/MV*", "level": "Experimentado" },
       { "name": "Arquitectura C4D", "level": "Hábil" }
     ],
     "projectManagement": [
@@ -534,56 +516,18 @@
       { "name": "LLama2", "level": "Hábil", "icon": ["fas", "comment-dots"] },
       { "name": "RAG", "level": "Hábil", "icon": ["fas", "book"] },
       { "name": "OpenAI (ChatGPT)", "level": "Hábil", "icon": ["fas", "robot"] },
-      { "name": "Copilot", "level": "Hábil", "icon": ["fas", "user-astronaut"] },
-      { "name": "Qwen", "level": "Hábil", "icon": ["fas", "brain"] },
-      { "name": "DeepSeek", "level": "Hábil", "icon": ["fas", "search"] },
-      { "name": "Ollama", "level": "Hábil", "icon": ["fas", "server"] },
-      { "name": "OllamaFactory", "level": "Hábil", "icon": ["fas", "industry"] },
-      { "name": "Docker Model Runner", "level": "Hábil", "icon": ["fab", "docker"] },
-      { "name": "SmallVM", "level": "Hábil", "icon": ["fas", "microchip"] },
-      { "name": "OpenManus", "level": "Hábil", "icon": ["fas", "hand-paper"] },
-      { "name": "Agent Development Kit", "level": "Hábil", "icon": ["fas", "toolbox"] },
-      { "name": "Gemini", "level": "Hábil", "icon": ["fas", "gem"] }
+      { "name": "Copilot", "level": "Hábil", "icon": ["fas", "user-astronaut"] }
     ],
-    "databases": [
+    "developmentTools": [
+      { "name": "Intellij", "level": "Experimentado", "icon": ["fas", "laptop-code"] },
+      { "name": "Eclipse", "level": "Experimentado", "icon": ["fas", "moon"] },
+      { "name": "Jenkins", "level": "Experimentado", "icon": ["fas", "cogs"] },
+      { "name": "VS Code", "level": "Experimentado", "icon": ["fas", "code"] },
       { "name": "MySQL", "level": "Experimentado", "icon": ["fas", "database"] },
       { "name": "PostgreSQL", "level": "Experimentado", "icon": ["fas", "database"] },
       { "name": "MongoDB", "level": "Hábil", "icon": ["fas", "leaf"] },
-      { "name": "Oracle", "level": "Experimentado", "icon": ["fas", "database"] },
-      { "name": "SQL Server", "level": "Hábil", "icon": ["fab", "microsoft"] },
-      { "name": "Redis", "level": "Hábil", "icon": ["fas", "server"] },
-      { "name": "Cassandra", "level": "Hábil", "icon": ["fas", "database"] },
-      { "name": "DynamoDB", "level": "Hábil", "icon": ["fab", "aws"] },
-      { "name": "Firebase", "level": "Hábil", "icon": ["fas", "fire"] },
-      { "name": "Elasticsearch", "level": "Hábil", "icon": ["fas", "search"] }
-    ],
-    "versionControl": [
-      { "name": "Git", "level": "Experimentado", "icon": ["fab", "git-alt"] },
-      { "name": "SVN", "level": "Experimentado", "icon": ["fas", "code-branch"] },
-      { "name": "Mercurial", "level": "Experimentado", "icon": ["fas", "code-branch"] },
-      { "name": "GitHub", "level": "Experimentado", "icon": ["fab", "github"] },
-      { "name": "GitLab", "level": "Experimentado", "icon": ["fab", "gitlab"] },
-      { "name": "Bitbucket", "level": "Experimentado", "icon": ["fab", "bitbucket"] }
-    ],
-    "buildTools": [
-      { "name": "Maven", "level": "Experimentado", "icon": ["fas", "box"] },
-      { "name": "Gradle", "level": "Experimentado", "icon": ["fas", "cogs"] },
-      { "name": "npm", "level": "Experimentado", "icon": ["fab", "npm"] },
-      { "name": "Yarn", "level": "Experimentado", "icon": ["fab", "yarn"] },
-      { "name": "NuGet", "level": "Experimentado", "icon": ["fas", "box"] },
-      { "name": "Ant", "level": "Hábil", "icon": ["fas", "bug"] }
-    ],
-    "developmentTools": [
-      { "name": "IntelliJ IDEA", "level": "Experimentado", "icon": ["fas", "laptop-code"] },
-      { "name": "Eclipse", "level": "Experimentado", "icon": ["fas", "moon"] },
-      { "name": "VS Code", "level": "Experimentado", "icon": ["fas", "code"] },
-      { "name": "Jenkins", "level": "Experimentado", "icon": ["fas", "cogs"] },
-      { "name": "GitLab CI/CD", "level": "Experimentado", "icon": ["fab", "gitlab"] },
-      { "name": "GitHub Actions", "level": "Experimentado", "icon": ["fab", "github"] },
-      { "name": "Jira", "level": "Experimentado", "icon": ["fab", "jira"] },
-      { "name": "Confluence", "level": "Experimentado", "icon": ["fas", "book"] },
-      { "name": "Postman", "level": "Experimentado", "icon": ["fas", "paper-plane"] },
-      { "name": "SonarQube", "level": "Experimentado", "icon": ["fas", "check-circle"] }
+      { "name": "SVN/GIT/Mecurial", "level": "Experimentado", "icon": ["fab", "git-alt"] },
+      { "name": "MAVEN/NPM/YARN/GRADLE", "level": "Experimentado", "icon": ["fas", "box"] }
     ]
   },
   "softSkillsSection": {
