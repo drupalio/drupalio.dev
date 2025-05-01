@@ -595,22 +595,119 @@ export default defineNuxtPlugin(async ({ vueApp }) => {
         ]
       },
       {
-        "title": "Desarrollador de Microservicios Java",
-        "company": "Globant",
-        "period": "May 2019 - Feb 2024",
-        "icon": ["fas", "microchip"],
-        "projects": [
-          {
-            "name": "QuizzerA",
-            "description": "GPT personalizado para proyectos clave y desarrollo de un sistema de seguimiento de entrevistas para mejorar la retroalimentación y la eficiencia",
-            "technologies": ["Java", "Spring Boot", "GPT", "AI"]
-          },
-          {
-            "name": "Banco Nacional del Perú",
-            "description": "Modernización de la banca en línea con microservicios utilizando el framework YAPE",
-            "technologies": ["Java", "Microservicios", "Framework YAPE"]
-          }
-        ]
+      "title": "Desarrollador de Microservicios Java",
+      "company": "Globant",
+      "period": "May 2019 - Feb 2024",
+      "icon": ["fas", "microchip"],
+      "projects": [
+        {
+          "name": "QuizzerA",
+          "description": "Personalización de GPT para proyectos clave y desarrollo de sistema de seguimiento de entrevistas para mejorar la retroalimentación y eficiencia",
+          "technologies": ["Java", "Spring Boot", "GPT", "AI"]
+        },
+        {
+          "name": "Banco Nacional del Perú",
+          "description": "Modernización de banca en línea con microservicios usando el framework YAPE",
+          "technologies": ["Java", "Microservicios", "YAPE Framework"]
+        },
+        {
+          "name": "Round Feather",
+          "description": "Construcción y mantenimiento de microservicios financieros con Quarkus y Kubernetes en Google Cloud, automatizando despliegues con GitHub Actions",
+          "technologies": ["Java", "Quarkus", "Kubernetes", "Google Cloud", "GitHub Actions"]
+        },
+        {
+          "name": "Santander",
+          "description": "Liderazgo en la transición de la plataforma bancaria a arquitectura de microservicios con Spring Boot",
+          "technologies": ["Java", "Spring Boot", "Microservicios"]
+        },
+        {
+          "name": "Expedia (Despegar & Hotels.com)",
+          "description": "Integración fluida y optimización del rendimiento de microservicios",
+          "technologies": ["Java", "Microservicios", "Optimización de Rendimiento"]
+        },
+        {
+          "name": "AEPE Energy",
+          "description": "Optimización de procesos CI/CD, mantenimiento y arquitectura escalable",
+          "technologies": ["Java", "CI/CD", "DevOps"]
+        },
+        {
+          "name": "Commodity Finance",
+          "description": "Mantenimiento de microservicios y plataformas web",
+          "technologies": ["Java", "Microservicios", "Desarrollo Web"]
+        },
+        {
+          "name": "MyGrowth",
+          "description": "Implementación de microservicios estratégicos para mejorar evaluaciones y experiencia de usuario",
+          "technologies": ["Java", "Microservicios", "UX"]
+        },
+        {
+          "name": "Disney",
+          "description": "Co-desarrollo de infraestructura de procesamiento por lotes para facturación y pagos de cine",
+          "technologies": ["Java", "Procesamiento por lotes", "Sistemas de Pago"]
+        },
+        {
+          "name": "HSBC",
+          "description": "Expansión de microservicios y modernización de plataforma bancaria digital",
+          "technologies": ["Java", "Microservicios", "Banca Digital"]
+        }
+      ]
+    },
+    {
+      "title": "Java Ssr Developer",
+      "company": "GFT Technologies",
+      "period": "Mar 2017 - Abr 2019",
+      "icon": ["fas", "briefcase"],
+      "projects": [
+        {
+          "name": "Glomo",
+          "description": "Migración de la plataforma bancaria de BBVA Bancomer de una arquitectura monolítica a microservicios utilizando CXF Spring Framework y SDLO de BBVA, aplicando principios SOLID e integración continua",
+          "technologies": ["Java", "CXF Spring Framework", "BBVA SDLO", "Microservicios", "CI/CD"]
+        },
+        {
+          "name": "Claims",
+          "description": "Soporte de primer nivel para sistema de reclamaciones de BBVA y desarrollo de APIs centrales para el motor y sistema de reclamaciones",
+          "technologies": ["Java", "Desarrollo de API", "Soporte"]
+        }
+      ]
+    },
+    {
+      "title": "Especialista Java",
+      "company": "Telcel Radio Dipsa",
+      "period": "Jun 2015 - Mar 2017",
+      "icon": ["fas", "mobile-alt"],
+      "projects": [
+        {
+          "name": "Telcel Blue Circle",
+          "description": "Reconstrucción del motor de campañas reactivas y sistema de recompensas Telcel Blue Circle",
+          "technologies": ["Java", "Programación Reactiva", "Sistema de Recompensas"]
+        }
+      ]
+    },
+    {
+      "title": "Desarrollador Java",
+      "company": "Grupo Salinas Dinero Expres",
+      "period": "Abr 2015 - Jul 2015",
+      "icon": ["fas", "money-bill-wave"],
+      "projects": [
+        {
+          "name": "Sistema de Transferencia de Dinero",
+          "description": "Migración de servicios web de transferencias de dinero (SOA) de Oracle Application Server a JBoss EAP",
+          "technologies": ["Java", "SOA", "Oracle Application Server", "JBoss EAP"]
+        }
+      ]
+    },
+    {
+      "title": "Desarrollador Java Jr",
+      "company": "MXD Solutions",
+      "period": "Jun 2014 - Abr 2015",
+      "icon": ["fas", "code"],
+      "projects": [
+        {
+          "name": "Sistema de Transferencia de Dinero",
+          "description": "Migración de servicios web de transferencias de dinero (SOA) de Oracle Application Server a JBoss EAP",
+          "technologies": ["Java", "SOA", "Oracle Application Server", "JBoss EAP"]
+        }
+      ]
       }
     ],
     "education": {
