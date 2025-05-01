@@ -270,6 +270,73 @@
       </div>
     </section>
 
+    <!-- Sección de Proyectos Personales -->
+    <section class="neo-section">
+      <h2 class="section-title">{{ t('petProjectsSection.title') }}</h2>
+      <p class="section-description">
+        {{ t('petProjectsSection.description') }}
+      </p>
+
+      <!-- Carrusel de Proyectos Personales -->
+      <div class="carousel-container">
+        <!-- Overlay para efecto de transición -->
+        <div :class="['carousel-overlay', { 'active': isPetProjectTransitioning }]"></div>
+
+        <div class="experience-carousel">
+          <!-- Carrusel de proyectos personales -->
+          <div v-for="(project, index) in petProjects"
+               :key="index"
+               :class="['carousel-slide', { 'active': currentPetProjectIndex === index }]">
+            <div class="carousel-card pet-project-card">
+              <div class="pet-project-header">
+                <div class="pet-project-icon">
+                  <font-awesome-icon :icon="project.icon" />
+                </div>
+                <h3 class="pet-project-name">{{ project.name }}</h3>
+              </div>
+              <p class="pet-project-description">{{ project.description }}</p>
+              <div class="pet-project-technologies">
+                <span v-for="(tech, techIndex) in project.technologies"
+                      :key="techIndex"
+                      class="technology-tag">{{ tech }}</span>
+              </div>
+              <a :href="project.link" target="_blank" class="pet-project-link">
+                <font-awesome-icon :icon="['fas', 'external-link-alt']" />
+                {{ currentLanguage === 'en' ? 'View Project' : 'Ver Proyecto' }}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles laterales -->
+        <client-only>
+          <button @click.prevent="prevPetProjectWithTransition" class="carousel-control-side prev">
+            <div class="control-icon">
+              <font-awesome-icon :icon="['fas', 'chevron-left']" />
+            </div>
+          </button>
+          <button @click.prevent="nextPetProjectWithTransition" class="carousel-control-side next">
+            <div class="control-icon">
+              <font-awesome-icon :icon="['fas', 'chevron-right']" />
+            </div>
+          </button>
+
+          <!-- Indicadores que se muestran temporalmente -->
+          <div :class="['carousel-indicators-floating', { 'visible': isPetProjectIndicatorsVisible }]">
+            <div class="carousel-progress">
+              <span class="progress-number">{{ Math.round((currentPetProjectIndex + 1) / (petProjects?.length || 1) * 100) }}%</span>
+            </div>
+            <div class="indicators-container">
+              <span v-for="(_, index) in (petProjects || [])"
+                    :key="index"
+                    :class="['indicator', { 'active': currentPetProjectIndex === index }]"
+                    @click.prevent="goToPetProjectWithTransition(index)"></span>
+            </div>
+          </div>
+        </client-only>
+      </div>
+    </section>
+
     <!-- Sección de Habilidades Blandas -->
     <section class="neo-section">
       <h2 class="section-title">{{ t('softSkillsSection.title') }}</h2>
@@ -389,15 +456,19 @@ const getNestedValue = (key, isObject) => {
 const isDarkTheme = ref(true)
 const currentWorkSlide = ref(0)
 const currentSkillsSlide = ref(0)
+const currentPetProjectIndex = ref(0)
 const isWorkTransitioning = ref(false)
 const isSkillsTransitioning = ref(false)
+const isPetProjectTransitioning = ref(false)
 const isWorkIndicatorsVisible = ref(false)
 const isSkillsIndicatorsVisible = ref(false)
+const isPetProjectIndicatorsVisible = ref(false)
 const showAllCourses = ref(false)
 
 // Temporizadores para ocultar los indicadores
 let workIndicatorsTimer = null
 let skillsIndicatorsTimer = null
+let petProjectIndicatorsTimer = null
 
 // Función para mostrar/ocultar todos los cursos
 const toggleShowAllCourses = () => {
@@ -675,6 +746,93 @@ const softSkills = computed(() => {
   const skills = tm('softSkills')
   return Array.isArray(skills) ? skills : []
 })
+
+// Definición de petProjects
+const petProjects = computed(() => {
+  const projects = tm('petProjects')
+  return Array.isArray(projects) ? projects : []
+})
+
+// Métodos para controlar el carrusel de proyectos personales con transición
+const showPetProjectIndicators = () => {
+  if (process.server) return;
+
+  isPetProjectIndicatorsVisible.value = true
+
+  // Limpiar el temporizador anterior si existe
+  if (petProjectIndicatorsTimer) {
+    clearTimeout(petProjectIndicatorsTimer)
+  }
+
+  // Configurar un nuevo temporizador para ocultar los indicadores después de 800ms
+  petProjectIndicatorsTimer = setTimeout(() => {
+    isPetProjectIndicatorsVisible.value = false
+  }, 800)
+}
+
+const nextPetProjectWithTransition = () => {
+  if (process.server) return;
+
+  // Si ya está en transición, no hacer nada
+  if (isPetProjectTransitioning.value) return
+
+  isPetProjectTransitioning.value = true
+  showPetProjectIndicators()
+
+  // Cambiar inmediatamente el slide
+  const length = petProjects?.value?.length || 0
+  if (currentPetProjectIndex.value < length - 1) {
+    currentPetProjectIndex.value++
+  } else {
+    currentPetProjectIndex.value = 0
+  }
+
+  // Restablecer el estado de transición después de un tiempo
+  setTimeout(() => {
+    isPetProjectTransitioning.value = false
+  }, 300)
+}
+
+const prevPetProjectWithTransition = () => {
+  if (process.server) return;
+
+  // Si ya está en transición, no hacer nada
+  if (isPetProjectTransitioning.value) return
+
+  isPetProjectTransitioning.value = true
+  showPetProjectIndicators()
+
+  // Cambiar inmediatamente el slide
+  const length = petProjects?.value?.length || 0
+  if (currentPetProjectIndex.value > 0) {
+    currentPetProjectIndex.value--
+  } else {
+    currentPetProjectIndex.value = Math.max(0, length - 1)
+  }
+
+  // Restablecer el estado de transición después de un tiempo
+  setTimeout(() => {
+    isPetProjectTransitioning.value = false
+  }, 300)
+}
+
+const goToPetProjectWithTransition = (index) => {
+  if (process.server) return;
+
+  // Si ya está en transición o es el mismo slide, no hacer nada
+  if (isPetProjectTransitioning.value || index === currentPetProjectIndex.value) return
+
+  isPetProjectTransitioning.value = true
+  showPetProjectIndicators()
+
+  // Cambiar inmediatamente el slide
+  currentPetProjectIndex.value = index
+
+  // Restablecer el estado de transición después de un tiempo
+  setTimeout(() => {
+    isPetProjectTransitioning.value = false
+  }, 300)
+}
 
 
 
@@ -1128,13 +1286,14 @@ onMounted(() => {
 .carousel-slide {
   width: 100%;
   flex-shrink: 0;
-  opacity: 0;
+  opacity: 0.8;
   visibility: hidden;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: all 0.25s ease;
   position: absolute;
   left: 0;
   top: 0;
-  transform: translateX(100px);
+  transform: scale(0.99);
+  filter: blur(2px);
   height: 100%;
 }
 
@@ -1142,7 +1301,8 @@ onMounted(() => {
   opacity: 1;
   visibility: visible;
   z-index: 1;
-  transform: translateX(0);
+  transform: scale(1);
+  filter: blur(0);
   position: relative; /* Permitir que determine la altura del contenedor */
 }
 
@@ -1572,6 +1732,138 @@ onMounted(() => {
   flex-shrink: 0;
 }
 
+.pet-projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.pet-project-card {
+  background-color: var(--neo-surface);
+  border-radius: var(--neo-radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--neo-shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--neo-border);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sin animaciones para el carrusel */
+
+.pet-project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(var(--neo-primary-rgb), 0.05) 0%, rgba(var(--neo-secondary-rgb), 0.02) 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pet-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neo-glow);
+  border-color: var(--neo-primary);
+}
+
+.pet-project-card:hover::before {
+  opacity: 1;
+}
+
+.pet-project-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.pet-project-icon {
+  font-size: 1.5rem;
+  color: var(--neo-primary);
+  margin-right: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(var(--neo-primary-rgb), 0.1);
+  border-radius: 50%;
+  box-shadow: var(--neo-shadow-sm);
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.pet-project-card:hover .pet-project-icon {
+  transform: scale(1.1);
+  color: var(--neo-secondary);
+  background-color: rgba(var(--neo-secondary-rgb), 0.1);
+}
+
+.pet-project-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--neo-text-primary);
+}
+
+.pet-project-description {
+  margin-bottom: 1rem;
+  color: var(--neo-text-secondary);
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+.pet-project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.pet-project-technologies .technology-tag {
+  background-color: rgba(var(--neo-primary-rgb), 0.1);
+  color: var(--neo-primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--neo-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pet-project-card:hover .technology-tag {
+  background-color: rgba(var(--neo-secondary-rgb), 0.1);
+  color: var(--neo-secondary);
+}
+
+.pet-project-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--neo-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  margin-top: auto;
+  padding: 0.5rem 0;
+}
+
+.pet-project-link svg {
+  margin-right: 0.5rem;
+}
+
+.pet-project-link:hover {
+  color: var(--neo-secondary);
+}
+
 .soft-skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1868,6 +2160,19 @@ onMounted(() => {
     box-sizing: border-box;
   }
 
+  .pet-projects-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    width: 100%;
+  }
+
+  .pet-project-card {
+    padding: 1.2rem;
+  }
+
+  .pet-project-name {
+    font-size: 1.1rem;
+  }
+
   .soft-skills-container {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     width: 100%;
@@ -1968,6 +2273,33 @@ onMounted(() => {
     width: 2.5rem;
     height: 2.5rem;
     font-size: 1.4rem;
+  }
+
+  .pet-projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .pet-project-card {
+    padding: 1rem;
+  }
+
+  .pet-project-icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .pet-project-name {
+    font-size: 1rem;
+  }
+
+  .pet-project-description {
+    font-size: 0.9rem;
+  }
+
+  .pet-project-technologies .technology-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
   }
 
   .soft-skills-container {
