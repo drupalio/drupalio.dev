@@ -55,8 +55,13 @@ export default defineNuxtPlugin(async ({ vueApp }) => {
             "technologies": ["Java", "Data Mining", "SQL", "CRM", "Stored Procedures"]
           },
           {
-            "name": "PlanSeguro",
+            "name": "Plan Seguro",
             "description": "Restructuring of look and feel for the insurance company, updating UI components and Angular versions",
+            "technologies": ["Angular", "TypeScript", "UI/UX", "CSS", "HTML"]
+          },
+          {
+            "name": "Banorte Sigma - Young Sites",
+            "description": "Restructuring of look and feel for the insurance company, updating UI components and MagnoliaCMS versions",
             "technologies": ["Angular", "TypeScript", "UI/UX", "CSS", "HTML"]
           }
         ]
@@ -588,8 +593,13 @@ export default defineNuxtPlugin(async ({ vueApp }) => {
             "technologies": ["Java", "Minería de Datos", "SQL", "CRM", "Procedimientos Almacenados"]
           },
           {
-            "name": "PlanSeguro",
+            "name": "Plan Seguro",
             "description": "Reestructuración de look and feel para la aseguradora, actualizando los componentes UI y las versiones de Angular",
+            "technologies": ["Angular", "TypeScript", "UI/UX", "CSS", "HTML"]
+          },
+          {
+            "name": "Banorte - Sigma Sitio Jovenes",
+            "description": "Reestructuración de look and feel para la aseguradora, actualizando los componentes UI y las versiones de MagnoliaCMS",
             "technologies": ["Angular", "TypeScript", "UI/UX", "CSS", "HTML"]
           }
         ]
