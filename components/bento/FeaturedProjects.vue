@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { featuredProjects } = useContentQueries()
 
-const projects = await featuredProjects()
+const { data: projects } = await featuredProjects()
 
 const layouts = ['wide', 'tall', 'compact', 'compact'] as const
 
@@ -17,7 +17,7 @@ const sectionTitle = computed(() =>
   <div class="flex flex-col gap-6">
     <SectionLabel number="03" :label="sectionTitle" />
 
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+    <div v-if="projects?.length" class="grid grid-cols-1 gap-4 lg:grid-cols-2">
       <FeaturedProjectCard
         v-for="(project, index) in projects"
         :key="project.path || project.title"

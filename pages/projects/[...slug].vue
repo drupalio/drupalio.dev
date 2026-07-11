@@ -4,9 +4,9 @@ const { projectBySlug } = useContentQueries()
 
 const slug = computed(() => route.path)
 
-const project = await projectBySlug(slug.value)
+const { data: project } = await projectBySlug(slug.value)
 
-if (!project) {
+if (!project.value) {
   throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 }
 
@@ -14,10 +14,10 @@ const { $i18n } = useNuxtApp()
 const currentLocale = computed(() => $i18n?.global?.locale?.value || 'en')
 
 useSeoMeta({
-  title: () => `${project.title} — Ricardo Morales`,
-  description: () => project.description,
-  ogTitle: () => `${project.title} — Ricardo Morales`,
-  ogDescription: () => project.description,
+  title: () => `${project.value?.title} — Ricardo Morales`,
+  description: () => project.value?.description,
+  ogTitle: () => `${project.value?.title} — Ricardo Morales`,
+  ogDescription: () => project.value?.description,
   ogType: 'website',
 })
 

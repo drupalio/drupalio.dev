@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { allBlogPosts } = useContentQueries()
 
-const posts = await allBlogPosts()
+const { data: posts } = await allBlogPosts()
 
 const { $i18n } = useNuxtApp()
 const currentLocale = computed(() => $i18n?.global?.locale?.value || 'en')

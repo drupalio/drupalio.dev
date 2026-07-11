@@ -2,9 +2,9 @@
 const route = useRoute()
 const { blogPostBySlug } = useContentQueries()
 
-const post = await blogPostBySlug(route.path)
+const { data: post } = await blogPostBySlug(route.path)
 
-if (!post) {
+if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Post not found' })
 }
 
@@ -12,10 +12,10 @@ const { $i18n } = useNuxtApp()
 const currentLocale = computed(() => $i18n?.global?.locale?.value || 'en')
 
 useSeoMeta({
-  title: () => `${post.title} — Ricardo Morales`,
-  description: () => post.description,
-  ogTitle: () => `${post.title} — Ricardo Morales`,
-  ogDescription: () => post.description,
+  title: () => `${post.value?.title} — Ricardo Morales`,
+  description: () => post.value?.description,
+  ogTitle: () => `${post.value?.title} — Ricardo Morales`,
+  ogDescription: () => post.value?.description,
   ogType: 'article',
 })
 

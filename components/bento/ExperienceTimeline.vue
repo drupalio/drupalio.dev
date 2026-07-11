@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { allExperience } = useContentQueries()
 
-const workExperience = await allExperience()
+const { data: workExperience } = await allExperience()
 
 const { $i18n } = useNuxtApp()
 const currentLocale = computed(() => $i18n?.global?.locale?.value || 'en')
@@ -15,7 +15,7 @@ const sectionTitle = computed(() =>
   <div class="flex flex-col gap-6">
     <SectionLabel number="02" :label="sectionTitle" />
 
-    <div class="flex flex-col gap-1">
+    <div v-if="workExperience" class="flex flex-col gap-1">
       <div
         v-for="job in workExperience"
         :key="job.company"
