@@ -2,17 +2,23 @@
   "personalInfo": {
     "name": "Ricardo Morales",
     "title": "Software Engineer",
-    "picture":"https://avatars.githubusercontent.com/u/5186093",
+    "picture": "https://avatars.githubusercontent.com/u/5186093",
     "links": [
       {
         "name": "LinkedIn",
         "url": "https://www.linkedin.com/in/drupalio",
-        "icon": ["fab", "linkedin"]
+        "icon": [
+          "fab",
+          "linkedin"
+        ]
       },
       {
         "name": "Website",
         "url": "https://www.drupalio.com",
-        "icon": ["fas", "globe"]
+        "icon": [
+          "fas",
+          "globe"
+        ]
       }
     ]
   },
@@ -28,22 +34,40 @@
       "title": "Java Senior Developer",
       "company": "Multiplica Talent",
       "period": "Apr 2024 - Present",
-      "icon": ["fas", "briefcase"],
+      "icon": [
+        "fas",
+        "briefcase"
+      ],
       "projects": [
         {
           "name": "Hive & Colony",
           "description": "Integrated and implemented Zoho One and Shopify for streamlined business operations",
-          "technologies": ["Java", "Zoho One", "Shopify"]
+          "technologies": [
+            "Java",
+            "Zoho One",
+            "Shopify"
+          ]
         },
         {
           "name": "Banorte",
           "description": "Developed templates and modules for Banorte's new public portal using MagnoliaCMS",
-          "technologies": ["Java", "MagnoliaCMS", "HTML", "CSS", "JavaScript"]
+          "technologies": [
+            "Java",
+            "MagnoliaCMS",
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ]
         },
         {
           "name": "Qualitas",
           "description": "Developed and integrated a CRM core using SQL/PLus stored procedures, functions and a Java backend",
-          "technologies": ["Java", "SQL/PLus", "Oracle", "CRM"]
+          "technologies": [
+            "Java",
+            "SQL/PLus",
+            "Oracle",
+            "CRM"
+          ]
         }
       ]
     },
@@ -51,57 +75,103 @@
       "title": "Java Microservices Developer",
       "company": "Globant",
       "period": "May 2019 - Feb 2024",
-      "icon": ["fas", "microchip"],
+      "icon": [
+        "fas",
+        "microchip"
+      ],
       "projects": [
         {
           "name": "QuizzerA",
           "description": "Customized GPT for key projects and developed an interview follow-up system to enhance feedback and efficiency",
-          "technologies": ["Java", "Spring Boot", "GPT", "AI"]
+          "technologies": [
+            "Java",
+            "Spring Boot",
+            "GPT",
+            "AI"
+          ]
         },
         {
           "name": "Banco Nacional del Peru",
           "description": "Modernized online banking with microservices using the YAPE framework",
-          "technologies": ["Java", "Microservices", "YAPE Framework"]
+          "technologies": [
+            "Java",
+            "Microservices",
+            "YAPE Framework"
+          ]
         },
         {
           "name": "Round Feather",
           "description": "Built and maintained financial microservices with Quarkus and Kubernetes on Google Cloud, automating deployments with GitHub Actions",
-          "technologies": ["Java", "Quarkus", "Kubernetes", "Google Cloud", "GitHub Actions"]
+          "technologies": [
+            "Java",
+            "Quarkus",
+            "Kubernetes",
+            "Google Cloud",
+            "GitHub Actions"
+          ]
         },
         {
           "name": "Santander",
           "description": "Led the transition of its banking platform to microservices architecture with Spring Boot",
-          "technologies": ["Java", "Spring Boot", "Microservices"]
+          "technologies": [
+            "Java",
+            "Spring Boot",
+            "Microservices"
+          ]
         },
         {
           "name": "Expedia (Despegar & Hotels.com)",
           "description": "Ensured seamless integration and optimized microservices performance",
-          "technologies": ["Java", "Microservices", "Performance Optimization"]
+          "technologies": [
+            "Java",
+            "Microservices",
+            "Performance Optimization"
+          ]
         },
         {
           "name": "AEPE Energy",
           "description": "Optimized CI/CD processes, maintenance and scalable architecture",
-          "technologies": ["Java", "CI/CD", "DevOps"]
+          "technologies": [
+            "Java",
+            "CI/CD",
+            "DevOps"
+          ]
         },
         {
           "name": "Commodity Finance",
           "description": "Maintained microservices and web platforms",
-          "technologies": ["Java", "Microservices", "Web Development"]
+          "technologies": [
+            "Java",
+            "Microservices",
+            "Web Development"
+          ]
         },
         {
           "name": "MyGrowth",
           "description": "Implemented strategic microservices to improve assessments and user experience",
-          "technologies": ["Java", "Microservices", "UX"]
+          "technologies": [
+            "Java",
+            "Microservices",
+            "UX"
+          ]
         },
         {
           "name": "Disney",
           "description": "Co-developed batch processing infrastructure for invoicing and cinema payments",
-          "technologies": ["Java", "Batch Processing", "Payment Systems"]
+          "technologies": [
+            "Java",
+            "Batch Processing",
+            "Payment Systems"
+          ]
         },
         {
           "name": "HSBC",
           "description": "Expanded microservices and modernized its digital banking platform",
-          "technologies": ["Java", "Microservices", "Digital Banking"]
+          "technologies": [
+            "Java",
+            "Microservices",
+            "Digital Banking"
+          ]
         }
       ]
     },
@@ -109,17 +179,30 @@
       "title": "Java Ssr Developer",
       "company": "GFT Technologies",
       "period": "Mar 2017 - Apr 2019",
-      "icon": ["fas", "briefcase"],
+      "icon": [
+        "fas",
+        "briefcase"
+      ],
       "projects": [
         {
           "name": "Glomo",
           "description": "Migrated BBVA Bancomer's banking platform from a monolithic to a microservices architecture using CXF Spring Framework and BBVA's SDLO, applying SOLID principles and continuous integration",
-          "technologies": ["Java", "CXF Spring Framework", "BBVA SDLO", "Microservices", "CI/CD"]
+          "technologies": [
+            "Java",
+            "CXF Spring Framework",
+            "BBVA SDLO",
+            "Microservices",
+            "CI/CD"
+          ]
         },
         {
           "name": "Claims",
           "description": "Provided first-level support for BBVA's claims system and developed core APIs for the claims engine/core system",
-          "technologies": ["Java", "API Development", "Support"]
+          "technologies": [
+            "Java",
+            "API Development",
+            "Support"
+          ]
         }
       ]
     },
@@ -127,12 +210,19 @@
       "title": "Java Specialist",
       "company": "Telcel Radio Dipsa",
       "period": "Jun 2015 - Mar 2017",
-      "icon": ["fas", "mobile-alt"],
+      "icon": [
+        "fas",
+        "mobile-alt"
+      ],
       "projects": [
         {
           "name": "Telcel Blue Circle",
           "description": "Rebuilt the reactive campaigns engine and Telcel Blue Circle rewards system ",
-          "technologies": ["Java", "Reactive Programming", "Rewards System"]
+          "technologies": [
+            "Java",
+            "Reactive Programming",
+            "Rewards System"
+          ]
         }
       ]
     },
@@ -140,12 +230,20 @@
       "title": "Java Developer",
       "company": "Grupo Salinas Dinero Expres",
       "period": "Apr 2015 - Jul 2015",
-      "icon": ["fas", "money-bill-wave"],
+      "icon": [
+        "fas",
+        "money-bill-wave"
+      ],
       "projects": [
         {
           "name": "Money Transfer System",
           "description": "Migrated Money Transfer WebServices (SOA) from Oracle Application Server to JBoss EAP",
-          "technologies": ["Java", "SOA", "Oracle Application Server", "JBoss EAP"]
+          "technologies": [
+            "Java",
+            "SOA",
+            "Oracle Application Server",
+            "JBoss EAP"
+          ]
         }
       ]
     },
@@ -153,12 +251,20 @@
       "title": "Java Developer Jr",
       "company": "MXD Solutions",
       "period": "Jun 2014 - Apr 2015",
-      "icon": ["fas", "code"],
+      "icon": [
+        "fas",
+        "code"
+      ],
       "projects": [
         {
           "name": "Money Transfer System",
           "description": "Migrated Money Transfer WebServices (SOA) from Oracle Application Server to JBoss EAP",
-          "technologies": ["Java", "SOA", "Oracle Application Server", "JBoss EAP"]
+          "technologies": [
+            "Java",
+            "SOA",
+            "Oracle Application Server",
+            "JBoss EAP"
+          ]
         }
       ]
     },
@@ -166,17 +272,25 @@
       "title": "Web Developer",
       "company": "Remodelaciones Industriales",
       "period": "Jan 2013 - Aug 2013",
-      "icon": ["fas", "laptop-code"],
+      "icon": [
+        "fas",
+        "laptop-code"
+      ],
       "projects": [
         {
           "name": "Client Management System",
           "description": "Developed, maintained and supported the CMS for client management",
-          "technologies": ["PHP", "MySQL", "HTML", "CSS", "JavaScript"]
+          "technologies": [
+            "PHP",
+            "MySQL",
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ]
         }
       ]
     }
   ],
-
   "education": {
     "formalEducation": [
       {
@@ -196,21 +310,30 @@
         "platform": "Oracle",
         "issue_date": "Feb 2015",
         "credential_id": "237614080OCAJSE7",
-        "icon": ["fab", "java"]
+        "icon": [
+          "fab",
+          "java"
+        ]
       },
       {
         "title": "Scrum Fundamentals Certified",
         "platform": "VMEdu Inc.",
         "issue_date": "Apr 2018",
         "credential_id": "623619",
-        "icon": ["fas", "users-cog"]
+        "icon": [
+          "fas",
+          "users-cog"
+        ]
       },
       {
         "title": "Introduction to Containers and Kubernetes",
         "platform": "Cloudevel®",
         "issue_date": "Sep 2020",
         "credential_id": "RMP-atikak8a",
-        "icon": ["fab", "docker"]
+        "icon": [
+          "fab",
+          "docker"
+        ]
       }
     ],
     "courses": [
@@ -220,7 +343,10 @@
         "completion_date": "Dec 2023",
         "course_id": "UC-88a6eec7-1069-43ad-896c-cdc6965d9e16",
         "link": "https://ude.my/UC-88a6eec7-1069-43ad-896c-cdc6965d9e16",
-        "icon": ["fas", "book"]
+        "icon": [
+          "fas",
+          "book"
+        ]
       },
       {
         "title": "Communication Skills: Improve Your Communication",
@@ -228,7 +354,10 @@
         "completion_date": "Nov 2022",
         "course_id": "UC-7f69003d-0d60-4001-92fd-96a31cc19794",
         "link": "https://www.udemy.com/certificate/UC-7f69003d-0d60-4001-92fd-96a31cc19794",
-        "icon": ["fas", "book"]
+        "icon": [
+          "fas",
+          "book"
+        ]
       },
       {
         "title": "Leadership: Practical Leadership Skills",
@@ -236,7 +365,10 @@
         "completion_date": "Oct 2022",
         "course_id": "UC-ac5f7a9d-a0b9-4946-a3f5-9b716187068a",
         "link": "https://www.udemy.com/certificate/UC-ac5f7a9d-a0b9-4946-a3f5-9b716187068a",
-        "icon": ["fas", "book"]
+        "icon": [
+          "fas",
+          "book"
+        ]
       },
       {
         "title": "Learn to Program with GO",
@@ -244,14 +376,20 @@
         "completion_date": "Jun 2022",
         "course_id": "UC-18c498c4-d7b4-4db7-82ed-f429de7118e3",
         "link": "https://www.udemy.com/certificate/UC-18c498c4-d7b4-4db7-82ed-f429de7118e3/",
-        "icon": ["fas", "book"]
+        "icon": [
+          "fas",
+          "book"
+        ]
       },
       {
         "title": "Advanced Rust: Managing Projects",
         "platform": "LinkedIn",
         "completion_date": "May 2022",
         "link": "https://www.linkedin.com/learning/certificates/9cecaceaf16eedc5424645a18906233c6804aafe27e1ec79ff57bb32c094a38a",
-        "icon": ["fab", "linkedin"]
+        "icon": [
+          "fab",
+          "linkedin"
+        ]
       },
       {
         "title": "Complete Jakarta EE 9 Guide: Java EE 9 from Beginner to Expert 2022",
@@ -259,7 +397,10 @@
         "completion_date": "May 2022",
         "course_id": "UC-766c49c2-cc32-4a65-b0c4-21c93e53fb92",
         "link": "https://www.udemy.com/certificate/UC-766c49c2-cc32-4a65-b0c4-21c93e53fb92",
-        "icon": ["fas", "book"]
+        "icon": [
+          "fas",
+          "book"
+        ]
       },
       {
         "title": "Microservices with Spring Boot, Cloud and Docker",
@@ -267,31 +408,46 @@
         "completion_date": "May 2022",
         "course_id": "UC-fef1b7d2-b227-417d-b6d8-604fe0251bae",
         "link": "https://www.udemy.com/certificate/UC-fef1b7d2-b227-417d-b6d8-604fe0251bae",
-        "icon": ["fas", "book"]
+        "icon": [
+          "fas",
+          "book"
+        ]
       },
       {
         "title": "Quarkus Fundamentals",
         "platform": "LinkedIn",
         "completion_date": "May 2022",
-        "icon": ["fab", "linkedin"]
+        "icon": [
+          "fab",
+          "linkedin"
+        ]
       },
       {
         "title": "Rust Tips and Tricks",
         "platform": "LinkedIn",
         "completion_date": "May 2022",
-        "icon": ["fab", "linkedin"]
+        "icon": [
+          "fab",
+          "linkedin"
+        ]
       },
       {
         "title": "All About Dotfiles",
         "platform": "CodelyTV",
         "completion_date": "Sep 2021",
-        "icon": ["fas", "tv"]
+        "icon": [
+          "fas",
+          "tv"
+        ]
       },
       {
         "title": "Complete NoSQL Databases Guide with MongoDB and NodeJS",
         "platform": "Mastermind",
         "completion_date": "Jul 2021",
-        "icon": ["fas", "brain"]
+        "icon": [
+          "fas",
+          "brain"
+        ]
       },
       {
         "title": "Android Architecture Masterclass",
@@ -299,7 +455,10 @@
         "completion_date": "May 2021",
         "course_id": "UC-0bc51045-bf1c-45e9-95b5-ad7eeeddaa53",
         "link": "https://www.udemy.com/certificate/UC-0bc51045-bf1c-45e9-95b5-ad7eeeddaa53",
-        "icon": ["fas", "book"]
+        "icon": [
+          "fas",
+          "book"
+        ]
       },
       {
         "title": "Android Unit Testing and Test Driven Development",
@@ -307,13 +466,19 @@
         "completion_date": "May 2021",
         "course_id": "UC-8d2c8311-9295-41be-9fd0-d91c3eb381ab",
         "link": "https://www.udemy.com/certificate/UC-8d2c8311-9295-41be-9fd0-d91c3eb381ab",
-        "icon": ["fas", "book"]
+        "icon": [
+          "fas",
+          "book"
+        ]
       },
       {
         "title": "Take Your First Steps with Rust",
         "platform": "Microsoft",
         "completion_date": "May 2021",
-        "icon": ["fab", "microsoft"]
+        "icon": [
+          "fab",
+          "microsoft"
+        ]
       },
       {
         "title": "The Complete Android 11 Jetpack Masterclass 2021",
@@ -321,14 +486,20 @@
         "completion_date": "May 2021",
         "course_id": "UC-8ddbda67-c27a-4681-ba64-9e815c4a8030",
         "link": "https://www.udemy.com/certificate/UC-8ddbda67-c27a-4681-ba64-9e815c4a8030",
-        "icon": ["fas", "book"]
+        "icon": [
+          "fas",
+          "book"
+        ]
       },
       {
         "title": "Rust Fundamentals",
         "platform": "Pluralsight",
         "completion_date": "Apr 2021",
         "course_id": "4127",
-        "icon": ["fas", "play-circle"]
+        "icon": [
+          "fas",
+          "play-circle"
+        ]
       },
       {
         "title": "Creating RESTful Services with PHP/MySQL (CodeIgniter 3)",
@@ -336,21 +507,30 @@
         "completion_date": "Mar 2021",
         "course_id": "UC-898bec2c-1ef3-4015-a8e5-8102e5b93984",
         "link": "https://www.udemy.com/certificate/UC-898bec2c-1ef3-4015-a8e5-8102e5b93984",
-        "icon": ["fas", "book"]
+        "icon": [
+          "fas",
+          "book"
+        ]
       },
       {
         "title": "Creating Offline-first Mobile Apps with HTML5",
         "platform": "Pluralsight",
         "completion_date": "Mar 2021",
         "course_id": "4127",
-        "icon": ["fas", "play-circle"]
+        "icon": [
+          "fas",
+          "play-circle"
+        ]
       },
       {
         "title": "Full Stack Development with Laravel & VueJS",
         "platform": "Mastermind",
         "completion_date": "Mar 2021",
         "course_id": "237614080OCAJSE7",
-        "icon": ["fas", "brain"]
+        "icon": [
+          "fas",
+          "brain"
+        ]
       },
       {
         "title": "Getting Started with WebAssembly & Emscripten",
@@ -358,7 +538,10 @@
         "completion_date": "Mar 2021",
         "course_id": "UC-b19c663c-900a-404f-9bfe-b4d8441aa5c2",
         "link": "https://www.udemy.com/certificate/UC-b19c663c-900a-404f-9bfe-b4d8441aa5c2",
-        "icon": ["fas", "book"]
+        "icon": [
+          "fas",
+          "book"
+        ]
       }
     ]
   },
@@ -368,21 +551,30 @@
       "platform": "Oracle",
       "issue_date": "Feb 2015",
       "credential_id": "237614080OCAJSE7",
-      "icon": ["fab", "java"]
+      "icon": [
+        "fab",
+        "java"
+      ]
     },
     {
       "title": "Scrum Fundamentals Certified",
       "platform": "VMEdu Inc.",
       "issue_date": "Apr 2018",
       "credential_id": "623619",
-      "icon": ["fas", "users-cog"]
+      "icon": [
+        "fas",
+        "users-cog"
+      ]
     },
     {
       "title": "Introduction to Containers and Kubernetes",
       "platform": "Cloudevel®",
       "issue_date": "Sep 2020",
       "credential_id": "RMP-atikak8a",
-      "icon": ["fab", "docker"]
+      "icon": [
+        "fab",
+        "docker"
+      ]
     }
   ],
   "courses": [
@@ -390,31 +582,46 @@
       "title": "Lambda Expressions and Streams in Java",
       "platform": "Udemy",
       "completion_date": "Dec 2023",
-      "icon": ["fas", "book"]
+      "icon": [
+        "fas",
+        "book"
+      ]
     },
     {
       "title": "Communication Skills: Improve Your Communication",
       "platform": "Udemy",
       "completion_date": "Nov 2022",
-      "icon": ["fas", "book"]
+      "icon": [
+        "fas",
+        "book"
+      ]
     },
     {
       "title": "Leadership: Practical Leadership Skills",
       "platform": "Udemy",
       "completion_date": "Oct 2022",
-      "icon": ["fas", "book"]
+      "icon": [
+        "fas",
+        "book"
+      ]
     },
     {
       "title": "Learn to Program with GO",
       "platform": "Udemy",
       "completion_date": "Jun 2022",
-      "icon": ["fas", "book"]
+      "icon": [
+        "fas",
+        "book"
+      ]
     },
     {
       "title": "Advanced Rust: Managing Projects",
       "platform": "LinkedIn",
       "completion_date": "May 2022",
-      "icon": ["fab", "linkedin"]
+      "icon": [
+        "fab",
+        "linkedin"
+      ]
     }
   ],
   "skills": {
@@ -426,79 +633,520 @@
       "cloud": "Cloud Providers",
       "servers": "Servers & Containers"
     },
-  "programmingLanguages": [
-    { "name": "Java (17+)", "level": "Expert", "icon": ["fab", "java"] },
-    { "name": "Kotlin", "level": "Experienced", "icon": ["fab", "android"] },
-    { "name": "PHP", "level": "Experienced", "icon": ["fab", "php"] },
-    { "name": "Python", "level": "Experienced", "icon": ["fab", "python"] },
-    { "name": "JavaScript", "level": "Experienced", "icon": ["fab", "js"] },
-    { "name": "TypeScript", "level": "Experienced", "icon": ["fab", "js-square"] },
-    { "name": "Ruby", "level": "Proficient", "icon": ["fas", "gem"] },
-    { "name": "Rust", "level": "Proficient", "icon": ["fas", "cog"] },
-    { "name": "GoLang", "level": "Proficient", "icon": ["fas", "code"] },
-    { "name": "C#", "level": "Proficient", "icon": ["fab", "microsoft"] },
-    { "name": "C++", "level": "Proficient", "icon": ["fas", "code"] },
-    { "name": "Ziglang", "level": "Proficient", "icon": ["fas", "bolt"] },
-    { "name": "Swift", "level": "Proficient", "icon": ["fab", "apple"] }
-  ],
-  "cloudProviders": [
-    { "name": "AWS", "level": "Experienced", "icon": ["fab", "aws"] },
-    { "name": "Google Cloud Platform", "level": "Proficient", "icon": ["fab", "google"] },
-    { "name": "Azure", "level": "Proficient", "icon": ["fab", "microsoft"] }
-  ],
-  "serversAndContainers": [
-    { "name": "Tomcat", "level": "Experienced", "icon": ["fas", "server"] },
-    { "name": "Glassfish", "level": "Experienced", "icon": ["fas", "fish"] },
-    { "name": "IBM WebSphere", "level": "Proficient", "icon": ["fas", "globe"] },
-    { "name": "OpenLiberty", "level": "Proficient", "icon": ["fas", "flag"] },
-    { "name": "Apache", "level": "Experienced", "icon": ["fas", "feather"] },
-    { "name": "Payara", "level": "Proficient", "icon": ["fas", "fish"] },
-    { "name": "Jboss", "level": "Experienced", "icon": ["fas", "fire"] },
-    { "name": "Openshift", "level": "Proficient", "icon": ["fas", "ship"] },
-    { "name": "DOCKER", "level": "Experienced", "icon": ["fab", "docker"] },
-    { "name": "Kubernetes", "level": "Experienced", "icon": ["fas", "dharmachakra"] }
-  ],
-  "developmentFrameworks": [
-    { "name": "Spring Framework", "level": "Expert", "icon": ["fas", "leaf"] },
-    { "name": "Quarkus", "level": "Experienced", "icon": ["fas", "bolt"] },
-    { "name": "Helidon", "level": "Proficient", "icon": ["fas", "sun"] },
-    { "name": "Hibernate", "level": "Experienced", "icon": ["fas", "database"] },
-    { "name": "EJB", "level": "Proficient", "icon": ["fas", "cubes"] },
-    { "name": "Apache Camel", "level": "Proficient", "icon": ["fas", "exchange-alt"] },
-    { "name": "Bootstrap", "level": "Proficient", "icon": ["fab", "bootstrap"] },
-    { "name": "Apache Kafka", "level": "Experienced", "icon": ["fas", "stream"] },
-    { "name": "RabbitMQ", "level": "Proficient", "icon": ["fas", "envelope"] },
-    { "name": "CodeIgniter", "level": "Proficient", "icon": ["fas", "fire"] },
-    { "name": "Vue.js", "level": "Proficient", "icon": ["fab", "vuejs"] },
-    { "name": "Django", "level": "Proficient", "icon": ["fab", "python"] },
-    { "name": "Express.js", "level": "Proficient", "icon": ["fab", "node-js"] },
-    { "name": "Wordpress", "level": "Proficient", "icon": ["fab", "wordpress"] },
-    { "name": "Drupal", "level": "Proficient", "icon": ["fab", "drupal"] },
-    { "name": "Foundation", "level": "Proficient", "icon": ["fas", "layer-group"] },
-    { "name": "Angular", "level": "Proficient", "icon": ["fab", "angular"] },
-    { "name": "jQuery", "level": "Proficient", "icon": ["fab", "js"] },
-    { "name": "Knockout", "level": "Proficient", "icon": ["fas", "box-open"] },
-    { "name": "Cordova", "level": "Proficient", "icon": ["fab", "android"] },
-    { "name": "Primefaces", "level": "Proficient", "icon": ["fas", "window-maximize"] },
-    { "name": "Flask", "level": "Proficient", "icon": ["fas", "flask"] },
-    { "name": "Gatsby", "level": "Proficient", "icon": ["fab", "react"] },
-    { "name": "Laravel", "level": "Proficient", "icon": ["fab", "laravel"] },
-    { "name": "React", "level": "Proficient", "icon": ["fab", "react"] },
-    { "name": "Next.js", "level": "Proficient", "icon": ["fab", "react"] }
-  ]
-},
+    "programmingLanguages": [
+      {
+        "name": "Java (17+)",
+        "level": "Expert",
+        "icon": [
+          "fab",
+          "java"
+        ]
+      },
+      {
+        "name": "Kotlin",
+        "level": "Experienced",
+        "icon": [
+          "fab",
+          "android"
+        ]
+      },
+      {
+        "name": "PHP",
+        "level": "Experienced",
+        "icon": [
+          "fab",
+          "php"
+        ]
+      },
+      {
+        "name": "Python",
+        "level": "Experienced",
+        "icon": [
+          "fab",
+          "python"
+        ]
+      },
+      {
+        "name": "JavaScript",
+        "level": "Experienced",
+        "icon": [
+          "fab",
+          "js"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "level": "Experienced",
+        "icon": [
+          "fab",
+          "js-square"
+        ]
+      },
+      {
+        "name": "Ruby",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "gem"
+        ]
+      },
+      {
+        "name": "Rust",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "cog"
+        ]
+      },
+      {
+        "name": "GoLang",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "code"
+        ]
+      },
+      {
+        "name": "C#",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "microsoft"
+        ]
+      },
+      {
+        "name": "C++",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "code"
+        ]
+      },
+      {
+        "name": "Ziglang",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "bolt"
+        ]
+      },
+      {
+        "name": "Swift",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "apple"
+        ]
+      }
+    ],
+    "cloudProviders": [
+      {
+        "name": "AWS",
+        "level": "Experienced",
+        "icon": [
+          "fab",
+          "aws"
+        ]
+      },
+      {
+        "name": "Google Cloud Platform",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "google"
+        ]
+      },
+      {
+        "name": "Azure",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "microsoft"
+        ]
+      }
+    ],
+    "serversAndContainers": [
+      {
+        "name": "Tomcat",
+        "level": "Experienced",
+        "icon": [
+          "fas",
+          "server"
+        ]
+      },
+      {
+        "name": "Glassfish",
+        "level": "Experienced",
+        "icon": [
+          "fas",
+          "fish"
+        ]
+      },
+      {
+        "name": "IBM WebSphere",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "globe"
+        ]
+      },
+      {
+        "name": "OpenLiberty",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "flag"
+        ]
+      },
+      {
+        "name": "Apache",
+        "level": "Experienced",
+        "icon": [
+          "fas",
+          "feather"
+        ]
+      },
+      {
+        "name": "Payara",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "fish"
+        ]
+      },
+      {
+        "name": "Jboss",
+        "level": "Experienced",
+        "icon": [
+          "fas",
+          "fire"
+        ]
+      },
+      {
+        "name": "Openshift",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "ship"
+        ]
+      },
+      {
+        "name": "DOCKER",
+        "level": "Experienced",
+        "icon": [
+          "fab",
+          "docker"
+        ]
+      },
+      {
+        "name": "Kubernetes",
+        "level": "Experienced",
+        "icon": [
+          "fas",
+          "dharmachakra"
+        ]
+      }
+    ],
+    "developmentFrameworks": [
+      {
+        "name": "Spring Framework",
+        "level": "Expert",
+        "icon": [
+          "fas",
+          "leaf"
+        ]
+      },
+      {
+        "name": "Quarkus",
+        "level": "Experienced",
+        "icon": [
+          "fas",
+          "bolt"
+        ]
+      },
+      {
+        "name": "Helidon",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "sun"
+        ]
+      },
+      {
+        "name": "Hibernate",
+        "level": "Experienced",
+        "icon": [
+          "fas",
+          "database"
+        ]
+      },
+      {
+        "name": "EJB",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "cubes"
+        ]
+      },
+      {
+        "name": "Apache Camel",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "exchange-alt"
+        ]
+      },
+      {
+        "name": "Bootstrap",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "bootstrap"
+        ]
+      },
+      {
+        "name": "Apache Kafka",
+        "level": "Experienced",
+        "icon": [
+          "fas",
+          "stream"
+        ]
+      },
+      {
+        "name": "RabbitMQ",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "envelope"
+        ]
+      },
+      {
+        "name": "CodeIgniter",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "fire"
+        ]
+      },
+      {
+        "name": "Vue.js",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "vuejs"
+        ]
+      },
+      {
+        "name": "Django",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "python"
+        ]
+      },
+      {
+        "name": "Express.js",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "node-js"
+        ]
+      },
+      {
+        "name": "Wordpress",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "wordpress"
+        ]
+      },
+      {
+        "name": "Drupal",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "drupal"
+        ]
+      },
+      {
+        "name": "Foundation",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "layer-group"
+        ]
+      },
+      {
+        "name": "Angular",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "angular"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "js"
+        ]
+      },
+      {
+        "name": "Knockout",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "box-open"
+        ]
+      },
+      {
+        "name": "Cordova",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "android"
+        ]
+      },
+      {
+        "name": "Primefaces",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "window-maximize"
+        ]
+      },
+      {
+        "name": "Flask",
+        "level": "Proficient",
+        "icon": [
+          "fas",
+          "flask"
+        ]
+      },
+      {
+        "name": "Gatsby",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "react"
+        ]
+      },
+      {
+        "name": "Laravel",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "laravel"
+        ]
+      },
+      {
+        "name": "React",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "react"
+        ]
+      },
+      {
+        "name": "Next.js",
+        "level": "Proficient",
+        "icon": [
+          "fab",
+          "react"
+        ]
+      }
+    ]
+  },
   "softSkillsSection": {
     "title": "Soft Skills",
     "description": "Key personal attributes that complement my technical expertise:"
   },
   "softSkills": [
-    { "name": "Outside of the Box Thinker", "icon": ["fas", "lightbulb"] },
-    { "name": "Team Player", "icon": ["fas", "users"] },
-    { "name": "Leadership", "icon": ["fas", "user-tie"] },
-    { "name": "Fast Learner", "icon": ["fas", "book-reader"] },
-    { "name": "Adaptability", "icon": ["fas", "sync-alt"] },
-    { "name": "Critical Thinking", "icon": ["fas", "brain"] },
-    { "name": "Problem Solver", "icon": ["fas", "puzzle-piece"] },
-    { "name": "Teamwork", "icon": ["fas", "handshake"] }
-  ]
+    {
+      "name": "Outside of the Box Thinker",
+      "icon": [
+        "fas",
+        "lightbulb"
+      ]
+    },
+    {
+      "name": "Team Player",
+      "icon": [
+        "fas",
+        "users"
+      ]
+    },
+    {
+      "name": "Leadership",
+      "icon": [
+        "fas",
+        "user-tie"
+      ]
+    },
+    {
+      "name": "Fast Learner",
+      "icon": [
+        "fas",
+        "book-reader"
+      ]
+    },
+    {
+      "name": "Adaptability",
+      "icon": [
+        "fas",
+        "sync-alt"
+      ]
+    },
+    {
+      "name": "Critical Thinking",
+      "icon": [
+        "fas",
+        "brain"
+      ]
+    },
+    {
+      "name": "Problem Solver",
+      "icon": [
+        "fas",
+        "puzzle-piece"
+      ]
+    },
+    {
+      "name": "Teamwork",
+      "icon": [
+        "fas",
+        "handshake"
+      ]
+    }
+  ],
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "stack": "Stack",
+    "contact": "Contact",
+    "writing": "Writing"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "tagline": "Systems engineer focused on backend architecture, AI integration, and performance. I build resilient, high-throughput systems — from banking platforms processing millions of transactions to AI-assisted development tools."
+  },
+  "status": {
+    "available": "Available for work",
+    "location": "Location",
+    "city": "Mexico City, MX",
+    "connect": "Connect"
+  },
+  "contact": {
+    "heading": "Let's build something resilient.",
+    "body": "Open to engineering roles, architecture consulting, and AI systems work.",
+    "email": "hello@drupalio.dev"
+  },
+  "footer": {
+    "built": "Built with Nuxt 3, Tailwind v4, and care."
+  },
+  "stack": {
+    "title": "Stack"
+  }
 }

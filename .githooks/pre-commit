@@ -1,0 +1,46 @@
+#!/bin/sh
+# pre-commit — Ejecuta verificadores antes de cada commit
+
+PROJECT_ROOT=$(git rev-parse --show-toplevel)
+
+# Obtener archivos staged
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACMR)
+
+if [ -z "$STAGED_FILES" ]; then
+  exit 0
+fi
+
+echo "[pre-commit] Running verification checks..."
+
+# Verificar que no se están commiteando archivos .env
+ENV_FILES=$(echo "$STAGED_FILES" | grep -E '\.env$' || true)
+if [ -n "$ENV_FILES" ]; then
+  echo "[pre-commit] ERROR: .env files should not be committed:"
+  echo "$ENV_FILES"
+  exit 1
+fi
+
+# Verificar que no se están commiteando secrets
+SECRET_PATTERNS='(API_KEY|SECRET|PASSWORD|TOKEN|CREDENTIALS)=["\x27]?[A-Za-z0-9_\-]{20,}'
+for FILE in $STAGED_FILES; do
+  if [ -f "$PROJECT_ROOT/$FILE" ]; then
+    MATCHES=$(git show :"$FILE" 2>/dev/null | grep -E "$SECRET_PATTERNS" || true)
+    if [ -n "$MATCHES" ]; then
+      echo "[pre-commit] WARNING: Possible secret in $FILE"
+      echo "$MATCHES"
+    fi
+  fi
+done
+
+# Verificar que los archivos .md nuevos tengan frontmatter
+MD_FILES=$(echo "$STAGED_FILES" | grep -E '\.md$' | grep -v -E '(README|AGENTS)' || true)
+for FILE in $MD_FILES; do
+  if [ -f "$PROJECT_ROOT/$FILE" ]; then
+    FIRST_LINE=$(git show :"$FILE" 2>/dev/null | head -1)
+    if [ "$FIRST_LINE" != "---" ]; then
+      echo "[pre-commit] WARNING: $FILE is missing frontmatter (---)"
+    fi
+  fi
+done
+
+echo "[pre-commit] Checks passed."

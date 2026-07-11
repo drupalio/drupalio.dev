@@ -1,0 +1,46 @@
+#!/bin/sh
+# post-commit — Actualiza documentos internos después de cada commit
+# Configuración: git config core.hooksPath .githooks
+
+PROJECT_ROOT=$(git rev-parse --show-toplevel)
+CHANGED_FILES=$(git diff --name-only HEAD~1..HEAD 2>/dev/null || git diff --name-only HEAD..HEAD~1 2>/dev/null || echo "")
+
+# 1. Actualizar log de sesión en AGENTS.md si hay cambios en archivos fuente
+if [ -n "$CHANGED_FILES" ]; then
+  COMMIT_MSG=$(git log -1 --pretty=%B | head -1)
+  COMMIT_HASH=$(git log -1 --pretty=%H | head -c 8)
+  TIMESTAMP=$(date '+%Y-%m-%d %H:%M')
+  FILE_COUNT=$(echo "$CHANGED_FILES" | wc -l | tr -d ' ')
+
+  # Agregar entrada al log de sesión
+  cat >> "$PROJECT_ROOT/AGENTS.md" << EOF
+
+## Sesión: $TIMESTAMP
+
+### Commit
+\`$COMMIT_HASH\` — $COMMIT_MSG
+
+### Archivos modificados ($FILE_COUNT)
+\`\`\`
+$CHANGED_FILES
+\`\`\`
+
+### Verificadores
+- [ ] Lint: pendiente
+- [ ] Typecheck: pendiente
+- [ ] Build: pendiente
+EOF
+
+  echo "[post-commit] Session log updated in AGENTS.md"
+fi
+
+# 2. Si hay cambios en archivos fuente, re-indexar knowledge graph
+# Solo si el proyecto tiene el plugin understand instalado
+HAS_UNDERSTAND=$(test -d "$PROJECT_ROOT/.understand-anything" && echo "yes" || echo "no")
+if [ "$HAS_UNDERSTAND" = "yes" ] && [ -n "$CHANGED_FILES" ]; then
+  # Verificar si hay cambios en archivos de código (no solo docs/config)
+  CODE_CHANGES=$(echo "$CHANGED_FILES" | grep -cE '\.(vue|js|ts|mjs|cjs|css|json|yml|yaml)$' || true)
+  if [ "$CODE_CHANGES" -gt 0 ]; then
+    echo "[post-commit] Code changes detected. Run '/understand' to update knowledge graph."
+  fi
+fi

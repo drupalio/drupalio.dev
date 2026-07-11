@@ -9,18 +9,83 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
-    '@nuxt/scripts',
-    '@nuxt/test-utils',
-    '@nuxt/ui'
+    '@nuxt/ui',
   ],
 
-  alias: {
-    '@locales': '/locales'
+  css: ['~/assets/css/main.css'],
+
+  components: {
+    dirs: [
+      { path: '~/components/ui', pathPrefix: false },
+      { path: '~/components/layout', pathPrefix: false },
+      { path: '~/components/bento', pathPrefix: false },
+    ],
   },
 
-  vite: {
-    optimizeDeps: {
-      include: ['vue-i18n']
-    }
-  }
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark',
+    classSuffix: '',
+  },
+
+  fonts: {
+    families: [
+      { name: 'Geist', provider: 'google' },
+      { name: 'Geist Mono', provider: 'google' },
+    ],
+  },
+
+  image: {
+    quality: 80,
+    format: ['avif', 'webp'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+  },
+
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/blog',
+        '/projects/quizzer-ai-interview-system',
+        '/projects/banking-modernization',
+        '/projects/financial-microservices-k8s',
+        '/projects/batch-payment-infrastructure',
+        '/projects/hsbc-digital-banking',
+        '/blog/resilient-microservices',
+      ],
+      interval: 60,
+    },
+    compressPublicAssets: true,
+  },
+
+  app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' },
+    head: {
+      htmlAttrs: { lang: 'en' },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'alternate', type: 'application/rss+xml', title: 'RSS', href: '/api/rss.xml' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { rel: 'preconnect', href: 'https://api.github.com' },
+        { rel: 'dns-prefetch', href: 'https://avatars.githubusercontent.com' },
+      ],
+      meta: [
+        { name: 'theme-color', content: '#0a0a0b' },
+        { name: 'color-scheme', content: 'dark light' },
+        { name: 'referrer', content: 'strict-origin-when-cross-origin' },
+        { name: 'plausible-domain', content: 'drupalio.dev' },
+      ],
+    },
+  },
 })

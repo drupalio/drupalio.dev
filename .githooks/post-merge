@@ -1,0 +1,31 @@
+#!/bin/sh
+# post-merge — Actualiza documentos internos después de un merge/pull
+
+PROJECT_ROOT=$(git rev-parse --show-toplevel)
+TIMESTAMP=$(date '+%Y-%m-%d %H:%M')
+
+# Obtener lista de archivos modificados por el merge
+CHANGED_FILES=$(git diff --name-only HEAD@{1}..HEAD 2>/dev/null || echo "")
+
+if [ -n "$CHANGED_FILES" ]; then
+  FILE_COUNT=$(echo "$CHANGED_FILES" | wc -l | tr -d ' ')
+
+  cat >> "$PROJECT_ROOT/AGENTS.md" << EOF
+
+## Sesión: $TIMESTAMP
+
+### Merge/Pull
+Archivos fusionados: $FILE_COUNT
+
+\`\`\`
+$CHANGED_FILES
+\`\`\`
+
+### Verificadores
+- [ ] Lint: pendiente
+- [ ] Typecheck: pendiente
+- [ ] Build: pendiente
+EOF
+
+  echo "[post-merge] Session log updated in AGENTS.md"
+fi
