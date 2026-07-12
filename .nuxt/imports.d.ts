@@ -49,7 +49,6 @@ export { useToast } from '../node_modules/.pnpm/@nuxt+ui@3.3.7_@babel+parser@7.2
 export { queryCollection, queryCollectionSearchSections, queryCollectionNavigation, queryCollectionItemSurroundings, useSearchCollection } from '../node_modules/.pnpm/@nuxt+content@3.15.0_@valibot+to-json-schema@1.7.1_valibot@1.4.2_typescript@5.9.3___bet_d813838a7756b496e7275e2811f16b06/node_modules/@nuxt/content/dist/runtime/client';
 export { useImage } from '../node_modules/.pnpm/@nuxt+image@1.11.0_db0@0.3.4_better-sqlite3@12.11.1__ioredis@5.11.1_magicast@0.5.3_srvx@0.11.21/node_modules/@nuxt/image/dist/runtime/composables';
 export { useColorMode } from '../node_modules/.pnpm/@nuxtjs+color-mode@3.5.2_magicast@0.5.3/node_modules/@nuxtjs/color-mode/dist/runtime/composables';
-export { useNuxtDevTools } from '../node_modules/.pnpm/@nuxt+devtools@3.2.4_vite@7.3.6_jiti@2.7.0_lightningcss@1.32.0_terser@5.49.0_yaml@2.9.0__vue@3.5.39_typescript@5.9.3_/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { flatUnwrap as unwrapSlot } from '../node_modules/.pnpm/@nuxtjs+mdc@0.22.1_magicast@0.5.3/node_modules/@nuxtjs/mdc/dist/runtime/utils/node';
 export { parseMarkdown } from '../node_modules/.pnpm/@nuxtjs+mdc@0.22.1_magicast@0.5.3/node_modules/@nuxtjs/mdc/dist/runtime/parser';
 export { stringifyMarkdown } from '../node_modules/.pnpm/@nuxtjs+mdc@0.22.1_magicast@0.5.3/node_modules/@nuxtjs/mdc/dist/runtime/stringify';

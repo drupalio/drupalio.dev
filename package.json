@@ -26,12 +26,8 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "eslint": "^9.39.0",
     "nuxt": "^3.16.2",
     "vue-tsc": "^3.3.7"
-  },
-  "pnpm": {
-    "overrides": {
-      "better-sqlite3": "^12.11.1"
-    }
   }
 }
