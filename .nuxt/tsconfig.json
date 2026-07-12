@@ -53,10 +53,10 @@
         "../node_modules/.pnpm/nitropack@2.13.4_better-sqlite3@12.11.1_oxc-parser@0.132.0_srvx@0.11.21_vite@7.3.6_jiti_252abcf793037d90428c5e7f6901ef92/node_modules/nitropack/runtime"
       ],
       "#content/components": [
-        "./content/components"
+        "./content/components.ts"
       ],
       "#content/manifest": [
-        "./content/manifest"
+        "./content/manifest.ts"
       ],
       "~": [
         ".."
@@ -149,7 +149,7 @@
         "./mdc-imports.mjs"
       ],
       "#app-manifest": [
-        "./manifest/meta/22d1a3e9-de0c-400f-8abd-a3d73cff4745.json"
+        "./manifest/meta/b348a423-e8bf-416e-853c-14d0a7700458.json"
       ],
       "#components": [
         "./components"

@@ -10,5 +10,4 @@ function createRemoteCollection(fetchEndpoint) {
 }
 
 export const collections = {
-  'lucide': () => import('@iconify-json/lucide/icons.json', { with: { type: 'json' } }).then(m => m.default),
 }

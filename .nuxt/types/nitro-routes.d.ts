@@ -69,9 +69,6 @@ declare module "nitropack/types" {
     '/__nuxt_content/info/query': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@3.15.0_@valibot+to-json-schema@1.7.1_valibot@1.4.2_typescript@5.9.3___bet_d813838a7756b496e7275e2811f16b06/node_modules/@nuxt/content/dist/runtime/api/query.post').default>>>>
     }
-    '/_ipx/**': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+image@1.11.0_db0@0.3.4_better-sqlite3@12.11.1__ioredis@5.11.1_magicast@0.5.3_srvx@0.11.21/node_modules/@nuxt/image/dist/runtime/ipx').default>>>>
-    }
   }
 }
 export {}
