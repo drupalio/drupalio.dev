@@ -1,0 +1,43 @@
+# Dependencias
+node_modules/
+.pnpm-store/
+.yarn/
+.npm/
+
+# Nuxt
+.nuxt/
+.output/
+dist/
+.cache/
+
+# Build
+coverage/
+.vite/
+*.log
+
+# Control de versiones
+.git/
+.git/**
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Variables sensibles
+.env
+.env.*
+!.env.example
+
+# Archivos temporales
+tmp/
+temp/
+*.tmp
+
+# Assets generados
+public/_nuxt/

@@ -3,10 +3,18 @@ import enData from '../locales/en.json'
 import esData from '../locales/es.json'
 
 export default defineNuxtPlugin(({ vueApp }) => {
+  const cookie = useCookie('language', {
+    default: () => 'en',
+    sameSite: 'lax',
+    maxAge: 60 * 60 * 24 * 365,
+  })
+
+  const initial = cookie.value === 'es' ? 'es' : 'en'
+
   const i18n = createI18n({
     legacy: false,
     globalInjection: true,
-    locale: 'en',
+    locale: initial,
     fallbackLocale: 'en',
     silentTranslationWarn: true,
     silentFallbackWarn: true,

@@ -23,19 +23,19 @@
   --ease-out-quick: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.dark {
+  color-scheme: dark;
+  --color-bg: #0a0a0b;
+  --color-surface: #131316;
+  --color-surface-2: #1a1a1f;
+  --color-border: #26262b;
+  --color-text: #ededed;
+  --color-text-muted: #8a8a93;
+}
+
 @layer base {
   :root {
     color-scheme: light;
-  }
-
-  .dark {
-    color-scheme: dark;
-    --color-bg: #0a0a0b;
-    --color-surface: #131316;
-    --color-surface-2: #1a1a1f;
-    --color-border: #26262b;
-    --color-text: #ededed;
-    --color-text-muted: #8a8a93;
   }
 
   html {

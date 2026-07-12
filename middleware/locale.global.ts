@@ -1,31 +1,19 @@
 type Locale = 'en' | 'es'
 
-export default defineNuxtRouteMiddleware((to) => {
-  if (!import.meta.client) return
-
+export default defineNuxtRouteMiddleware(() => {
   const { $i18n } = useNuxtApp()
   if (!$i18n?.global) return
 
-  const localePath = to.path
+  const cookie = useCookie<string>('language', {
+    default: () => 'en',
+    sameSite: 'lax',
+    maxAge: 60 * 60 * 24 * 365,
+  })
 
   const knownLocales: Locale[] = ['en', 'es']
-  const firstSegment = localePath.split('/')[1] as Locale
+  const saved = (cookie.value as Locale) || 'en'
 
-  if (knownLocales.includes(firstSegment)) {
-    const locale: Locale = firstSegment
-    if ($i18n.global.locale.value !== locale) {
-      $i18n.global.locale.value = locale
-      localStorage.setItem('language', locale)
-    }
-    return
-  }
-
-  const saved = (localStorage.getItem('language') || 'en') as Locale
-  if (saved && knownLocales.includes(saved) && saved !== 'en') {
-    return navigateTo(`/${saved}${localePath === '/' ? '' : localePath}`, { replace: true })
-  }
-
-  if (saved !== $i18n.global.locale.value) {
+  if (knownLocales.includes(saved) && saved !== $i18n.global.locale.value) {
     $i18n.global.locale.value = saved
   }
 })
