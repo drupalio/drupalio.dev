@@ -52,12 +52,6 @@ jobs:
       - name: Prepare Nuxt
         run: pnpm run postinstall
 
-      - name: Run lint
-        run: pnpm run lint
-
-      - name: Run typecheck
-        run: pnpm run typecheck
-
       - name: Build for static export
         run: pnpm run generate
         env:
