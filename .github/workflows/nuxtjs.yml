@@ -37,15 +37,6 @@ jobs:
         with:
           static_site_generator: nuxt
 
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            .output
-          key: ${{ runner.os }}-nuxt-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-nuxt-
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
