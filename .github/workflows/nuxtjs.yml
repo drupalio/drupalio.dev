@@ -32,11 +32,6 @@ jobs:
           node-version: "22"
           cache: "pnpm"
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: nuxt
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -45,8 +40,6 @@ jobs:
 
       - name: Build for static export
         run: pnpm run generate
-        env:
-          NUXT_APP_BASE_URL: ${{ steps.pages.outputs.base_url }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
