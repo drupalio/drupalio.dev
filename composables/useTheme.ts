@@ -1,3 +1,5 @@
+import { useColorMode } from '#imports'
+
 export type Theme = 'light' | 'dark'
 
 export const useTheme = () => {
