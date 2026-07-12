@@ -1,14 +1,12 @@
-import { useColorMode } from '#imports'
-
 export type Theme = 'light' | 'dark'
 
 export const useTheme = () => {
-  const colorMode = useColorMode()
+  const { $colorMode } = useNuxtApp()
 
   const isDark = computed({
-    get: () => colorMode.value === 'dark',
+    get: () => $colorMode.value === 'dark',
     set: (val: boolean) => {
-      colorMode.preference = val ? 'dark' : 'light'
+      $colorMode.preference = val ? 'dark' : 'light'
     },
   })
 
