@@ -41,7 +41,6 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            .nuxt
             .output
           key: ${{ runner.os }}-nuxt-${{ hashFiles('pnpm-lock.yaml') }}
           restore-keys: |
@@ -49,6 +48,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Prepare Nuxt
+        run: pnpm run postinstall
 
       - name: Run lint
         run: pnpm run lint
