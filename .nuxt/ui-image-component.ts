@@ -1,1 +1,0 @@
-export { default } from "/Users/drupalio/drupalio.dev/node_modules/.pnpm/@nuxt+image@1.11.0_db0@0.3.4_better-sqlite3@12.11.1__ioredis@5.11.1_magicast@0.5.3_srvx@0.11.21/node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue";
