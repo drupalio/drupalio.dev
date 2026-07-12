@@ -14,6 +14,15 @@ projects:
   - name: "Qualitas"
     description: "Developed and integrated a CRM core using SQL/PLus stored procedures, functions and a Java backend"
     technologies: ["Java", "SQL/PLus", "Oracle", "CRM"]
+  - name: "GEPP"
+    description: "Backend analysis and development using data mining and procedures for promotion management on a custom-built CRM"
+    technologies: ["Java", "Data Mining", "SQL", "CRM", "Stored Procedures"]
+  - name: "Plan Seguro"
+    description: "Look and feel restructure for the insurance company, updating UI components and Angular versions"
+    technologies: ["Angular", "TypeScript", "UI/UX", "CSS", "HTML"]
+  - name: "Banorte - Sigma Sitio Jovenes"
+    description: "Look and feel restructure for the insurance company, updating UI components and MagnoliaCMS versions"
+    technologies: ["Angular", "TypeScript", "UI/UX", "CSS", "HTML"]
 order: 0
 ---
 
