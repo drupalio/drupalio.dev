@@ -23,6 +23,12 @@ projects:
   - name: "Banorte - Sigma Sitio Jovenes"
     description: "Look and feel restructure for the insurance company, updating UI components and MagnoliaCMS versions"
     technologies: ["Angular", "TypeScript", "UI/UX", "CSS", "HTML"]
+  - name: "Plan Seguro - Cotizador Colectivo"
+    description: "Collective insurance quoter for Plan Seguro"
+  - name: "Heineken - Magnolia"
+    description: "Heineken project on Magnolia"
+  - name: "Pinkup"
+    description: "AI concierge with AR-powered imagery"
 order: 0
 ---
 
