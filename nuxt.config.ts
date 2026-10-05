@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
   modules: [
@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     families: [
       { name: 'Geist', provider: 'google' },
       { name: 'Geist Mono', provider: 'google' },
+      { name: 'Cabinet Grotesk', provider: 'fontshare', weights: [500, 700] },
     ],
   },
 
@@ -49,7 +50,26 @@ export default defineNuxtConfig({
     },
   },
 
+  build: {
+    transpile: ['vue-i18n'],
+  },
+
+  vite: {
+    define: {
+      __VUE_PROD_DEVTOOLS__: false,
+      __VUE_I18N_LEGACY_API__: false,
+      __VUE_I18N_FULL_INSTALL__: true,
+      __INTLIFY_PROD_DEVTOOLS__: false,
+    },
+  },
+
   nitro: {
+    replace: {
+      __VUE_PROD_DEVTOOLS__: 'false',
+      __VUE_I18N_LEGACY_API__: 'false',
+      __VUE_I18N_FULL_INSTALL__: 'true',
+      __INTLIFY_PROD_DEVTOOLS__: 'false',
+    },
     prerender: {
       crawlLinks: true,
       routes: [

@@ -10,33 +10,40 @@ const t = (key: string) => {
 }
 
 const name = computed(() => t('personalInfo.name'))
-const title = computed(() => t('personalInfo.title'))
-const avatarUrl = 'https://avatars.githubusercontent.com/u/5186093'
+const firstName = computed(() => name.value.split(' ')[0] ?? name.value)
+const restName = computed(() => name.value.split(' ').slice(1).join(' '))
 </script>
 
 <template>
   <div class="flex flex-col gap-6">
-    <div class="flex items-center gap-4">
-      <NuxtImg
-        :src="avatarUrl"
-        :alt="name"
-        width="56"
-        height="56"
-        format="avif"
-        sizes="56px sm:56px"
-        class="h-14 w-14 rounded-full ring-1 ring-border"
-        loading="eager"
-      />
-      <p class="section-label">{{ t('hero.greeting') }}</p>
-    </div>
-    <h1 class="text-balance text-5xl font-semibold leading-[1.05] tracking-tight text-text sm:text-6xl lg:text-7xl">
-      {{ name }}
+    <p class="font-mono text-xs uppercase tracking-wider text-text-muted">
+      {{ t('personalInfo.title') }} · {{ t('status.city') }}
+    </p>
+
+    <h1 class="max-w-5xl font-display text-6xl leading-[0.95] font-bold tracking-tight text-balance text-text sm:text-7xl lg:text-8xl">
+      {{ firstName }}
+      <span class="text-accent">{{ restName }}</span>
     </h1>
-    <p class="text-balance text-xl text-text-muted sm:text-2xl">
-      {{ title }}
-    </p>
-    <p class="max-w-xl text-base leading-relaxed text-text-muted">
-      {{ t('hero.tagline') }}
-    </p>
+
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-8">
+      <p class="max-w-xl text-lg leading-relaxed text-text-muted">
+        {{ t('hero.tagline') }}
+      </p>
+
+      <div class="flex shrink-0 flex-wrap items-center gap-3">
+        <NuxtLink to="/#projects" class="btn-solid">
+          {{ t('hero.workCta') }}
+        </NuxtLink>
+        <NuxtLink
+          to="/#contact"
+          class="inline-flex h-11 items-center gap-1.5 rounded-xl px-2 text-sm font-medium text-text-muted transition-colors duration-150 hover:text-text"
+        >
+          {{ t('hero.contactCta') }}
+          <Icon name="lucide:arrow-down-right" size="15" aria-hidden="true" />
+        </NuxtLink>
+      </div>
+    </div>
+
+    <TraceLedger />
   </div>
 </template>

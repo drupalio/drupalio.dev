@@ -59,7 +59,7 @@ const labels = computed(() => ({
             </span>
           </div>
 
-          <h1 class="text-balance text-4xl font-semibold tracking-tight text-text sm:text-5xl">
+          <h1 class="font-display text-balance text-4xl font-bold tracking-tight text-text sm:text-5xl">
             {{ project.title }}
           </h1>
 

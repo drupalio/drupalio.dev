@@ -1130,7 +1130,9 @@
   },
   "hero": {
     "greeting": "Hello, I'm",
-    "tagline": "Systems engineer focused on backend architecture, AI integration, and performance. I build resilient, high-throughput systems — from banking platforms processing millions of transactions to AI-assisted development tools."
+    "tagline": "Systems engineer focused on backend architecture, AI integration, and performance. I build resilient, high-throughput systems: from banking platforms processing millions of transactions to AI-assisted development tools.",
+    "workCta": "View selected work",
+    "contactCta": "Get in touch"
   },
   "status": {
     "available": "Available for work",

@@ -40,11 +40,11 @@ const topLevelSkills = computed(() => {
   <div class="flex flex-col gap-6">
     <SectionLabel number="04" :label="t('stack.title') || 'Stack'" />
 
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 xl:grid-cols-3">
       <div
         v-for="group in topLevelSkills"
         :key="group.title"
-        class="flex flex-col gap-2"
+        class="flex flex-col gap-2 border-t border-border pt-3"
       >
         <p class="font-mono text-xs uppercase tracking-wider text-text-muted">{{ group.title }}</p>
         <div class="flex flex-col gap-1">
