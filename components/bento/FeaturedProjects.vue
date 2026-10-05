@@ -36,7 +36,7 @@ const casePath = (path?: string) => {
         <span class="tabular-nums">{{ flagship.period }}</span>
       </div>
 
-      <h3 class="font-display max-w-4xl text-balance text-4xl font-bold leading-[1.02] tracking-tight text-text sm:text-5xl">
+      <h3 class="kinetic font-display max-w-4xl text-balance text-4xl font-bold leading-[1.02] tracking-tight text-text sm:text-5xl">
         {{ flagship.title }}
       </h3>
 
@@ -44,10 +44,12 @@ const casePath = (path?: string) => {
         {{ flagship.description }}
       </p>
 
-      <div v-if="flagship.metrics?.length" class="flex flex-wrap gap-x-10 gap-y-4">
-        <div v-for="metric in flagship.metrics" :key="metric.label" class="flex flex-col gap-1">
-          <span class="font-display text-3xl font-bold tabular-nums text-text">{{ metric.value }}</span>
-          <span class="font-mono text-[10px] uppercase tracking-wider text-text-muted">{{ metric.label }}</span>
+      <div v-if="flagship.metrics?.length" class="plate w-fit rounded-2xl">
+        <div class="frost flex flex-wrap gap-x-10 gap-y-4 rounded-2xl px-7 py-5">
+          <div v-for="metric in flagship.metrics" :key="metric.label" class="flex flex-col gap-1">
+            <span class="font-display text-3xl font-bold tabular-nums text-text">{{ metric.value }}</span>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-text-muted">{{ metric.label }}</span>
+          </div>
         </div>
       </div>
 

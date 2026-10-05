@@ -47,13 +47,26 @@ cero decoración sin función. La firma es la composición tipográfica.
 
 ## Movimiento
 
-MOTION 1: hovers y transiciones de color. Contenido visible por defecto (A1),
-`prefers-reduced-motion` respetado, sin parallax ni bucles.
+MOTION 2: hovers con presión táctil, titulares con cinética atada al scroll
+(`animation-timeline`, solo transform, contenido siempre visible), grano
+estático global tenue. `prefers-reduced-motion` desactiva todo movimiento.
+Contenido visible por defecto (A1).
+
+## Profundidad 2026 (dosis estricta, cohesión ante todo)
+
+Tres capas, cada una con motivo escrito; nada se apila por tendencia:
+- Escarcha (vidrio 2.0): solo nav al hacer scroll (refracta contenido real)
+  y panel de métricas del flagship (refracta placa ámbar). 2 elementos (R-10).
+- Brutalismo táctil: sombra dura direccional en botones primarios (presión
+  al hover/active) y placa ámbar offset tras métricas. Geometría afilada solo
+  donde hay borde estructural (índice, flagship).
+- Cinética + grano: titulares display con rise atado al scroll; grano fino
+  sobre el sustrato, detrás del contenido (A12).
 
 ## Dials
 
-ENERGY 2 / RHYTHM 3 / MOTION 1.
+ENERGY 2 / RHYTHM 3 / MOTION 2.
 
 Design Read: revista técnica personal de ingeniería para audiencia técnica
-y contratante, en lenguaje editorial denso y sobrio, dial
-ENERGY 2 / RHYTHM 3 / MOTION 1.
+y contratante, en lenguaje editorial denso con profundidad 2026, dial
+ENERGY 2 / RHYTHM 3 / MOTION 2.

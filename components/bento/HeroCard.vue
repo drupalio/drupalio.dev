@@ -25,7 +25,7 @@ const restName = computed(() => name.value.split(' ').slice(1).join(' '))
       <span>{{ t('status.city') }}</span>
     </p>
 
-    <h1 class="max-w-5xl font-display text-6xl leading-[0.95] font-bold tracking-tight text-balance text-text sm:text-7xl lg:text-8xl">
+    <h1 class="kinetic max-w-5xl font-display text-6xl leading-[0.95] font-bold tracking-tight text-balance text-text sm:text-7xl lg:text-8xl">
       {{ firstName }}
       <span class="text-accent">{{ restName }}</span>
     </h1>
@@ -38,7 +38,7 @@ const restName = computed(() => name.value.split(' ').slice(1).join(' '))
       <div class="flex shrink-0 flex-wrap items-center gap-3">
         <NuxtLink
           to="/#projects"
-          class="inline-flex h-11 items-center rounded-xl bg-text px-5 text-sm font-medium text-bg transition-colors duration-150 hover:bg-accent hover:text-white dark:hover:text-[#17122b]"
+          class="btn-press inline-flex h-11 items-center rounded-xl bg-text px-5 text-sm font-medium text-bg"
         >
           {{ t('hero.workCta') }}
         </NuxtLink>

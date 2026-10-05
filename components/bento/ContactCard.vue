@@ -27,7 +27,7 @@ const email = 'hello@drupalio.dev'
 
     <a
       :href="`mailto:${email}`"
-      class="inline-flex h-11 w-fit items-center gap-2 rounded-xl bg-text px-5 text-sm font-medium text-bg transition-colors duration-150"
+      class="btn-press inline-flex h-11 w-fit items-center gap-2 rounded-xl bg-text px-5 text-sm font-medium text-bg"
     >
       <Icon name="lucide:mail" size="15" />
       {{ email }}

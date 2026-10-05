@@ -23,8 +23,12 @@ elegida desde tendencias 2027: editorial técnico. Especificación en
   por defecto.
 - [x] CA3: Secciones numeradas con regla superior y composiciones variadas.
 - [x] CA4: Blog, slugs y footer entonados al sistema; titulares display.
-- [x] CA5: Contrastes AA con números; MOTION 1; contenido visible sin JS.
+- [x] CA5: Contrastes AA con números; MOTION 2 (cinética + grano,
+  reduced-motion); contenido visible sin JS.
 - [x] CA6: Verificadores en verde + Delivery Gate con reporte PASS.
+- [x] CA7: Capa de profundidad 2026 con dosis estricta: escarcha en 2
+  elementos (nav al scroll, métricas flagship sobre placa ámbar), sombra
+  dura táctil en botones primarios, grano global tenue.
 
 ## Stack Técnico
 - Nuxt 4, Tailwind v4, `@nuxt/fonts` (Cabinet Grotesk fontshare + Geist).
