@@ -1,6 +1,6 @@
 ---
 title: "Rediseño 2027 v3 — editorial técnico"
-status: planned
+status: done
 created: 2026-10-05
 locale: es
 ---
@@ -18,13 +18,13 @@ elegida desde tendencias 2027: editorial técnico. Especificación en
 `DESIGN.md` (ENERGY 2 / RHYTHM 3 / MOTION 1).
 
 ## Criterios de Aceptación
-- [ ] CA1: Hero editorial (nombre oversize, meta real, entradilla, CTAs).
-- [ ] CA2: Proyectos home como índice editorial + un flagship, sin tarjetas
+- [x] CA1: Hero editorial (nombre oversize, meta real, entradilla, CTAs).
+- [x] CA2: Proyectos home como índice editorial + un flagship, sin tarjetas
   por defecto.
-- [ ] CA3: Secciones numeradas con regla superior y composiciones variadas.
-- [ ] CA4: Blog, slugs y footer entonados al sistema; titulares display.
-- [ ] CA5: Contrastes AA con números; MOTION 1; contenido visible sin JS.
-- [ ] CA6: Verificadores en verde + Delivery Gate con reporte PASS.
+- [x] CA3: Secciones numeradas con regla superior y composiciones variadas.
+- [x] CA4: Blog, slugs y footer entonados al sistema; titulares display.
+- [x] CA5: Contrastes AA con números; MOTION 1; contenido visible sin JS.
+- [x] CA6: Verificadores en verde + Delivery Gate con reporte PASS.
 
 ## Stack Técnico
 - Nuxt 4, Tailwind v4, `@nuxt/fonts` (Cabinet Grotesk fontshare + Geist).
