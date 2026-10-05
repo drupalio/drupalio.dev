@@ -7,7 +7,7 @@ export const useInView = (options?: IntersectionObserverInit) => {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry?.isIntersecting) {
           inView.value = true
           observer.disconnect()
         }

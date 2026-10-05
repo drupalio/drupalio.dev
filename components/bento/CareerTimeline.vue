@@ -15,7 +15,7 @@ const sectionTitle = computed(() =>
 function yearFromPeriod(period: string): string {
   if (!period) return ''
   const match = period.match(/(\d{4})/)
-  return match ? match[1] : ''
+  return match?.[1] ?? ''
 }
 </script>
 

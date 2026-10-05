@@ -10,6 +10,8 @@ const sectionTitle = computed(() =>
   currentLocale.value === 'en' ? 'Writing' : 'Escritos',
 )
 
+const postPath = (path: string) => path.replace(/^\/(en|es)\//, '/')
+
 useSeoMeta({
   title: 'Writing — Ricardo Morales',
   description: 'Thoughts on microservices, AI engineering, and building resilient systems.',
@@ -33,7 +35,7 @@ useSeoMeta({
         <NuxtLink
           v-for="post in posts"
           :key="post.path"
-          :to="post.path.replace(/^\/(en|es)\//, '/')"
+          :to="postPath(post.path)"
           class="group flex flex-col gap-1 border-b border-border py-4 transition-colors duration-150 hover:border-accent/30"
         >
           <div class="flex items-baseline justify-between gap-4">
