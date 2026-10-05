@@ -5,6 +5,7 @@
 @theme {
   --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-display: "Cabinet Grotesk", "Geist", ui-sans-serif, system-ui, sans-serif;
 
   --color-bg: #fafafa;
   --color-surface: #ffffff;
@@ -12,8 +13,8 @@
   --color-border: #e4e4e7;
   --color-text: #18181b;
   --color-text-muted: #71717a;
-  --color-accent: #6366f1;
-  --color-accent-muted: rgba(99, 102, 241, 0.1);
+  --color-accent: #7a4d0f;
+  --color-accent-muted: rgba(122, 77, 15, 0.1);
 
   --radius-xl: 0.75rem;
   --radius-2xl: 1rem;
@@ -31,6 +32,8 @@
   --color-border: #26262b;
   --color-text: #ededed;
   --color-text-muted: #8a8a93;
+  --color-accent: #d9a441;
+  --color-accent-muted: rgba(217, 164, 65, 0.12);
 }
 
 @layer base {

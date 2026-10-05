@@ -17,7 +17,7 @@ const email = 'hello@drupalio.dev'
   <div class="flex flex-col gap-4">
     <SectionLabel number="09" :label="currentLocale === 'en' ? 'Contact' : 'Contacto'" />
 
-    <h3 class="text-balance text-2xl font-medium tracking-tight text-text">
+    <h3 class="font-display text-balance text-3xl font-bold tracking-tight text-text sm:text-4xl">
       {{ t('contact.heading') }}
     </h3>
 
@@ -27,9 +27,9 @@ const email = 'hello@drupalio.dev'
 
     <a
       :href="`mailto:${email}`"
-      class="inline-flex w-fit items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-all duration-150 hover:bg-accent/90"
+      class="inline-flex h-11 w-fit items-center gap-2 rounded-xl bg-text px-5 text-sm font-medium text-bg transition-colors duration-150"
     >
-      <Icon name="lucide:mail" size="14" />
+      <Icon name="lucide:mail" size="15" />
       {{ email }}
     </a>
 

@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     families: [
       { name: 'Geist', provider: 'google' },
       { name: 'Geist Mono', provider: 'google' },
+      { name: 'Cabinet Grotesk', provider: 'fontshare', weights: [500, 700] },
     ],
   },
 

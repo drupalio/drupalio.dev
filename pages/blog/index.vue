@@ -26,7 +26,7 @@ useSeoMeta({
     <main class="mx-auto max-w-3xl px-6 pt-32 pb-20 lg:px-8">
       <div class="mb-12 flex flex-col gap-4">
         <SectionLabel number="" :label="sectionTitle" />
-        <h1 class="text-balance text-4xl font-semibold tracking-tight text-text sm:text-5xl">
+        <h1 class="font-display text-balance text-4xl font-bold tracking-tight text-text sm:text-5xl">
           {{ currentLocale === 'en' ? 'Engineering deep dives, not hot takes.' : 'Análisis técnico, no opiniones.' }}
         </h1>
       </div>

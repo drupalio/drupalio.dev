@@ -54,83 +54,53 @@ useHead({
     <AppHeader />
 
     <main class="mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8">
-      <!-- Row 1: Hero + Status -->
-      <div class="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-6">
-        <section id="hero" v-animate class="lg:col-span-7 lg:row-span-1 flex items-center">
-          <HeroCard />
-        </section>
+      <section id="hero" v-animate>
+        <HeroCard />
+      </section>
 
-        <section v-animate="80" class="lg:col-span-5">
-          <BentoCard variant="hover" padding="lg">
-            <StatusCard />
-          </BentoCard>
-        </section>
-      </div>
-
-      <!-- Row 2: About -->
-      <div class="mt-6 grid grid-cols-1 lg:grid-cols-12">
-        <section id="about" v-animate class="lg:col-span-12">
+      <div class="mt-16 grid grid-cols-1 lg:grid-cols-12">
+        <section id="about" v-animate class="border-t border-border pt-8 lg:col-span-10">
           <AboutSection />
         </section>
       </div>
 
-      <!-- Row 3: Experience + Tech Stack -->
-      <div class="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-6">
-        <section id="experience" v-animate class="lg:col-span-8">
-          <BentoCard variant="default" padding="lg">
-            <ExperienceTimeline />
-          </BentoCard>
+      <div class="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+        <section id="experience" v-animate class="border-t border-border pt-8 lg:col-span-7">
+          <ExperienceTimeline />
         </section>
 
-        <section id="stack" v-animate="80" class="lg:col-span-4">
-          <BentoCard variant="default" padding="lg">
-            <TechStackGrid />
-          </BentoCard>
+        <section id="stack" v-animate="80" class="border-t border-border pt-8 lg:col-span-5">
+          <TechStackGrid />
         </section>
       </div>
 
-      <!-- Row 4: Featured Projects -->
-      <div class="mt-6">
+      <div class="mt-20">
         <section id="projects" v-animate>
           <LazyFeaturedProjects v-if="showBelowFold" />
         </section>
       </div>
 
-      <!-- Row 5: AI Lab + GitHub -->
-      <div class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-6">
-        <section v-animate class="lg:col-span-6">
-          <BentoCard variant="default" padding="lg">
-            <LazyAILabCard v-if="showBelowFold" />
-          </BentoCard>
+      <div class="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+        <section v-animate class="border-t border-border pt-8 lg:col-span-6">
+          <LazyAILabCard v-if="showBelowFold" />
         </section>
 
-        <section v-animate="80" class="lg:col-span-6">
-          <BentoCard variant="default" padding="lg">
-            <LazyGitHubCard v-if="showBelowFold" />
-          </BentoCard>
+        <section v-animate="80" class="border-t border-border pt-8 lg:col-span-6">
+          <LazyGitHubCard v-if="showBelowFold" />
         </section>
       </div>
 
-      <!-- Row 6: Career Timeline -->
-      <div v-animate class="mt-6">
-        <BentoCard variant="default" padding="lg">
-          <LazyCareerTimeline v-if="showBelowFold" />
-        </BentoCard>
+      <div v-animate class="mt-12 border-t border-border pt-8">
+        <LazyCareerTimeline v-if="showBelowFold" />
       </div>
 
-      <!-- Row 7: Soft Skills -->
-      <div v-animate class="mt-6">
-        <BentoCard variant="default" padding="lg">
-          <LazySoftSkillsCloud v-if="showBelowFold" />
-        </BentoCard>
+      <div v-animate class="mt-12 border-t border-border pt-8">
+        <LazySoftSkillsCloud v-if="showBelowFold" />
       </div>
 
-      <!-- Row 8: Contact -->
-      <div v-animate class="mt-6">
-        <section id="contact">
-          <BentoCard variant="default" padding="lg">
-            <LazyContactCard v-if="showBelowFold" />
-          </BentoCard>
+      <div v-animate class="mt-20">
+        <section id="contact" class="border-t-2 border-text pt-10">
+          <LazyContactCard v-if="showBelowFold" />
         </section>
       </div>
     </main>
