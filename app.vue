@@ -1,7 +1,5 @@
 <template>
-  <div class="grain">
-    <NuxtPage />
-  </div>
+  <NuxtPage />
 </template>
 
 <script setup lang="ts">

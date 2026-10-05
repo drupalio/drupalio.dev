@@ -13,7 +13,7 @@ const sectionTitle = computed(() =>
 
 <template>
   <div class="flex flex-col gap-6">
-    <SectionLabel number="02" :label="sectionTitle" />
+    <SectionLabel number="03" :label="sectionTitle" />
 
     <div v-if="workExperience" class="flex flex-col gap-1">
       <div
@@ -30,23 +30,17 @@ const sectionTitle = computed(() =>
           </div>
           <p class="text-sm text-text-muted">{{ job.company }}</p>
 
-          <div v-if="job.projects?.length" class="mt-3 flex flex-col gap-2">
+          <div v-if="job.projects?.length" class="mt-3 flex flex-col gap-3">
             <div
               v-for="(project, pIndex) in job.projects"
               :key="pIndex"
-              class="rounded-lg bg-surface-2 px-3 py-2"
+              class="border-l-2 border-border pl-3"
             >
               <p class="text-sm font-medium text-text">{{ project.name }}</p>
               <p class="mt-0.5 text-xs leading-relaxed text-text-muted">{{ project.description }}</p>
-              <div v-if="project.technologies?.length" class="mt-2 flex flex-wrap gap-1">
-                <span
-                  v-for="tech in project.technologies"
-                  :key="tech"
-                  class="rounded-md bg-accent/5 px-1.5 py-0.5 font-mono text-[10px] text-accent"
-                >
-                  {{ tech }}
-                </span>
-              </div>
+              <p v-if="project.technologies?.length" class="mt-1 font-mono text-[11px] text-text-muted">
+                {{ project.technologies.join(' · ') }}
+              </p>
             </div>
           </div>
         </div>

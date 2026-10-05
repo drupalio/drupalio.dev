@@ -53,53 +53,45 @@ useHead({
     <ScrollProgress />
     <AppHeader />
 
-    <main class="mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8">
-      <section id="hero" v-animate>
+    <main class="mx-auto max-w-7xl px-6 pb-20 pt-32 lg:px-8">
+      <section id="hero">
         <HeroCard />
       </section>
 
-      <div class="mt-16 grid grid-cols-1 lg:grid-cols-12">
-        <section id="about" v-animate class="border-t border-border pt-8 lg:col-span-10">
+      <div class="mt-20 grid grid-cols-1 lg:grid-cols-12">
+        <section id="about" class="border-t border-border pt-8 lg:col-span-10">
           <AboutSection />
         </section>
       </div>
 
-      <div class="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
-        <section id="experience" v-animate class="border-t border-border pt-8 lg:col-span-7">
-          <ExperienceTimeline />
-        </section>
-
-        <section id="stack" v-animate="80" class="border-t border-border pt-8 lg:col-span-5">
-          <TechStackGrid />
-        </section>
-      </div>
-
-      <div class="mt-20">
-        <section id="projects" v-animate>
+      <div class="mt-24">
+        <section id="projects">
           <LazyFeaturedProjects v-if="showBelowFold" />
         </section>
       </div>
 
-      <div class="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
-        <section v-animate class="border-t border-border pt-8 lg:col-span-6">
-          <LazyAILabCard v-if="showBelowFold" />
+      <div class="mt-24 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+        <section id="experience" class="border-t border-border pt-8 lg:col-span-7">
+          <ExperienceTimeline />
         </section>
 
-        <section v-animate="80" class="border-t border-border pt-8 lg:col-span-6">
+        <section id="stack" class="border-t border-border pt-8 lg:col-span-5">
+          <TechStackGrid />
+        </section>
+      </div>
+
+      <div class="mt-24 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+        <section class="border-t border-border pt-8 lg:col-span-7">
           <LazyGitHubCard v-if="showBelowFold" />
         </section>
+
+        <section class="border-t border-border pt-8 lg:col-span-5">
+          <LazyWritingStrip v-if="showBelowFold" />
+        </section>
       </div>
 
-      <div v-animate class="mt-12 border-t border-border pt-8">
-        <LazyCareerTimeline v-if="showBelowFold" />
-      </div>
-
-      <div v-animate class="mt-12 border-t border-border pt-8">
-        <LazySoftSkillsCloud v-if="showBelowFold" />
-      </div>
-
-      <div v-animate class="mt-20">
-        <section id="contact" class="border-t-2 border-text pt-10">
+      <div class="mt-28 grid grid-cols-1 lg:grid-cols-12">
+        <section id="contact" class="border-t-2 border-text pt-10 lg:col-span-8">
           <LazyContactCard v-if="showBelowFold" />
         </section>
       </div>

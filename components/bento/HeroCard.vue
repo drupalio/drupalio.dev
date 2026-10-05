@@ -16,30 +16,22 @@ const restName = computed(() => name.value.split(' ').slice(1).join(' '))
 
 <template>
   <div class="flex flex-col gap-6">
-    <p class="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs uppercase tracking-wider text-text-muted">
-      <span class="inline-flex items-center gap-2">
-        <span class="inline-flex h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
-        {{ t('status.available') }}
-      </span>
-      <span aria-hidden="true">·</span>
-      <span>{{ t('status.city') }}</span>
+    <p class="font-mono text-xs uppercase tracking-wider text-text-muted">
+      {{ t('personalInfo.title') }} · {{ t('status.city') }}
     </p>
 
-    <h1 class="kinetic max-w-5xl font-display text-6xl leading-[0.95] font-bold tracking-tight text-balance text-text sm:text-7xl lg:text-8xl">
+    <h1 class="max-w-5xl font-display text-6xl leading-[0.95] font-bold tracking-tight text-balance text-text sm:text-7xl lg:text-8xl">
       {{ firstName }}
       <span class="text-accent">{{ restName }}</span>
     </h1>
 
     <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-8">
       <p class="max-w-xl text-lg leading-relaxed text-text-muted">
-        {{ t('personalInfo.title') }}. {{ t('hero.tagline') }}
+        {{ t('hero.tagline') }}
       </p>
 
       <div class="flex shrink-0 flex-wrap items-center gap-3">
-        <NuxtLink
-          to="/#projects"
-          class="btn-press inline-flex h-11 items-center rounded-xl bg-text px-5 text-sm font-medium text-bg"
-        >
+        <NuxtLink to="/#projects" class="btn-solid">
           {{ t('hero.workCta') }}
         </NuxtLink>
         <NuxtLink
@@ -51,5 +43,7 @@ const restName = computed(() => name.value.split(' ').slice(1).join(' '))
         </NuxtLink>
       </div>
     </div>
+
+    <TraceLedger />
   </div>
 </template>

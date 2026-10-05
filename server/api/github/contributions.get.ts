@@ -56,22 +56,12 @@ export default defineCachedEventHandler(async () => {
       days,
       total,
       streak: 0,
+      stale: false,
     }
   } catch {
-    const now = new Date()
-    const days: ContributionDay[] = []
-    let total = 0
-
-    for (let i = 364; i >= 0; i--) {
-      const d = new Date(now)
-      d.setDate(d.getDate() - i)
-      const dateStr = d.toISOString().slice(0, 10)
-      const count = Math.floor(Math.random() * 5)
-      total += count
-      days.push({ date: dateStr, count, level: levelFromCount(count) })
-    }
-
-    return { days, total, streak: 0 }
+    // No fabricated activity on failure: return an empty grid flagged stale
+    // so the UI shows an honest empty state (R-17, R-38).
+    return { days: [], total: 0, streak: 0, stale: true }
   }
 }, {
   maxAge: 60 * 30,

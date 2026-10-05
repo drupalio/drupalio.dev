@@ -28,7 +28,7 @@ onMounted(() => {
 <template>
   <header
     class="fixed inset-x-0 top-0 z-50 transition-colors duration-200"
-    :class="scrolled ? 'border-b border-border frost' : 'border-b border-transparent bg-transparent'"
+    :class="scrolled ? 'border-b border-border bg-surface' : 'border-b border-transparent bg-transparent'"
   >
     <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8" aria-label="Primary">
       <NuxtLink to="/" class="font-display text-[15px] font-bold tracking-tight text-text" aria-label="drupalio.dev home">

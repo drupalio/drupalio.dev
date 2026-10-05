@@ -55,7 +55,7 @@ useSeoMeta({
 
       <NuxtLink
         to="/"
-        class="btn-press inline-flex h-11 items-center gap-2 rounded-xl bg-text px-5 text-sm font-medium text-bg"
+        class="btn-solid"
       >
         <Icon name="lucide:arrow-left" size="14" />
         {{ backLabel }}

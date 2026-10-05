@@ -28,8 +28,11 @@ export default defineCachedEventHandler(async () => {
       following: res.following,
       createdAt: res.created_at,
       avatarUrl: res.avatar_url,
+      stale: false,
     }
   } catch {
+    // Offline fallback so the build never breaks. Flagged stale so the UI
+    // labels it as a cached snapshot instead of live data (R-38).
     return {
       username: 'drupalio',
       publicRepos: 47,
@@ -37,6 +40,7 @@ export default defineCachedEventHandler(async () => {
       following: 8,
       createdAt: '2013-03-01T00:00:00Z',
       avatarUrl: 'https://avatars.githubusercontent.com/u/5186093',
+      stale: true,
     }
   }
 }, {
