@@ -5,6 +5,7 @@ company: "Globant"
 role: "Java Microservices Developer"
 period: "2019-2021"
 category: "media"
+diagram: "batch-payment"
 stack: ["Java", "Spring Batch", "Kafka", "Oracle", "Microservices"]
 metrics:
   - label: "Ventana batch"

@@ -6,11 +6,10 @@ role: "Java Ssr Developer"
 description: "Java Ssr Developer en GFT Technologies"
 projects:
   - name: "Glomo"
-    description: "Migración de la plataforma bancaria de BBVA Bancomer de una arquitectura monolítica a microservicios utilizando CXF Spring Framework y SDLO de BBVA, aplicando principios SOLID e integración continua"
+    description: "Migré la plataforma bancaria de BBVA Bancomer de monolito a microservicios con CXF Spring sobre SDLO de BBVA, aplicando principios SOLID e integración continua durante la migración."
     technologies: ["Java", "CXF Spring Framework", "BBVA SDLO", "Microservicios", "CI/CD"]
   - name: "Claims"
-    description: "Soporte de primer nivel para sistema de reclamaciones de BBVA y desarrollo de APIs centrales para el motor y sistema de reclamaciones"
+    description: "Construí las APIs centrales del motor de reclamaciones de BBVA y di soporte de primer nivel al sistema."
     technologies: ["Java", "Desarrollo de API", "Soporte"]
 order: 2
 ---
-

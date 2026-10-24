@@ -6,6 +6,11 @@ const slug = computed(() => route.path)
 
 const { data: project } = await projectBySlug(slug.value)
 
+const diagramKind = computed(() => {
+  const value = project.value?.diagram
+  return value === 'quizzer-interview' || value === 'batch-payment' ? value : undefined
+})
+
 if (!project.value) {
   throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 }
@@ -90,7 +95,7 @@ const labels = computed(() => ({
 
         <!-- Challenge -->
         <section v-if="project.challenge" class="flex flex-col gap-3">
-          <SectionLabel :number="'01'" :label="labels.challenge" />
+          <SectionLabel :number="'01'" :label="labels.challenge" as="div" />
           <p class="text-balance text-base leading-relaxed text-text-muted">
             {{ project.challenge }}
           </p>
@@ -98,15 +103,20 @@ const labels = computed(() => ({
 
         <!-- Architecture -->
         <section v-if="project.architecture" class="flex flex-col gap-3">
-          <SectionLabel :number="'02'" :label="labels.architecture" />
+          <SectionLabel :number="'02'" :label="labels.architecture" as="div" />
           <p class="text-balance text-base leading-relaxed text-text-muted">
             {{ project.architecture }}
           </p>
+          <ProjectArchitectureDiagram
+            v-if="diagramKind"
+            :kind="diagramKind"
+            :locale="currentLocale === 'es' ? 'es' : 'en'"
+          />
         </section>
 
         <!-- Results -->
         <section v-if="project.results" class="flex flex-col gap-3">
-          <SectionLabel :number="'03'" :label="labels.results" />
+          <SectionLabel :number="'03'" :label="labels.results" as="div" />
           <p class="text-balance text-base leading-relaxed text-text-muted">
             {{ project.results }}
           </p>

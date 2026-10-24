@@ -7,6 +7,7 @@ const projectSchema = z.object({
   role: z.string(),
   period: z.string(),
   category: z.enum(['banking', 'ai', 'fintech', 'media', 'infrastructure', 'enterprise']),
+  diagram: z.enum(['quizzer-interview', 'batch-payment']).optional(),
   stack: z.array(z.string()),
   metrics: z.array(z.object({
     label: z.string(),

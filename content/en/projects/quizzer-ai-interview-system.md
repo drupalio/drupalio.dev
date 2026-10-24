@@ -1,10 +1,11 @@
 ---
-title: "QuizzerA — AI Interview System"
+title: "QuizzerA: AI Interview System"
 description: "Customized GPT for key projects and developed an interview follow-up system to enhance feedback and efficiency"
 company: "Globant"
 role: "Java Microservices Developer"
 period: "2022-2024"
 category: "ai"
+diagram: "quizzer-interview"
 stack: ["Java", "Spring Boot", "GPT", "AI", "Microservices"]
 metrics:
   - label: "Feedback cycle"

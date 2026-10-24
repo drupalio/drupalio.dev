@@ -3,44 +3,39 @@ import { queryCollection } from '@nuxt/content/server'
 export default defineEventHandler(async (event) => {
   const baseUrl = 'https://drupalio.dev'
 
-  const staticRoutes = [
-    { loc: '/', priority: 1.0, changefreq: 'weekly' },
-    { loc: '/blog', priority: 0.8, changefreq: 'weekly' },
-  ]
+  type Route = { loc: string, priority: number, changefreq: string }
+  const routes = new Map<string, Route>()
+  const add = (route: Route) => {
+    const prev = routes.get(route.loc)
+    if (!prev || prev.priority < route.priority) routes.set(route.loc, route)
+  }
 
-  const projectRoutes: Array<{ loc: string; priority: number; changefreq: string }> = []
-  const blogRoutes: Array<{ loc: string; priority: number; changefreq: string }> = []
+  add({ loc: '/', priority: 1.0, changefreq: 'weekly' })
+  add({ loc: '/blog', priority: 0.8, changefreq: 'weekly' })
 
+  // Both locales share one URL (language is a cookie), so the /en and /es
+  // prefixes are stripped and duplicates collapse into a single entry.
   try {
-    const enProjects = await queryCollection(event, 'projects_en').all()
-    const esProjects = await queryCollection(event, 'projects_es').all()
-    for (const p of enProjects) {
-      const path = p.path?.replace(/^\/en/, '') || ''
-      if (path) projectRoutes.push({ loc: path, priority: 0.7, changefreq: 'monthly' })
-    }
-    for (const p of esProjects) {
-      const path = p.path?.replace(/^\/es/, '/es') || ''
-      if (path) projectRoutes.push({ loc: path, priority: 0.6, changefreq: 'monthly' })
-    }
+    const [enProjects, esProjects, enBlog, esBlog] = await Promise.all([
+      queryCollection(event, 'projects_en').all(),
+      queryCollection(event, 'projects_es').all(),
+      queryCollection(event, 'blog_en').where('draft', '=', false).all(),
+      queryCollection(event, 'blog_es').where('draft', '=', false).all(),
+    ])
 
-    const enBlog = await queryCollection(event, 'blog_en').where('draft', '=', false).all()
-    const esBlog = await queryCollection(event, 'blog_es').where('draft', '=', false).all()
-    for (const b of enBlog) {
-      const path = b.path?.replace(/^\/en/, '') || ''
-      if (path) blogRoutes.push({ loc: path, priority: 0.6, changefreq: 'monthly' })
+    for (const p of [...enProjects, ...esProjects]) {
+      const loc = p.path?.replace(/^\/(en|es)/, '') || ''
+      if (loc) add({ loc, priority: 0.7, changefreq: 'monthly' })
     }
-    for (const b of esBlog) {
-      const path = b.path?.replace(/^\/es/, '/es') || ''
-      if (path) blogRoutes.push({ loc: path, priority: 0.5, changefreq: 'monthly' })
+    for (const b of [...enBlog, ...esBlog]) {
+      const loc = b.path?.replace(/^\/(en|es)/, '') || ''
+      if (loc) add({ loc, priority: 0.6, changefreq: 'monthly' })
     }
   } catch (e) {
     console.error('Sitemap query error:', e)
   }
 
-  const allRoutes = [...staticRoutes, ...projectRoutes, ...blogRoutes]
-
-  const urls = allRoutes
-    .filter((r) => r.loc)
+  const urls = [...routes.values()]
     .map((r) => `  <url>\n    <loc>${baseUrl}${r.loc}</loc>\n    <priority>${r.priority}</priority>\n    <changefreq>${r.changefreq}</changefreq>\n  </url>`)
     .join('\n')
 

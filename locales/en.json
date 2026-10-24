@@ -1,7 +1,7 @@
 {
   "personalInfo": {
     "name": "Ricardo Morales",
-    "title": "Software Engineer",
+    "title": "Senior Backend Engineer, Java and Cloud",
     "picture": "https://avatars.githubusercontent.com/u/5186093",
     "links": [
       {
@@ -24,7 +24,7 @@
   },
   "summary": {
     "title": "About me",
-    "summaryText": "Experienced system developer with a strong ability to navigate diverse tech stacks, prioritize clean and efficient coding, and embrace innovation. Committed, creative, and driven by continuous learning. Excel in fostering collaboration and delivering high-quality results. Passionate about both technology and gastronomy, strive to leverage my skills to create meaningful impacts across industries and communities."
+    "summaryText": "I build and modernize backend systems for companies where downtime is expensive. Most of my work is Java and Spring Boot microservices on Kubernetes, with event-driven flows over Apache Kafka and CI/CD pipelines that deploy without a maintenance window. I moved monolithic banking platforms at BBVA and Banco Nacional del Perú to microservices, rebuilt Disney's nightly invoicing batch so a failed run recovers instead of restarting from zero, and shipped an LLM interview assistant that cut feedback from five days to under 48 hours. I am looking for a senior backend, platform, or AI engineering role where architecture decisions carry real weight."
   },
   "workExperienceSection": {
     "title": "Work Experience"
@@ -1130,7 +1130,7 @@
   },
   "hero": {
     "greeting": "Hello, I'm",
-    "tagline": "Systems engineer focused on backend architecture, AI integration, and performance. I build resilient, high-throughput systems: from banking platforms processing millions of transactions to AI-assisted development tools.",
+    "tagline": "Twelve years of backend engineering where a failed request costs money: banking, payments, insurance, and media. Java and Spring Boot microservices on Kubernetes, Kafka event pipelines, and LLM tooling that shipped. Clients have included BBVA, Santander, HSBC, Banorte, Expedia, and Disney.",
     "workCta": "View selected work",
     "contactCta": "Get in touch"
   },
@@ -1141,8 +1141,8 @@
     "connect": "Connect"
   },
   "contact": {
-    "heading": "Let's build something resilient.",
-    "body": "Open to engineering roles, architecture consulting, and AI systems work.",
+    "heading": "Open to senior backend roles.",
+    "body": "I am finishing my notice period at Multiplica Talent. Send the role and the stack, and I will give you my start date.",
     "email": "hello@drupalio.dev"
   },
   "footer": {

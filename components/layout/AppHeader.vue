@@ -7,8 +7,8 @@ const t = (key: string) => {
 
 const navItems = computed(() => [
   { label: t('nav.about'), href: '/#about' },
-  { label: t('nav.experience'), href: '/#experience' },
   { label: t('nav.projects'), href: '/#projects' },
+  { label: t('nav.experience'), href: '/#experience' },
   { label: t('nav.stack'), href: '/#stack' },
   { label: t('nav.writing'), href: '/blog' },
   { label: t('nav.contact'), href: '/#contact' },

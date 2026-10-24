@@ -1,0 +1,37 @@
+# Ricardo Morales
+
+> Senior backend engineer in Mexico City. Twelve years building and modernizing Java and Spring Boot microservices for banking, payments, insurance, and media clients, including BBVA, Santander, HSBC, Banorte, Expedia, and Disney.
+
+## Profile
+
+- Name: Ricardo Morales
+- Role: Senior Backend Engineer
+- Location: Mexico City, Mexico
+- Languages: Spanish, English
+- Current status: at Multiplica Talent, finishing notice period, open to senior backend roles
+- Contact: hello@drupalio.dev
+- LinkedIn: https://www.linkedin.com/in/drupalio
+- GitHub: https://github.com/drupalio
+
+## Core stack
+
+Java, Spring Boot, Quarkus, Apache Kafka, Kubernetes, Docker, Google Cloud Platform, AWS, GitHub Actions, Oracle Database, PostgreSQL, Redis, Angular, TypeScript, LLM integration.
+
+## Selected work
+
+- [QuizzerA: AI Interview System](https://drupalio.dev/projects/quizzer-ai-interview-system): LLM interview assistant, feedback cycle from 5 days to under 48 hours.
+- [Banking Platform Modernization](https://drupalio.dev/projects/banking-modernization): monolith to Spring Boot microservices for Banco Nacional del Perú.
+- [Financial Microservices on Kubernetes](https://drupalio.dev/projects/financial-microservices-k8s): Quarkus native microservices on Google Cloud.
+- [Batch Payment Infrastructure](https://drupalio.dev/projects/batch-payment-infrastructure): nightly invoicing and cinema payments for Disney.
+- [Digital Banking Expansion](https://drupalio.dev/projects/hsbc-digital-banking): microservices and feature flags for HSBC.
+
+## Pages
+
+- [Home](https://drupalio.dev/): profile, selected work, experience, stack, contact
+- [Blog](https://drupalio.dev/blog): engineering writing
+
+## Notes
+
+- Prerendered routes expose static HTML; Spanish content follows the saved language preference.
+- Structured data: schema.org Person at https://drupalio.dev/
+- The site is bilingual (Spanish and English) and both languages share the same URL.

@@ -6,29 +6,28 @@ role: "Desarrollador Senior Java"
 description: "Desarrollador Senior Java en Multiplica Talent"
 projects:
   - name: "Hive & Colony"
-    description: "Integración e implementación de Zoho One y Shopify para operaciones empresariales optimizadas"
+    description: "Integré Zoho One y Shopify para que pedidos, inventario y datos de cliente se mantengan consistentes en ambas plataformas."
     technologies: ["Java", "Zoho One", "Shopify"]
   - name: "Banorte"
-    description: "Desarrollo de plantillas y módulos para el nuevo portal público de Banorte usando MagnoliaCMS"
+    description: "Construí plantillas y módulos reutilizables en MagnoliaCMS para el nuevo portal público de Banorte, sobre backend Java."
     technologies: ["Java", "MagnoliaCMS", "HTML", "CSS", "JavaScript"]
   - name: "Qualitas"
-    description: "Desarrollo e integración del núcleo CRM utilizando procedimientos almacenados, funciones SQL/PLus y backend en Java"
+    description: "Construí el núcleo del CRM con procedimientos almacenados y funciones de Oracle sobre un backend Java."
     technologies: ["Java", "SQL/PLus", "Oracle", "CRM"]
   - name: "GEPP"
-    description: "Análisis y desarrollo de backend utilizando minería de datos y procedimientos para la gestión de promociones sobre un CRM hecho a medida"
+    description: "Desarrollé la gestión de promociones sobre un CRM a medida, con minería de datos y procedimientos almacenados."
     technologies: ["Java", "Minería de Datos", "SQL", "CRM", "Procedimientos Almacenados"]
   - name: "Plan Seguro"
-    description: "Reestructuración de look and feel para la aseguradora, actualizando los componentes UI y las versiones de Angular"
+    description: "Rehíce el look and feel del sitio de la aseguradora, actualizando los componentes Angular y TypeScript."
     technologies: ["Angular", "TypeScript", "UI/UX", "CSS", "HTML"]
   - name: "Banorte - Sigma Sitio Jovenes"
-    description: "Reestructuración de look and feel para la aseguradora, actualizando los componentes UI y las versiones de MagnoliaCMS"
+    description: "Rehíce el look and feel del portal de jóvenes, actualizando los componentes UI y la versión de MagnoliaCMS."
     technologies: ["Angular", "TypeScript", "UI/UX", "CSS", "HTML"]
   - name: "Plan Seguro - Cotizador Colectivo"
-    description: "Cotizador colectivo de seguros para Plan Seguro"
+    description: "Construí el cotizador de seguros colectivos para pólizas de grupo."
   - name: "Heineken - Magnolia"
-    description: "Proyecto Heineken en Magnolia"
+    description: "Desarrollé el sitio de Heineken sobre Magnolia CMS."
   - name: "Pinkup"
-    description: "Conserjería con IA e imágenes con realidad aumentada"
+    description: "Desarrollé un conserje con IA e imágenes de producto en realidad aumentada."
 order: 0
 ---
-

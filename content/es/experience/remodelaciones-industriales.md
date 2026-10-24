@@ -6,8 +6,7 @@ role: "Desarrollador Web"
 description: "Desarrollador Web en Remodelaciones Industriales"
 projects:
   - name: "Sistema de Gestión de Clientes"
-    description: "Desarrollo, mantenimiento y soporte del CMS para la gestión de clientes"
+    description: "Desarrollé y mantuve el CMS con el que la empresa administraba su cartera de clientes, en PHP y MySQL."
     technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"]
 order: 6
 ---
-

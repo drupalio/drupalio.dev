@@ -6,8 +6,7 @@ role: "Java Developer Jr"
 description: "Java Developer Jr at MXD Solutions"
 projects:
   - name: "Money Transfer System"
-    description: "Migrated Money Transfer WebServices (SOA) from Oracle Application Server to JBoss EAP"
+    description: "Migrated the money transfer SOA web services from Oracle Application Server to JBoss EAP."
     technologies: ["Java", "SOA", "Oracle Application Server", "JBoss EAP"]
 order: 5
 ---
-

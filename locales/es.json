@@ -1,7 +1,7 @@
 {
   "personalInfo": {
     "name": "Ricardo Morales",
-    "title": "Ingeniero de Software",
+    "title": "Ingeniero Backend Senior, Java y Cloud",
     "picture": "https://avatars.githubusercontent.com/u/5186093",
     "links": [
       {
@@ -24,7 +24,7 @@
   },
   "summary": {
     "title": "Sobre mí",
-    "summaryText": "Desarrollador de sistemas con experiencia y una sólida capacidad para navegar por diversos stacks tecnológicos, priorizando un código limpio y eficiente, y abrazando la innovación. Comprometido, creativo y motivado por el aprendizaje continuo. Destaco en fomentar la colaboración y entregar resultados de alta calidad. Apasionado tanto por la tecnología como por la gastronomía, busco aprovechar mis habilidades para crear impactos significativos en diversas industrias y comunidades."
+    "summaryText": "Construyo y modernizo sistemas backend para empresas donde una caída cuesta dinero. La mayor parte de mi trabajo son microservicios en Java y Spring Boot sobre Kubernetes, con flujos event-driven sobre Apache Kafka y pipelines CI/CD que despliegan sin ventana de mantenimiento. Migré plataformas bancarias monolíticas de BBVA y Banco Nacional del Perú a microservicios. También reconstruí el batch nocturno de facturación de Disney para que una ejecución fallida se recupere en lugar de reiniciar desde cero, y desarrollé un asistente de entrevistas con LLM que redujo el ciclo de feedback de cinco días a menos de 48 horas. Busco un rol senior de backend, plataforma o ingeniería de IA donde las decisiones de arquitectura importen."
   },
   "workExperienceSection": {
     "title": "Experiencias Laborales"
@@ -1370,7 +1370,7 @@
   },
   "hero": {
     "greeting": "Hola, soy",
-    "tagline": "Ingeniero de sistemas enfocado en arquitectura backend, integración de IA y rendimiento. Construyo sistemas resilientes de alto throughput: desde plataformas bancarias que procesan millones de transacciones hasta herramientas de desarrollo asistidas por IA.",
+    "tagline": "Doce años de ingeniería backend donde una petición fallida cuesta dinero: banca, pagos, seguros y medios. Microservicios en Java y Spring Boot sobre Kubernetes, pipelines de eventos con Kafka y herramientas con LLM que sí salieron a producción. He trabajado con BBVA, Santander, HSBC, Banorte, Expedia y Disney.",
     "workCta": "Ver trabajo seleccionado",
     "contactCta": "Contáctame"
   },
@@ -1381,8 +1381,8 @@
     "connect": "Conectar"
   },
   "contact": {
-    "heading": "Construyamos algo resiliente.",
-    "body": "Abierto a roles de ingeniería, consultoría de arquitectura y sistemas de IA.",
+    "heading": "Abierto a roles senior de backend.",
+    "body": "Estoy cerrando mi aviso en Multiplica Talent. Mándame el rol y el stack, y te digo mi fecha de inicio.",
     "email": "hello@drupalio.dev"
   },
   "footer": {

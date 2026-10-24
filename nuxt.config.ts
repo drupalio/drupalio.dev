@@ -81,6 +81,8 @@ export default defineNuxtConfig({
         '/projects/batch-payment-infrastructure',
         '/projects/hsbc-digital-banking',
         '/blog/resilient-microservices',
+        '/api/sitemap.xml',
+        '/api/rss.xml',
       ],
       interval: 60,
     },

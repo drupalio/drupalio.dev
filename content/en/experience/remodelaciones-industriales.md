@@ -6,8 +6,7 @@ role: "Web Developer"
 description: "Web Developer at Remodelaciones Industriales"
 projects:
   - name: "Client Management System"
-    description: "Developed, maintained and supported the CMS for client management"
+    description: "Built and maintained the CMS the company used to manage its client base, in PHP and MySQL."
     technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"]
 order: 6
 ---
-

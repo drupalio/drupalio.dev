@@ -11,17 +11,20 @@ onMounted(() => {
   })
 })
 
+const title = 'Ricardo Morales, Senior Backend Engineer'
+const description = 'Senior backend engineer with 12+ years in banking, payments, insurance, and media: Java and Spring Boot microservices, Kubernetes, Apache Kafka, Google Cloud, and LLM integration.'
+
 useSeoMeta({
-  title: 'Ricardo Morales — Software Engineer',
-  description: 'Systems thinking, AI engineering, backend architecture, and performance work by Ricardo Morales.',
-  ogTitle: 'Ricardo Morales — Software Engineer',
-  ogDescription: 'Systems thinking, AI engineering, backend architecture, and performance work by Ricardo Morales.',
-  ogType: 'website',
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: 'profile',
   ogUrl: 'https://drupalio.dev',
   ogImage: 'https://avatars.githubusercontent.com/u/5186093',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Ricardo Morales — Software Engineer',
-  twitterDescription: 'Systems thinking, AI engineering, backend architecture, and performance work.',
+  twitterTitle: title,
+  twitterDescription: description,
   twitterImage: 'https://avatars.githubusercontent.com/u/5186093',
 })
 
@@ -32,12 +35,74 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Person',
+        '@id': 'https://drupalio.dev/#person',
         name: 'Ricardo Morales',
-        jobTitle: 'Software Engineer',
+        jobTitle: 'Senior Backend Engineer',
+        description,
         url: 'https://drupalio.dev',
+        image: 'https://avatars.githubusercontent.com/u/5186093',
+        email: 'mailto:hello@drupalio.dev',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Mexico City',
+          addressCountry: 'MX',
+        },
         sameAs: [
           'https://www.linkedin.com/in/drupalio',
           'https://github.com/drupalio',
+        ],
+        knowsLanguage: ['es', 'en'],
+        hasOccupation: {
+          '@type': 'Occupation',
+          name: 'Senior Backend Engineer',
+        },
+        knowsAbout: [
+          'Java',
+          'Spring Boot',
+          'Quarkus',
+          'Microservices',
+          'Event-driven architecture',
+          'Apache Kafka',
+          'Kubernetes',
+          'Docker',
+          'Google Cloud Platform',
+          'Amazon Web Services',
+          'CI/CD',
+          'GitHub Actions',
+          'Oracle Database',
+          'PostgreSQL',
+          'Redis',
+          'Angular',
+          'TypeScript',
+          'Large Language Models',
+          'Prompt engineering',
+          'Software architecture',
+        ],
+        alumniOf: {
+          '@type': 'CollegeOrUniversity',
+          name: 'Tecnológico de Estudios Superiores de Ecatepec',
+        },
+        hasCredential: [
+          {
+            '@type': 'EducationalOccupationalCredential',
+            name: 'Oracle Certified Associate Java',
+            credentialCategory: 'certification',
+            identifier: '237614080OCAJSE7',
+            recognizedBy: { '@type': 'Organization', name: 'Oracle' },
+          },
+          {
+            '@type': 'EducationalOccupationalCredential',
+            name: 'Scrum Fundamentals Certified',
+            credentialCategory: 'certification',
+            identifier: '623619',
+            recognizedBy: { '@type': 'Organization', name: 'VMEdu Inc.' },
+          },
+          {
+            '@type': 'EducationalOccupationalCredential',
+            name: 'Introduction to Containers and Kubernetes',
+            credentialCategory: 'certification',
+            recognizedBy: { '@type': 'Organization', name: 'Cloudevel' },
+          },
         ],
       }),
     },
@@ -66,7 +131,7 @@ useHead({
 
       <div class="mt-24">
         <section id="projects">
-          <LazyFeaturedProjects v-if="showBelowFold" />
+          <LazyFeaturedProjects />
         </section>
       </div>
 
@@ -92,7 +157,7 @@ useHead({
 
       <div class="mt-28 grid grid-cols-1 lg:grid-cols-12">
         <section id="contact" class="border-t-2 border-text pt-10 lg:col-span-8">
-          <LazyContactCard v-if="showBelowFold" />
+          <LazyContactCard />
         </section>
       </div>
     </main>
